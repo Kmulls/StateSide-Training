@@ -115,16 +115,23 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 
-.brand { display: inline-flex; align-items: center; gap: .65rem; font-weight: 700; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 700; }
 .brand-mark {
-  display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--amber-500), var(--terracotta));
-  color: #fff; font-family: var(--font-display); font-weight: 700; font-size: .95rem; letter-spacing: .02em;
-  box-shadow: var(--shadow-sm);
+  display: grid; place-items: center; width: 42px; height: 42px; border-radius: 11px;
+  overflow: hidden; border: 1px solid rgba(255,255,255,.18); box-shadow: var(--shadow-sm);
+  flex: none;
 }
+.brand-mark img { width: 100%; height: 100%; object-fit: cover; }
+.scrolled .brand-mark { border-color: rgba(11,31,58,.14); }
+.brand-text { display: inline-flex; flex-direction: column; line-height: 1.1; }
 .brand-name { font-family: var(--font-display); font-size: 1.18rem; color: #fff; letter-spacing: -.01em; transition: color .3s ease; }
 .brand-tm { color: var(--amber-400); margin-left: .12em; }
+.brand-by {
+  font-family: var(--font-body); font-size: .66rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .12em; color: rgba(255,255,255,.6); margin-top: .18rem; transition: color .3s ease;
+}
 .scrolled .brand-name { color: var(--navy-900); }
+.scrolled .brand-by { color: var(--slate-400); }
 
 .nav { display: flex; align-items: center; gap: 1.6rem; }
 .nav a { font-size: .95rem; font-weight: 500; color: rgba(255,255,255,.85); transition: color .2s ease; }
@@ -463,6 +470,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .agentic-card--wide { grid-column: auto; }
   .form-row { grid-template-columns: 1fr; }
   .hero-stats { gap: 1.4rem; }
+  .brand-by { display: none; }
   .team-card { flex-direction: column; }
   .corridor-node { flex-basis: 50%; }
   .corridor-node::before { display: none; }
