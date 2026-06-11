@@ -12,6 +12,7 @@ A self-contained static site — no build step, no dependencies.
 - `index.html` — page markup and copy
 - `styles.css` — design system + responsive layout
 - `script.js` — sticky header, mobile nav, scroll-reveal, contact-form stub
+- `images/` — San Miguel de Allende property photography (hero, showcase band, CTA)
 
 Fonts (Fraunces + Inter) load from Google Fonts.
 
