@@ -417,7 +417,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy-900); color: rgba(255,255,255,.7); padding: clamp(3rem,6vw,4.5rem) 0 2rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.1); }
-.footer-brand { display: flex; gap: 1rem; max-width: 420px; }
+.footer-brand { display: flex; flex-direction: column; gap: 1.1rem; max-width: 420px; }
+.roi-logo { width: 220px; height: auto; }
 .footer-brand p { font-size: .95rem; line-height: 1.6; }
 .footer-brand strong { color: #fff; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 1.2rem; align-content: flex-start; }

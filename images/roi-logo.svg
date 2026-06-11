@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" role="img" aria-label="Roi Digital Consulting">
+  <defs>
+    <linearGradient id="roiMark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#efb755"/>
+      <stop offset="1" stop-color="#c2602f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Mark: rounded square with an upward growth arrow (Return on Investment) -->
+  <rect x="2" y="8" width="48" height="48" rx="13" fill="url(#roiMark)"/>
+  <path d="M14 40 L23 31 L29 36 L40 24" fill="none" stroke="#fff" stroke-width="3.2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M33 24 L40 24 L40 31" fill="none" stroke="#fff" stroke-width="3.2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Wordmark -->
+  <text x="64" y="33" font-family="Fraunces, Georgia, serif" font-size="25" font-weight="600"
+        letter-spacing="-0.3" fill="#ffffff">Roi</text>
+  <text x="111" y="33" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500"
+        letter-spacing="0.2" fill="#ffffff" opacity="0.92">Digital</text>
+
+  <text x="64" y="51" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600"
+        letter-spacing="3.4" fill="#f6d18a">CONSULTING LLC</text>
+</svg>
