@@ -70,7 +70,7 @@
       if (status) {
         status.hidden = false;
         status.style.color = "#7ed8a8";
-        status.textContent = "Thanks — we'll be in touch about the pilot shortly.";
+        status.textContent = "Thanks — we'll be in touch shortly.";
       }
       form.reset();
     });
