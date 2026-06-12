@@ -50,8 +50,7 @@
       var hash = a.getAttribute("href");
       if (hash === "#" || hash === "#main") return; // skip-link keeps default
       if (scrollToHash(hash)) {
-        e.preventDefault();
-        history.pushState(null, "", hash);
+        e.preventDefault(); // scroll without writing the hash to the URL
       }
     });
   });
