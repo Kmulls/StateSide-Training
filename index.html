@@ -301,7 +301,8 @@
           </article>
           <article class="team-card reveal">
             <div class="team-avatar team-avatar--photo">
-              <img src="images/myles-vidor.jpeg" alt="Myles Vidor" loading="lazy" />
+              <img src="images/myles-vidor.jpeg" alt="Myles Vidor" loading="lazy"
+                   onerror="var a=this.closest('.team-avatar');a.classList.remove('team-avatar--photo');a.textContent='M';" />
             </div>
             <div class="team-body">
               <h3>Myles Vidor</h3>
