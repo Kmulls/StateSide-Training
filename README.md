@@ -38,4 +38,5 @@ Pricing · Team · Expansion Corridor · Contact
 
 - The contact form is a front-end stub — wire it to a real handler (Formspree, Netlify
   Forms, or a backend) before launch.
-- Add Miles Vidor's headshot at `images/miles-vidor.jpeg` (the team card references it).
+- Add Miles Vidor's headshot to `images/` named `milesheadshot.jpg` (or .jpeg/.png — the
+  team card auto-detects the extension and falls back to an initial if absent).
