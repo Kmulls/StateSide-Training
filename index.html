@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stateside Certified™ — US-grade real estate service, built for Latin America</title>
-  <meta name="description" content="The AI infrastructure and agent certification that makes a brokerage perform like a top US firm — a 90-day sprint to a US-grade client experience." />
+  <title data-c="meta.title"></title>
+  <meta name="description" content="" />
   <meta name="theme-color" content="#0b1f3a" />
   <link rel="icon" type="image/jpeg" href="images/roi-logo.jpeg" />
 
@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="content/site.js"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -33,22 +34,22 @@
         </span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#problem">The Problem</a>
-        <a href="#offer">The System</a>
-        <a href="#pilot">90-Day Sprint</a>
-        <a href="#team">Team</a>
-        <a href="#contact" class="btn btn-sm btn-primary nav-cta">Claim Your Territory</a>
+        <a href="#problem" data-c="nav.problem"></a>
+        <a href="#offer" data-c="nav.offer"></a>
+        <a href="#pilot" data-c="nav.pilot"></a>
+        <a href="#team" data-c="nav.team"></a>
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta" data-c="nav.cta"></a>
       </nav>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-nav" id="mobile-nav" hidden>
-      <a href="#problem">The Problem</a>
-      <a href="#offer">The System</a>
-      <a href="#pilot">90-Day Sprint</a>
-      <a href="#team">Team</a>
-      <a href="#contact" class="btn btn-primary">Claim Your Territory</a>
+      <a href="#problem" data-c="nav.problem"></a>
+      <a href="#offer" data-c="nav.offer"></a>
+      <a href="#pilot" data-c="nav.pilot"></a>
+      <a href="#team" data-c="nav.team"></a>
+      <a href="#contact" class="btn btn-primary" data-c="nav.cta"></a>
     </div>
   </header>
 
@@ -59,21 +60,16 @@
         <img src="images/estate-hero.jpeg" alt="" class="hero-photo" loading="eager" fetchpriority="high" />
       </div>
       <div class="container hero-inner">
-        <h1 class="hero-title reveal">
-          Buyers and sellers want the reliability of <span class="accent">Stateside</span> service.
-        </h1>
-        <p class="hero-sub reveal">
-          The AI infrastructure <strong>+</strong> agent certification that makes a Latin American
-          brokerage perform like a top US firm.
-        </p>
+        <h1 class="hero-title reveal" data-c="hero.title"></h1>
+        <p class="hero-sub reveal" data-c="hero.sub"></p>
         <div class="hero-cta reveal">
-          <a href="#contact" class="btn btn-primary btn-lg">Claim Your Territory</a>
-          <a href="#offer" class="btn btn-ghost btn-lg">See how it works</a>
+          <a href="#contact" class="btn btn-primary btn-lg" data-c="hero.ctaPrimary"></a>
+          <a href="#offer" class="btn btn-ghost btn-lg" data-c="hero.ctaGhost"></a>
         </div>
         <ul class="hero-stats reveal" aria-label="Key figures">
-          <li><span class="stat-num">24/7</span><span class="stat-label">US response-time standards</span></li>
-          <li><span class="stat-num">~$34K</span><span class="stat-label">gross commission per listing</span></li>
-          <li><span class="stat-num">2 deals</span><span class="stat-label">pay back year-one investment</span></li>
+          <li><span class="stat-num" data-c="hero.stats.0.num"></span><span class="stat-label" data-c="hero.stats.0.label"></span></li>
+          <li><span class="stat-num" data-c="hero.stats.1.num"></span><span class="stat-label" data-c="hero.stats.1.label"></span></li>
+          <li><span class="stat-num" data-c="hero.stats.2.num"></span><span class="stat-label" data-c="hero.stats.2.label"></span></li>
         </ul>
       </div>
     </section>
@@ -82,27 +78,18 @@
     <section class="section problem" id="problem">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">The Problem</span>
-          <h2>Brokerages don't lose American clients on inventory. They lose them on trust.</h2>
+          <span class="kicker" data-c="problem.kicker"></span>
+          <h2 data-c="problem.heading"></h2>
         </div>
         <div class="problem-grid">
-          <p class="problem-lead reveal">
-            American buyers and sellers bring US expectations with them:
-            same-day responses, transaction transparency,
-            plain-English guidance through fideicomiso and closing, and negotiation
-            that feels familiar.
-          </p>
-          <p class="problem-lead reveal">
-            Local brokerages don't lose these clients on listings. They lose them on
-            <strong>communication, process, and trust.</strong> No one in the region
-            trains for this — and no one has the systems to deliver it at scale.
-          </p>
+          <p class="problem-lead reveal" data-c="problem.lead1"></p>
+          <p class="problem-lead reveal" data-c="problem.lead2"></p>
         </div>
         <ul class="expectation-list reveal" aria-label="What American clients expect">
-          <li>Same-day responses</li>
-          <li>Transaction transparency</li>
-          <li>Plain-English fideicomiso &amp; closing</li>
-          <li>Familiar negotiation</li>
+          <li data-c="problem.expectations.0"></li>
+          <li data-c="problem.expectations.1"></li>
+          <li data-c="problem.expectations.2"></li>
+          <li data-c="problem.expectations.3"></li>
         </ul>
       </div>
     </section>
@@ -113,8 +100,8 @@
       <div class="showcase-overlay">
         <div class="container">
           <blockquote class="reveal">
-            <p>The properties already sell themselves. We make the <em>service</em> match the address.</p>
-            <cite>Every corridor · the same standard</cite>
+            <p data-c="showcase.quote"></p>
+            <cite data-c="showcase.cite"></cite>
           </blockquote>
         </div>
       </div>
@@ -124,56 +111,53 @@
     <section class="section offer" id="offer">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">The Offer</span>
-          <h2>System first. Training on top.</h2>
-          <p class="section-intro">
-            Two layers that turn US-grade service from aspiration into infrastructure —
-            then certify the people who deliver it.
-          </p>
+          <span class="kicker" data-c="offer.kicker"></span>
+          <h2 data-c="offer.heading"></h2>
+          <p class="section-intro" data-c="offer.intro"></p>
         </div>
 
         <!-- Layer 1 -->
         <div class="layer reveal">
           <div class="layer-head">
-            <span class="layer-tag">Layer 1</span>
-            <h3>Stateside Systems</h3>
-            <p>Built on the <strong>AGENTIC Framework™</strong> — the infrastructure that makes US-grade service automatic, not aspirational.</p>
+            <span class="layer-tag" data-c="offer.layer1.tag"></span>
+            <h3 data-c="offer.layer1.heading"></h3>
+            <p data-c="offer.layer1.body"></p>
           </div>
           <div class="agentic-grid">
             <article class="agentic-card">
-              <span class="agentic-letter">A</span>
-              <h4>Architecture</h4>
-              <p>Bilingual lead capture and nurture pipeline designed around the American buyer journey — from US-based research to closing in Mexico.</p>
+              <span class="agentic-letter" data-c="offer.agentic.0.letter"></span>
+              <h4 data-c="offer.agentic.0.title"></h4>
+              <p data-c="offer.agentic.0.body"></p>
             </article>
             <article class="agentic-card">
-              <span class="agentic-letter">G</span>
-              <h4>Guardrailed</h4>
-              <p>Compliance-aware communication: fideicomiso, disclosures, cross-border money movement — accurate every time, in both languages.</p>
+              <span class="agentic-letter" data-c="offer.agentic.1.letter"></span>
+              <h4 data-c="offer.agentic.1.title"></h4>
+              <p data-c="offer.agentic.1.body"></p>
             </article>
             <article class="agentic-card">
-              <span class="agentic-letter">E</span>
-              <h4>Evolving</h4>
-              <p>The system learns from every transaction. Playbooks and responses sharpen with each closed deal.</p>
+              <span class="agentic-letter" data-c="offer.agentic.2.letter"></span>
+              <h4 data-c="offer.agentic.2.title"></h4>
+              <p data-c="offer.agentic.2.body"></p>
             </article>
             <article class="agentic-card">
-              <span class="agentic-letter">N</span>
-              <h4>Native Context</h4>
-              <p>Your market, your listings, your firm's voice — embedded. Not generic AI; <em>your</em> brokerage, amplified.</p>
+              <span class="agentic-letter" data-c="offer.agentic.3.letter"></span>
+              <h4 data-c="offer.agentic.3.title"></h4>
+              <p data-c="offer.agentic.3.body"></p>
             </article>
             <article class="agentic-card">
-              <span class="agentic-letter">T</span>
-              <h4>Tools</h4>
-              <p>WhatsApp, SMS, and email automation, CRM integration, and automatic transaction-status updates that hit US response-time standards 24/7.</p>
+              <span class="agentic-letter" data-c="offer.agentic.4.letter"></span>
+              <h4 data-c="offer.agentic.4.title"></h4>
+              <p data-c="offer.agentic.4.body"></p>
             </article>
             <article class="agentic-card">
-              <span class="agentic-letter">I</span>
-              <h4>Information</h4>
-              <p>A living cross-border knowledge base every agent draws from: local market data + US client expectations in one place.</p>
+              <span class="agentic-letter" data-c="offer.agentic.5.letter"></span>
+              <h4 data-c="offer.agentic.5.title"></h4>
+              <p data-c="offer.agentic.5.body"></p>
             </article>
             <article class="agentic-card agentic-card--wide">
-              <span class="agentic-letter">C</span>
-              <h4>Continually Optimized</h4>
-              <p>Response time, conversion, and client satisfaction tracked monthly. The system gets measurably better — and proves it.</p>
+              <span class="agentic-letter" data-c="offer.agentic.6.letter"></span>
+              <h4 data-c="offer.agentic.6.title"></h4>
+              <p data-c="offer.agentic.6.body"></p>
             </article>
           </div>
         </div>
@@ -181,37 +165,33 @@
         <!-- Layer 2 -->
         <div class="layer reveal">
           <div class="layer-head">
-            <span class="layer-tag">Layer 2</span>
-            <h3>Stateside Certified™ Agent Training</h3>
-            <p>Team-based certification built on <strong>26 years</strong> of US brokerage experience.</p>
+            <span class="layer-tag" data-c="offer.layer2.tag"></span>
+            <h3 data-c="offer.layer2.heading"></h3>
+            <p data-c="offer.layer2.body"></p>
           </div>
           <ul class="training-list">
             <li>
-              <h4>Communication standards &amp; SLAs</h4>
-              <p>The response discipline American clients expect.</p>
+              <h4 data-c="offer.training.0.title"></h4>
+              <p data-c="offer.training.0.body"></p>
             </li>
             <li>
-              <h4>Cross-cultural negotiation</h4>
-              <p>Where US directness meets relationship-driven dealmaking.</p>
+              <h4 data-c="offer.training.1.title"></h4>
+              <p data-c="offer.training.1.body"></p>
             </li>
             <li>
-              <h4>The American client journey</h4>
-              <p>Buyer and seller side, end to end.</p>
+              <h4 data-c="offer.training.2.title"></h4>
+              <p data-c="offer.training.2.body"></p>
             </li>
             <li>
-              <h4>Fideicomiso &amp; closing fluency</h4>
-              <p>Explained in plain English, with confidence.</p>
+              <h4 data-c="offer.training.3.title"></h4>
+              <p data-c="offer.training.3.body"></p>
             </li>
             <li>
-              <h4>AI-powered practice at scale</h4>
-              <p>Roleplay and scenario training between live sessions — skills compound without a trainer in the room.</p>
+              <h4 data-c="offer.training.4.title"></h4>
+              <p data-c="offer.training.4.body"></p>
             </li>
           </ul>
-          <p class="mark-note reveal">
-            Agents who complete certification carry the
-            <span class="seal">Stateside Certified™</span> mark — a trust signal
-            American clients understand instantly.
-          </p>
+          <p class="mark-note reveal" data-c="offer.markNote"></p>
         </div>
       </div>
     </section>
@@ -220,62 +200,54 @@
     <section class="section pilot" id="pilot">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">The 90-Day Sprint</span>
-          <h2>Your data-layer buildout — and the transformation begins.</h2>
+          <span class="kicker" data-c="pilot.kicker"></span>
+          <h2 data-c="pilot.heading"></h2>
         </div>
 
         <div class="pilot-grid">
           <article class="pilot-card reveal">
-            <h3>Scope</h3>
-            <p>Full system install for your brokerage, plus certification for your full agent team.</p>
+            <h3 data-c="pilot.cards.0.heading"></h3>
+            <p data-c="pilot.cards.0.body"></p>
           </article>
           <article class="pilot-card reveal">
-            <h3>Metrics</h3>
+            <h3 data-c="pilot.cards.1.heading"></h3>
             <ul>
-              <li>Response time to American leads</li>
-              <li>Lead-to-appointment conversion</li>
-              <li>Client NPS</li>
+              <li data-c="pilot.cards.1.items.0"></li>
+              <li data-c="pilot.cards.1.items.1"></li>
+              <li data-c="pilot.cards.1.items.2"></li>
             </ul>
           </article>
           <article class="pilot-card reveal">
-            <h3>Outcome</h3>
-            <p>A certified team, a working system, and the case study that opens every corridor market in Latin America.</p>
+            <h3 data-c="pilot.cards.2.heading"></h3>
+            <p data-c="pilot.cards.2.body"></p>
           </article>
         </div>
 
         <!-- Pricing -->
         <div class="pricing reveal">
           <div class="pricing-head">
-            <h3>Founding Rate Investment</h3>
-            <p class="pricing-note">Founding rate — in exchange for case study &amp; referral rights.</p>
+            <h3 data-c="pilot.pricing.heading"></h3>
+            <p class="pricing-note" data-c="pilot.pricing.note"></p>
           </div>
           <div class="pricing-cards">
             <div class="price-card">
-              <span class="price-label">System build</span>
-              <span class="price-amount">$12,500<span class="price-unit">one-time</span></span>
+              <span class="price-label" data-c="pilot.pricing.cards.0.label"></span>
+              <span class="price-amount" data-c="pilot.pricing.cards.0.amount"></span>
             </div>
             <div class="price-card">
-              <span class="price-label">System operation &amp; optimization</span>
-              <span class="price-amount">$3,500<span class="price-unit">/month</span></span>
+              <span class="price-label" data-c="pilot.pricing.cards.1.label"></span>
+              <span class="price-amount" data-c="pilot.pricing.cards.1.amount"></span>
             </div>
             <div class="price-card">
-              <span class="price-label">Stateside Certified training</span>
-              <span class="price-amount">$15,000<span class="price-unit">up to 10 agents</span></span>
+              <span class="price-label" data-c="pilot.pricing.cards.2.label"></span>
+              <span class="price-amount" data-c="pilot.pricing.cards.2.amount"></span>
             </div>
           </div>
 
           <div class="math reveal">
-            <h4>The math</h4>
-            <p>
-              The average corridor home sold for <strong>~$569,000</strong> in 2025, at a 6%
-              commission — roughly <strong>$34,000 in gross commission per listing</strong>.
-              The full first-year investment pays for itself with
-              <strong>two incremental deals.</strong>
-            </p>
-            <p class="math-context">
-              For context: US agents pay Tom Ferry or Buffini <strong>$550–$1,300/month each</strong>
-              for coaching alone — no systems, no infrastructure, no certification.
-            </p>
+            <h4 data-c="pilot.math.heading"></h4>
+            <p data-c="pilot.math.body"></p>
+            <p class="math-context" data-c="pilot.math.context"></p>
           </div>
         </div>
       </div>
@@ -285,8 +257,8 @@
     <section class="section team" id="team">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">Why This Team</span>
-          <h2>The training and the technology, from builders on both sides of the border.</h2>
+          <span class="kicker" data-c="team.kicker"></span>
+          <h2 data-c="team.heading"></h2>
         </div>
         <div class="team-grid">
           <article class="team-card reveal">
@@ -294,9 +266,9 @@
               <img src="images/kevin-mullaney.jpeg" alt="Kevin Mullaney" loading="lazy" />
             </div>
             <div class="team-body">
-              <h3>Kevin Mullaney</h3>
-              <p class="team-role">26 years in US real estate</p>
-              <p>Builds AI operating systems for owner-operated businesses (Roi Digital Consulting, AGENTIC Framework). The training and the technology, from one builder.</p>
+              <h3 data-c="team.members.0.name"></h3>
+              <p class="team-role" data-c="team.members.0.role"></p>
+              <p data-c="team.members.0.bio"></p>
             </div>
           </article>
           <article class="team-card reveal">
@@ -306,9 +278,9 @@
                    onerror="var f=(this.dataset.fallbacks||'').split(',').filter(Boolean);if(f.length){this.dataset.fallbacks=f.slice(1).join(',');this.src=f[0];}else{var a=this.closest('.team-avatar');a.classList.remove('team-avatar--photo');a.textContent='M';}" />
             </div>
             <div class="team-body">
-              <h3>Miles Vidor</h3>
-              <p class="team-role">Born and raised in Mexico · NY brokerage principal</p>
-              <p>Dual-market relationships and credibility on both sides of the border.</p>
+              <h3 data-c="team.members.1.name"></h3>
+              <p class="team-role" data-c="team.members.1.role"></p>
+              <p data-c="team.members.1.bio"></p>
             </div>
           </article>
         </div>
@@ -319,20 +291,20 @@
     <section class="section corridor" id="corridor">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">Where This Goes</span>
-          <h2>Every corridor in Latin America has the same gap.</h2>
+          <span class="kicker" data-c="corridor.kicker"></span>
+          <h2 data-c="corridor.heading"></h2>
         </div>
         <ol class="corridor-map reveal" aria-label="Expansion path">
           <li class="corridor-node active">
             <span class="node-dot"></span>
-            <span class="node-label">Your market</span>
+            <span class="node-label" data-c="corridor.nodes.0"></span>
           </li>
-          <li class="corridor-node"><span class="node-dot"></span><span class="node-label">Cabo</span></li>
-          <li class="corridor-node"><span class="node-dot"></span><span class="node-label">Puerto Vallarta</span></li>
-          <li class="corridor-node"><span class="node-dot"></span><span class="node-label">Mérida</span></li>
-          <li class="corridor-node"><span class="node-dot"></span><span class="node-label">Tulum</span></li>
-          <li class="corridor-node"><span class="node-dot"></span><span class="node-label">Costa Rica</span></li>
-          <li class="corridor-node"><span class="node-dot"></span><span class="node-label">Panama</span></li>
+          <li class="corridor-node"><span class="node-dot"></span><span class="node-label" data-c="corridor.nodes.1"></span></li>
+          <li class="corridor-node"><span class="node-dot"></span><span class="node-label" data-c="corridor.nodes.2"></span></li>
+          <li class="corridor-node"><span class="node-dot"></span><span class="node-label" data-c="corridor.nodes.3"></span></li>
+          <li class="corridor-node"><span class="node-dot"></span><span class="node-label" data-c="corridor.nodes.4"></span></li>
+          <li class="corridor-node"><span class="node-dot"></span><span class="node-label" data-c="corridor.nodes.5"></span></li>
+          <li class="corridor-node"><span class="node-dot"></span><span class="node-label" data-c="corridor.nodes.6"></span></li>
         </ol>
       </div>
     </section>
@@ -341,19 +313,19 @@
     <section class="section cta" id="contact">
       <img src="images/twilight-estate.webp" alt="" class="cta-photo" loading="lazy" />
       <div class="container cta-inner reveal">
-        <h2>Claim your territory.</h2>
-        <p>We build the system, train your agents, and deliver the training and system to all your team.</p>
+        <h2 data-c="cta.heading"></h2>
+        <p data-c="cta.body"></p>
         <form class="cta-form" action="#" method="post" novalidate>
           <div class="form-row">
             <label class="sr-only" for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            <input id="name" name="name" type="text" data-cph="form.namePlaceholder" autocomplete="name" required />
             <label class="sr-only" for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required />
+            <input id="email" name="email" type="email" data-cph="form.emailPlaceholder" autocomplete="email" required />
           </div>
           <div class="form-row">
             <label class="sr-only" for="brokerage">Brokerage &amp; market</label>
-            <input id="brokerage" name="brokerage" type="text" placeholder="Brokerage & market" />
-            <button type="submit" class="btn btn-primary btn-lg">Claim Your Territory</button>
+            <input id="brokerage" name="brokerage" type="text" data-cph="form.brokeragePlaceholder" />
+            <button type="submit" class="btn btn-primary btn-lg" data-c="form.submitLabel"></button>
           </div>
           <p class="form-status" role="status" aria-live="polite" hidden></p>
         </form>
@@ -368,21 +340,22 @@
         <span class="roi-logo">
           <img src="images/roi-logo.jpeg" alt="Roi Digital Consulting LLC" width="690" height="692" loading="lazy" />
         </span>
-        <p>Stateside Certified™ is a venture of <strong>Roi Digital Consulting LLC</strong>.<br />We build the system. Your agents deliver the service.</p>
+        <p data-c="footer.brand"></p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#problem">The Problem</a>
-        <a href="#offer">The System</a>
-        <a href="#pilot">90-Day Sprint</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
+        <a href="#problem" data-c="footer.navProblem"></a>
+        <a href="#offer" data-c="footer.navOffer"></a>
+        <a href="#pilot" data-c="footer.navPilot"></a>
+        <a href="#team" data-c="footer.navTeam"></a>
+        <a href="#contact" data-c="footer.navContact"></a>
       </nav>
     </div>
     <div class="container footer-legal">
-      <span>© <span id="year"></span> Roi Digital Consulting LLC. Stateside Certified™ and AGENTIC Framework™ are marks of Roi Digital Consulting.</span>
+      <span data-c="footer.legal"></span>
     </div>
   </footer>
 
+  <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
