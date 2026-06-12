@@ -105,11 +105,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(8,22,40,0);
+  background: #f3ead8;
+  box-shadow: 0 1px 0 rgba(11,31,58,.06), var(--shadow-sm);
   transition: background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
 }
 .site-header.scrolled {
-  background: rgba(251,250,247,.85);
+  background: rgba(243,234,216,.92);
   backdrop-filter: saturate(140%) blur(12px);
   box-shadow: 0 1px 0 rgba(11,31,58,.08), var(--shadow-sm);
 }
@@ -118,26 +119,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 700; }
 .brand-mark {
   display: grid; place-items: center; width: 42px; height: 42px; border-radius: 11px;
-  overflow: hidden; border: 1px solid rgba(255,255,255,.18); box-shadow: var(--shadow-sm);
+  overflow: hidden; border: 1px solid rgba(11,31,58,.14); box-shadow: var(--shadow-sm);
   flex: none;
 }
 .brand-mark img { width: 100%; height: 100%; object-fit: cover; }
-.scrolled .brand-mark { border-color: rgba(11,31,58,.14); }
 .brand-text { display: inline-flex; flex-direction: column; line-height: 1.1; }
-.brand-name { font-family: var(--font-display); font-size: 1.18rem; color: #fff; letter-spacing: -.01em; transition: color .3s ease; }
-.brand-tm { color: var(--amber-400); margin-left: .12em; }
+.brand-name { font-family: var(--font-display); font-size: 1.18rem; color: var(--navy-900); letter-spacing: -.01em; transition: color .3s ease; }
+.brand-tm { color: var(--amber-500); margin-left: .12em; }
 .brand-by {
   font-family: var(--font-body); font-size: .66rem; font-weight: 600; text-transform: uppercase;
-  letter-spacing: .12em; color: rgba(255,255,255,.6); margin-top: .18rem; transition: color .3s ease;
+  letter-spacing: .12em; color: var(--slate-400); margin-top: .18rem; transition: color .3s ease;
 }
-.scrolled .brand-name { color: var(--navy-900); }
-.scrolled .brand-by { color: var(--slate-400); }
 
 .nav { display: flex; align-items: center; gap: 1.6rem; }
-.nav a { font-size: .95rem; font-weight: 500; color: rgba(255,255,255,.85); transition: color .2s ease; }
-.nav a:hover { color: #fff; }
-.scrolled .nav a { color: var(--slate-700); }
-.scrolled .nav a:hover { color: var(--navy-800); }
+.nav a { font-size: .95rem; font-weight: 500; color: var(--slate-700); transition: color .2s ease; }
+.nav a:hover { color: var(--navy-800); }
 .nav .nav-cta { color: #fff; }
 
 .nav-toggle { display: none; }
@@ -430,9 +426,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .roi-logo {
   display: inline-grid; place-items: center; width: 150px; height: 150px;
   border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,.12);
-  box-shadow: var(--shadow-md);
+  background: #fff; box-shadow: var(--shadow-md);
 }
-.roi-logo img { width: 100%; height: 100%; object-fit: cover; }
+.roi-logo img { width: 100%; height: 100%; object-fit: contain; }
 .footer-brand p { font-size: .95rem; line-height: 1.6; }
 .footer-brand strong { color: #fff; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 1.2rem; align-content: flex-start; }
@@ -451,8 +447,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
     width: 44px; height: 44px; background: transparent; border: 0; cursor: pointer; padding: 10px;
   }
-  .nav-toggle span { display: block; height: 2px; background: #fff; border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
-  .scrolled .nav-toggle span { background: var(--navy-900); }
+  .nav-toggle span { display: block; height: 2px; background: var(--navy-900); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }

@@ -2,8 +2,7 @@
 
 The marketing landing page for **Stateside Certified™**, a venture of Roi Digital
 Consulting LLC: AI infrastructure + agent certification that makes a Latin American
-brokerage perform like a top US firm, built for expat-heavy markets starting in
-San Miguel de Allende.
+brokerage perform like a top US firm — delivered as a 90-day sprint.
 
 ## Stack
 
@@ -12,7 +11,7 @@ A self-contained static site — no build step, no dependencies.
 - `index.html` — page markup and copy
 - `styles.css` — design system + responsive layout
 - `script.js` — sticky header, mobile nav, scroll-reveal, contact-form stub
-- `images/` — San Miguel de Allende property photography (hero, showcase band, CTA)
+- `images/` — property photography (hero, showcase band, CTA)
 
 Fonts (Fraunces + Inter) load from Google Fonts.
 
@@ -32,11 +31,11 @@ Pages, or an S3 bucket. No build required.
 
 ## Sections
 
-Hero · The Problem · The Offer (AGENTIC Framework™ + Certification) · 90-Day Pilot &
+Hero · The Problem · The Offer (AGENTIC Framework™ + Certification) · 90-Day Sprint &
 Pricing · Team · Expansion Corridor · Contact
 
 ## Notes / TODO
 
 - The contact form is a front-end stub — wire it to a real handler (Formspree, Netlify
   Forms, or a backend) before launch.
-- Replace placeholder contact email and Myles's last name when confirmed.
+- Add Myles Vidor's headshot at `images/myles-vidor.jpeg` (the team card references it).
