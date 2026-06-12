@@ -77,7 +77,7 @@ window.CONTENT = {
       {
         letter: "T",
         title: "Tools",
-        body: "WhatsApp, SMS, and email automation, CRM integration, and automatic transaction-status updates that hit US response-time standards 24/7."
+        body: "WhatsApp, SMS, and email automation, customer-relationship management (CRM) integration, and automatic transaction-status updates that hit US response-time standards 24/7."
       },
       {
         letter: "I",
@@ -99,7 +99,7 @@ window.CONTENT = {
 
     training: [
       {
-        title: "Communication standards &amp; SLAs",
+        title: "Communication standards &amp; service-level agreements (SLAs)",
         body: "The response discipline American clients expect."
       },
       {
@@ -137,7 +137,7 @@ window.CONTENT = {
         items: [
           "Response time to American leads",
           "Lead-to-appointment conversion",
-          "Client NPS"
+          "Client satisfaction (NPS)"
         ]
       },
       {
