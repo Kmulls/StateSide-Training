@@ -10,5 +10,7 @@ Only the things requiring a human decision or input. Everything else is done and
 
 4. **Copy I wrote that wasn't in any spec.** A few connective phrases were authored this session (not from a spec): the showcase cite "Every corridor · the same standard," the corridor map's "Your market" node label, and the closing CTA heading "Claim your territory." Confirm these or replace them in `content/site.js`.
 
+5. **Spanish translation needs a native-speaker proof before launch.** It's AI-generated Latin American Spanish — structure is verified, but wording should be reviewed for tone/market fit. Specific word choices to confirm: "Guardrailed" → *"Con Límites Claros"*; "Playbooks" → *"guiones de respuesta"*; "corridor" → *"corredor"*; "Founding Rate" → *"Tarifa Fundadora"*; "2 deals" → *"2 cierres"*. Edit any of these in `content/site.js` under the `es:` block. Also note: the `og:` social-preview tags are English-only regardless of language.
+
 ---
 _Resolved: Miles Vidor's headshot (`images/milesheadshot.png`) is now in the repo and live._

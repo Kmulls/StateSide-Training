@@ -1,6 +1,9 @@
-/* content.js — runtime renderer for window.CONTENT */
+/* content.js — bilingual runtime renderer for window.CONTENT { en, es } */
 (function () {
   "use strict";
+
+  var STORE = "ss_lang";
+  var SUPPORTED = ["en", "es"];
 
   function get(obj, path) {
     return path.split(".").reduce(function (x, k) {
@@ -8,50 +11,62 @@
     }, obj);
   }
 
-  function render() {
-    var C = window.CONTENT;
-    if (!C) {
-      console.warn("content.js: window.CONTENT not found.");
-      return;
-    }
+  function initialLang() {
+    var saved = null;
+    try { saved = localStorage.getItem(STORE); } catch (e) {}
+    if (SUPPORTED.indexOf(saved) !== -1) return saved;
+    var nav = ((navigator.languages && navigator.languages[0]) ||
+               navigator.language || "en").toLowerCase();
+    return nav.indexOf("es") === 0 ? "es" : "en";
+  }
 
-    /* Fill data-c elements */
+  var lang = initialLang();
+
+  function render() {
+    var ROOT = window.CONTENT;
+    if (!ROOT) { console.warn("content.js: window.CONTENT not found."); return; }
+    var C = ROOT[lang] || ROOT.en;
+
+    document.documentElement.setAttribute("lang", lang);
+
     document.querySelectorAll("[data-c]").forEach(function (el) {
       var key = el.getAttribute("data-c");
       var v = get(C, key);
-      if (v == null) {
-        console.warn("content.js: missing key \"" + key + "\"");
-        return;
-      }
-      if (el.tagName === "TITLE") {
-        document.title = v;
-      } else {
-        el.innerHTML = v;
-      }
+      if (v == null) { console.warn('content.js: missing key "' + key + '" for "' + lang + '"'); return; }
+      if (el.tagName === "TITLE") document.title = v;
+      else el.innerHTML = v;
     });
 
-    /* Fill meta description */
     var metaDesc = document.querySelector("meta[name='description']");
     if (metaDesc && C.meta && C.meta.description != null) {
       metaDesc.setAttribute("content", C.meta.description);
     }
 
-    /* Fill data-cph (placeholder) elements */
     document.querySelectorAll("[data-cph]").forEach(function (el) {
-      var key = el.getAttribute("data-cph");
-      var v = get(C, key);
-      if (v == null) {
-        console.warn("content.js: missing placeholder key \"" + key + "\"");
-        return;
-      }
-      el.setAttribute("placeholder", v);
+      var v = get(C, el.getAttribute("data-cph"));
+      if (v != null) el.setAttribute("placeholder", v);
+    });
+
+    document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-lang-btn") === lang));
     });
   }
 
-  /* This script is placed at the end of <body>. The entire DOM is parsed
-     and available at this point even though readyState may still read
-     "loading". Run render() immediately so injected nodes (including the
-     #year span in footer.legal) exist in the DOM before script.js
-     executes on the very next line. */
+  function setLang(l) {
+    if (SUPPORTED.indexOf(l) === -1) return;
+    lang = l;
+    try { localStorage.setItem(STORE, l); } catch (e) {}
+    render();
+  }
+  window.setSiteLang = setLang;
+
+  /* Toggle clicks (delegated, so it works regardless of when buttons render) */
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest && e.target.closest("[data-lang-btn]");
+    if (btn) { e.preventDefault(); setLang(btn.getAttribute("data-lang-btn")); }
+  });
+
+  /* Runs at end of <body>: DOM is parsed, so #year (in footer.legal) exists
+     before script.js executes next. */
   render();
 })();

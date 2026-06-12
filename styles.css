@@ -136,6 +136,17 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .nav a:hover { color: var(--navy-800); }
 .nav .nav-cta { color: #fff; }
 
+/* Language toggle (EN | ES) */
+.lang-toggle { display: inline-flex; align-items: center; border: 1px solid rgba(11,31,58,.22); border-radius: 999px; overflow: hidden; flex: none; }
+.lang-btn {
+  font-family: var(--font-body); font-size: .78rem; font-weight: 700; letter-spacing: .03em;
+  padding: .32rem .66rem; background: transparent; border: 0; color: var(--slate-700);
+  cursor: pointer; transition: background .2s ease, color .2s ease;
+}
+.lang-btn[aria-pressed="true"] { background: var(--navy-900); color: #fff; }
+.lang-btn[aria-pressed="false"]:hover { color: var(--navy-800); }
+.mobile-nav .lang-toggle { align-self: flex-start; margin-top: .4rem; }
+
 .nav-toggle { display: none; }
 
 /* Mobile nav */

@@ -17,3 +17,8 @@ Each line: the call + one-line reasoning.
 
 ## Content provenance
 9. **All current copy is INTERIM** — carried over from this session's agreed edits (the B2B / "90-Day Sprint" pivot), because the `/specs` files referenced for the build (`agentic-sales-copy-changelog.md`, `brand.md`, `stateside-certified-onepager.md`) are **not present in the repo**. When the specs are provided, `content/site.js` is swapped wholesale — structure and styles stay put.
+
+## Bilingual toggle (EN / ES)
+10. **Content is now `{ en: {...}, es: {...} }`** in `content/site.js` — both languages live in the one editable file; the renderer injects the active language. Same edit-content-only workflow, now per language.
+11. **Default language = the visitor's browser language** (`navigator.language`; starts with `es` → Spanish, otherwise English). The visitor's explicit EN/ES choice is then remembered via `localStorage`. English is always the fallback.
+12. **Spanish is an AI translation** (neutral Latin American register) — structure/keys/inline-HTML/brand-names/prices/acronyms all preserved (acronym expansions translated, acronyms kept). Flagged for native-speaker proofing (see REVIEW).
