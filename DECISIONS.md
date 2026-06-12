@@ -22,3 +22,9 @@ Each line: the call + one-line reasoning.
 10. **Content is now `{ en: {...}, es: {...} }`** in `content/site.js` — both languages live in the one editable file; the renderer injects the active language. Same edit-content-only workflow, now per language.
 11. **Default language = the visitor's browser language** (`navigator.language`; starts with `es` → Spanish, otherwise English). The visitor's explicit EN/ES choice is then remembered via `localStorage`. English is always the fallback.
 12. **Spanish is an AI translation** (neutral Latin American register) — structure/keys/inline-HTML/brand-names/prices/acronyms all preserved (acronym expansions translated, acronyms kept). Flagged for native-speaker proofing (see REVIEW).
+
+## Prerender (build-time render)
+13. **Switched from runtime injection to a build step** (`build.js`): bakes `template.html` + `content/site.js` into static `index.html` (EN) + `es/index.html` (ES) with copy already in the HTML. Removed the runtime renderer (`content.js`). Reason: search crawlers and social link-preview bots don't run JavaScript — baking content in makes SEO and per-language previews actually work, and removes the flash-of-empty before JS. Same edit-content-only workflow, plus one deterministic build I run.
+14. **Language is a URL, not a JS state**: English at `/`, Spanish at `/es/`; the EN/ES control is a real link. Each page declares its own language authoritatively, so a shared `/es/` link always renders Spanish (no `localStorage`/browser override flipping it).
+15. **Absolute URLs via one `BASE_URL` constant** for `og:image` / `canonical` / `hreflang` (crawlers require absolute); page assets stay relative (`../` on the ES page) so the site is portable. Update `BASE_URL` at custom-domain time.
+16. **No auto-redirect** for Spanish browsers (English is the default landing) — avoids surprise redirects; the toggle is the explicit path. Easy to add later (logged in REVIEW).
