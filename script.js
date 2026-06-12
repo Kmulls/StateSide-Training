@@ -36,6 +36,9 @@
   function scrollToHash(hash) {
     var target = hash && hash.length > 1 ? document.querySelector(hash) : null;
     if (!target) return false;
+    // Settle any reveal animations inside the target first, so the section
+    // doesn't slide after we land on it.
+    target.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
     var headerEl = document.getElementById("site-header");
     var offset = (headerEl ? headerEl.offsetHeight : 0) + 12;
     var y = target.getBoundingClientRect().top + window.pageYOffset - offset;
