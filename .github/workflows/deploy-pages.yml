@@ -2,7 +2,7 @@ name: Deploy landing page to GitHub Pages
 
 on:
   push:
-    branches: [claude/landing-page-54i2jb]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
