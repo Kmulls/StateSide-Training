@@ -124,7 +124,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .brand-mark img { width: 100%; height: 100%; object-fit: cover; }
 .brand-text { display: inline-flex; flex-direction: column; line-height: 1.1; }
-.brand-name { font-family: var(--font-display); font-size: 1.18rem; color: var(--navy-900); letter-spacing: -.01em; transition: color .3s ease; }
+.brand-name { font-family: var(--font-display); font-size: 1.18rem; color: var(--amber-500); letter-spacing: -.01em; transition: color .3s ease; }
 .brand-tm { color: var(--amber-500); margin-left: .12em; }
 .brand-by {
   font-family: var(--font-body); font-size: .66rem; font-weight: 600; text-transform: uppercase;
