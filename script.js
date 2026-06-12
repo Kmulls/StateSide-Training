@@ -32,6 +32,27 @@
     });
   }
 
+  /* Smooth in-page nav that lands the section just below the sticky header */
+  function scrollToHash(hash) {
+    var target = hash && hash.length > 1 ? document.querySelector(hash) : null;
+    if (!target) return false;
+    var headerEl = document.getElementById("site-header");
+    var offset = (headerEl ? headerEl.offsetHeight : 0) + 12;
+    var y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+    return true;
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var hash = a.getAttribute("href");
+      if (hash === "#" || hash === "#main") return; // skip-link keeps default
+      if (scrollToHash(hash)) {
+        e.preventDefault();
+        history.pushState(null, "", hash);
+      }
+    });
+  });
+
   /* Scroll reveal */
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
