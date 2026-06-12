@@ -42,6 +42,19 @@
       metaDesc.setAttribute("content", C.meta.description);
     }
 
+    /* Language-aware social / Open Graph tags (helps JS-aware consumers;
+       static defaults in <head> cover non-JS scrapers). */
+    function setMeta(sel, val) {
+      var m = document.querySelector(sel);
+      if (m && val != null) m.setAttribute("content", val);
+    }
+    if (C.meta) {
+      setMeta("meta[property='og:title']", C.meta.title);
+      setMeta("meta[property='og:description']", C.meta.description);
+    }
+    setMeta("meta[property='og:locale']", lang === "es" ? "es_LA" : "en_US");
+    setMeta("meta[property='og:locale:alternate']", lang === "es" ? "en_US" : "es_LA");
+
     document.querySelectorAll("[data-cph]").forEach(function (el) {
       var v = get(C, el.getAttribute("data-cph"));
       if (v != null) el.setAttribute("placeholder", v);
