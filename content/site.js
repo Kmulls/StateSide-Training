@@ -10,13 +10,13 @@ window.CONTENT = {
       offer: "The System",
       pilot: "90-Day Sprint",
       team: "Team",
-      cta: "Claim Your Territory"
+      cta: "Agentic"
     },
 
     hero: {
       title: "Buyers and sellers want the reliability of <span class=\"accent\">Stateside</span> service.",
       sub: "The AI infrastructure <strong>+</strong> agent certification that makes a Latin American brokerage perform like a top US firm.",
-      ctaPrimary: "Claim Your Territory",
+      ctaPrimary: "Agentic",
       ctaGhost: "See how it works",
       stats: [
         { num: "24/7",    label: "US response-time standards" },
@@ -210,7 +210,7 @@ window.CONTENT = {
       namePlaceholder: "Your name",
       emailPlaceholder: "Email",
       brokeragePlaceholder: "Brokerage & market",
-      submitLabel: "Claim Your Territory",
+      submitLabel: "Agentic",
       status: {
         thanks: "Thanks — we'll be in touch shortly.",
         invalid: "Please enter a valid email so we can reach you.",
@@ -240,13 +240,13 @@ window.CONTENT = {
       offer: "El Sistema",
       pilot: "Sprint de 90 Días",
       team: "Equipo",
-      cta: "Reserve Su Territorio"
+      cta: "Agentic"
     },
 
     hero: {
       title: "Compradores y vendedores exigen la confiabilidad del servicio <span class=\"accent\">Stateside</span>.",
       sub: "La infraestructura de IA <strong>+</strong> la certificación de agentes que hacen que una inmobiliaria latinoamericana opere como la mejor firma de EE. UU.",
-      ctaPrimary: "Reserve Su Territorio",
+      ctaPrimary: "Agentic",
       ctaGhost: "Vea cómo funciona",
       stats: [
         { num: "24/7",    label: "Estándares de respuesta del mercado estadounidense" },
@@ -440,7 +440,7 @@ window.CONTENT = {
       namePlaceholder: "Su nombre",
       emailPlaceholder: "Correo electrónico",
       brokeragePlaceholder: "Inmobiliaria y mercado",
-      submitLabel: "Reserve Su Territorio",
+      submitLabel: "Agentic",
       status: {
         thanks: "Gracias — nos pondremos en contacto pronto.",
         invalid: "Ingrese un correo electrónico válido para poder contactarle.",
