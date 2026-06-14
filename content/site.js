@@ -49,7 +49,7 @@ window.CONTENT = {
 
     offer: {
       kicker: "The Offer",
-      heading: "System first. Training on top.",
+      heading: "<span class=\"nb\">System first.</span> <span class=\"nb\">Training on top.</span>",
       intro: "Most brokerages try to fix service problems with effort. We fix them with infrastructure — then train the people who run it.",
 
       layer1: {
@@ -291,7 +291,7 @@ window.CONTENT = {
 
     offer: {
       kicker: "La Propuesta",
-      heading: "Primero el sistema. Luego la capacitación.",
+      heading: "<span class=\"nb\">Primero el sistema.</span> <span class=\"nb\">Luego la capacitación.</span>",
       intro: "La mayoría de las inmobiliarias intentan resolver los problemas de servicio con más esfuerzo. Nosotros los resolvemos con infraestructura — y luego capacitamos a quienes la operan.",
 
       layer1: {
