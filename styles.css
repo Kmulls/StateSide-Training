@@ -345,6 +345,7 @@ a.lang-btn:hover { color: var(--navy-800); }
 .price-label { display: block; font-size: .95rem; color: rgba(255,255,255,.7); margin-bottom: .9rem; min-height: 2.6em; }
 .price-amount { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 600; color: #fff; display: flex; flex-direction: column; align-items: center; }
 .price-unit { font-family: var(--font-body); font-size: .85rem; font-weight: 500; color: var(--amber-300); margin-top: .3rem; letter-spacing: .02em; }
+.price-custom { font-size: 1.15rem; line-height: 1.35; font-weight: 600; }
 
 .math {
   margin-top: 2.4rem; background: linear-gradient(135deg, rgba(224,162,59,.12), rgba(194,96,47,.08));

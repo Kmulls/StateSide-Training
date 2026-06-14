@@ -28,3 +28,7 @@ Each line: the call + one-line reasoning.
 14. **Language is a URL, not a JS state**: English at `/`, Spanish at `/es/`; the EN/ES control is a real link. Each page declares its own language authoritatively, so a shared `/es/` link always renders Spanish (no `localStorage`/browser override flipping it).
 15. **Absolute URLs via one `BASE_URL` constant** for `og:image` / `canonical` / `hreflang` (crawlers require absolute); page assets stay relative (`../` on the ES page) so the site is portable. Update `BASE_URL` at custom-domain time.
 16. **No auto-redirect** for Spanish browsers (English is the default landing) — avoids surprise redirects; the toggle is the explicit path. Easy to add later (logged in REVIEW).
+
+## Contact form + later copy changes
+17. **Contact form wired functional**: a `FORM_ENDPOINT` constant (set it to a Formspree URL for background AJAX submit) with a working `mailto:` fallback to an interim Gmail (assembled from parts in JS to deter scraping) so it captures leads today. Status messages are baked per-language via `window.FORM_MSGS` (emitted by `build.js` from `content/site.js`), keeping all copy in the one content file.
+18. **Client-directed copy changes**: pricing card 3 → "Customized Plan after initial consult" (removed the $15,000 / "up to 10 agents"); the "Where This Goes" section was repurposed from the geographic-expansion map to the "every brokerage has two problems (training + lead management) → better ROI, and it compounds" message (removed the corridor node list).

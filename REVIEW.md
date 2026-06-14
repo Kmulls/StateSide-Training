@@ -4,7 +4,7 @@ Only the things requiring a human decision or input. Everything else is done and
 
 1. **The specs aren't in the repo.** All current site copy is *interim* — it's the copy we agreed in this session, not the final `/specs` files (`agentic-sales-copy-changelog.md`, `brand.md`, `stateside-certified-onepager.md`), which don't exist in the repo. Push or send those three files and I'll replace `content/site.js` with the real content (structure/styles unchanged).
 
-2. **Contact form is a stub.** `<form action="#">` doesn't send anywhere yet. Before launch it needs a real handler — Formspree, Netlify Forms, or an email endpoint. Tell me which and I'll wire it.
+2. **Contact form works now — on an interim destination.** On submit it opens the visitor's email app pre-filled to `kmullaney67@gmail.com` (assembled in JS to deter scraping), so it captures leads today. For *background* submission (no email-app popup) and to keep your personal address private, create a free **Formspree** account (~2 min) and send me the endpoint — I paste it into one constant (`FORM_ENDPOINT` in `script.js`) and it upgrades automatically. Also switch the lead destination to `hello@agenticsales.com` once that inbox exists.
 
 3. **Generated pages + `BASE_URL` at domain time.** `index.html` and `es/index.html` are now **build output** from `build.js` (`template.html` + `content/site.js`) — don't hand-edit them; edit `content/site.js` and I rebuild. When the custom domain (e.g. agenticsales.com) goes live, update the single `BASE_URL` line at the top of `build.js` so the social/SEO URLs (`og:image`, `canonical`, `hreflang`) point at the real domain instead of the github.io address.
 

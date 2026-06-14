@@ -90,6 +90,13 @@ function build(lang) {
     '  <link rel="alternate" hreflang="x-default" href="' + BASE_URL + '/" />\n';
   html = html.replace("</head>", head + "</head>");
 
+  // 8b) Bake per-language contact-form status messages for script.js to read.
+  if (C.form && C.form.status) {
+    const msgs = JSON.stringify(C.form.status).replace(/</g, "\\u003c");
+    html = html.replace('<script src="script.js"></script>',
+      '<script>window.FORM_MSGS=' + msgs + ';</script>\n  <script src="script.js"></script>');
+  }
+
   // 9) Spanish page lives one directory deep: point relative assets up a level.
   if (lang === "es") {
     html = html.replace(/(src|href)="(images\/|styles\.css|script\.js)/g, '$1="../$2');

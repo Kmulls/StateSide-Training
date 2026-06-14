@@ -161,7 +161,7 @@ window.CONTENT = {
           },
           {
             label: "Stateside Certified training",
-            amount: "$15,000<span class=\"price-unit\">up to 10 agents</span>"
+            amount: "<span class=\"price-custom\">Customized Plan after initial consult</span>"
           }
         ]
       },
@@ -191,17 +191,9 @@ window.CONTENT = {
     },
 
     corridor: {
-      kicker: "Where This Goes",
-      heading: "Every corridor in Latin America has the same gap.",
-      nodes: [
-        "Your market",
-        "Cabo",
-        "Puerto Vallarta",
-        "Mérida",
-        "Tulum",
-        "Costa Rica",
-        "Panama"
-      ]
+      kicker: "The Bigger Picture",
+      heading: "Every brokerage has the same two problems: training and lead management.",
+      body: "We show you how to get a better return on investment (ROI) on your spend — plus this compounds over time."
     },
 
     cta: {
@@ -213,7 +205,12 @@ window.CONTENT = {
       namePlaceholder: "Your name",
       emailPlaceholder: "Email",
       brokeragePlaceholder: "Brokerage & market",
-      submitLabel: "Claim Your Territory"
+      submitLabel: "Claim Your Territory",
+      status: {
+        thanks: "Thanks — we'll be in touch shortly.",
+        invalid: "Please enter a valid email so we can reach you.",
+        sending: "Sending…"
+      }
     },
 
     footer: {
@@ -389,7 +386,7 @@ window.CONTENT = {
           },
           {
             label: "Capacitación Stateside Certified",
-            amount: "$15,000<span class=\"price-unit\">hasta 10 agentes</span>"
+            amount: "<span class=\"price-custom\">Plan personalizado tras la consulta inicial</span>"
           }
         ]
       },
@@ -419,17 +416,9 @@ window.CONTENT = {
     },
 
     corridor: {
-      kicker: "Hacia Dónde Va Esto",
-      heading: "Cada corredor en Latinoamérica tiene la misma brecha.",
-      nodes: [
-        "Su mercado",
-        "Cabo",
-        "Puerto Vallarta",
-        "Mérida",
-        "Tulum",
-        "Costa Rica",
-        "Panama"
-      ]
+      kicker: "El Panorama General",
+      heading: "Toda inmobiliaria tiene los mismos dos problemas: capacitación y gestión de prospectos.",
+      body: "Le mostramos cómo obtener un mejor retorno de la inversión (ROI) en su gasto — y, además, se multiplica con el tiempo."
     },
 
     cta: {
@@ -441,7 +430,12 @@ window.CONTENT = {
       namePlaceholder: "Su nombre",
       emailPlaceholder: "Correo electrónico",
       brokeragePlaceholder: "Inmobiliaria y mercado",
-      submitLabel: "Reserve Su Territorio"
+      submitLabel: "Reserve Su Territorio",
+      status: {
+        thanks: "Gracias — nos pondremos en contacto pronto.",
+        invalid: "Ingrese un correo electrónico válido para poder contactarle.",
+        sending: "Enviando…"
+      }
     },
 
     footer: {
