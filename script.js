@@ -1,4 +1,4 @@
-/* Stateside Certified™ — landing page interactions */
+/* Stateside — landing page interactions */
 (function () {
   "use strict";
 
@@ -123,7 +123,7 @@
       }
 
       // Fallback: open a pre-filled email to the lead inbox.
-      var subject = "Stateside Certified — inquiry from " + (val("#name") || email.value);
+      var subject = "Stateside — inquiry from " + (val("#name") || email.value);
       var body =
         "Name: " + val("#name") + "\n" +
         "Email: " + email.value + "\n" +

@@ -1,8 +1,8 @@
 window.CONTENT = {
   en: {
     meta: {
-      title: "Stateside Certified™ — US-grade real estate service, built for Latin America",
-      description: "The AI infrastructure and agent certification that makes a brokerage perform like a top US firm — a 90-day sprint to a US-grade client experience."
+      title: "Stateside — US-grade real estate service, built for Latin America",
+      description: "The AI infrastructure and agent training that makes a brokerage perform like a top US firm — a 90-day sprint to a US-grade client experience."
     },
 
     nav: {
@@ -10,13 +10,13 @@ window.CONTENT = {
       offer: "The System",
       pilot: "90-Day Sprint",
       team: "Team",
-      cta: "Agentic"
+      cta: "Learn about Agentic"
     },
 
     hero: {
       title: "Buyers and sellers want the reliability of <span class=\"accent\">Stateside</span> service.",
-      sub: "The AI infrastructure <strong>+</strong> agent certification that makes a Latin American brokerage perform like a top US firm.",
-      ctaPrimary: "Agentic",
+      sub: "The AI infrastructure <strong>+</strong> agent training that makes a Latin American brokerage perform like a top US firm.",
+      ctaPrimary: "Learn about Agentic",
       ctaGhost: "See how it works",
       stats: [
         { num: "24/7",    label: "US response-time standards" },
@@ -46,12 +46,13 @@ window.CONTENT = {
     offer: {
       kicker: "The Offer",
       heading: "System first. Training on top.",
-      intro: "Two layers that turn US-grade service from aspiration into infrastructure — then certify the people who deliver it.",
+      intro: "Most brokerages try to fix service problems with effort. We fix them with infrastructure — then train the people who run it.",
 
       layer1: {
         tag: "Layer 1",
-        heading: "Stateside Systems",
-        body: "Built on the <strong>AGENTIC Framework™</strong> — the infrastructure that makes US-grade service automatic, not aspirational."
+        heading: "Stateside Systems™",
+        subtitle: "Built on the AGENTIC Framework™",
+        body: "<p>First, we give your firm something most brokerages never build: a real data structure underneath the business.</p><p>That foundation is the part nobody sees and everybody needs. It's what lets AI actually work — not as a gimmick, but as a system that captures every lead, responds in minutes instead of days, and never lets a client fall through the cracks. Your communication and lead flow get measurably faster and tighter, fast.</p><p>Most firms bolt AI onto chaos and wonder why it fails. We build the structure first. That's why ours holds.</p>"
       },
 
       agentic: [
@@ -94,8 +95,9 @@ window.CONTENT = {
 
       layer2: {
         tag: "Layer 2",
-        heading: "Stateside Certified™ Agent Training",
-        body: "Team-based certification built on <strong>26 years</strong> of US brokerage experience."
+        heading: "Stateside Training™",
+        subtitle: "The culture layer",
+        body: "<p>Then we solidify the human side.</p><p>Stateside Training turns your standards into a repeatable process — so brokerage culture isn't trapped in your head or locked in your top producer's instincts. New agents ramp faster because the system <em>teaches them how you operate.</em> Consistency stops being something you constantly enforce and becomes something the firm simply does.</p><p>The system makes service fast. The training makes it human. Together they make it repeatable — at scale, in two languages, across the border.</p>"
       },
 
       training: [
@@ -121,7 +123,15 @@ window.CONTENT = {
         }
       ],
 
-      markNote: "Agents who complete certification carry the <span class=\"seal\">Stateside Certified™</span> mark — a trust signal American clients understand instantly."
+      automate: {
+        heading: "Then we automate everything that should be.",
+        body: "<p>Every task a machine can own, it owns. The hours your people get back are redeployed where humans create real value — relationships, negotiation, and closing deals.</p><p>Same payroll, more leverage. Or less spend, same output. You choose which side of the equation to win on.</p>"
+      },
+
+      roi: {
+        heading: "That's why it's Roi Consulting.",
+        body: "We put the return <em>first</em> in the equation — so the math speaks for itself."
+      }
     },
 
     pilot: {
@@ -131,7 +141,7 @@ window.CONTENT = {
       cards: [
         {
           heading: "Scope",
-          body: "Full system install for your brokerage, plus certification for your full agent team."
+          body: "Full system install for your brokerage, plus training for your full agent team."
         },
         {
           heading: "Metrics",
@@ -143,7 +153,7 @@ window.CONTENT = {
         },
         {
           heading: "Outcome",
-          body: "A certified team, a working system, and the case study that opens every corridor market in Latin America."
+          body: "A trained team, a working system, and the case study that opens every corridor market in Latin America."
         }
       ],
 
@@ -160,7 +170,7 @@ window.CONTENT = {
             amount: "$3,500<span class=\"price-unit\">/month</span>"
           },
           {
-            label: "Stateside Certified training",
+            label: "Stateside Agent Training",
             amount: "<span class=\"price-custom\">Customized Plan after initial consult</span>"
           }
         ]
@@ -169,7 +179,7 @@ window.CONTENT = {
       math: {
         heading: "The math",
         body: "The average corridor home sold for <strong>~$569,000</strong> in 2025, at a 6% commission — roughly <strong>$34,000 in gross commission per listing</strong>. The full first-year investment pays for itself with <strong>two incremental deals.</strong>",
-        context: "For context: US agents pay Tom Ferry or Buffini <strong>$550–$1,300/month each</strong> for coaching alone — no systems, no infrastructure, no certification."
+        context: "For context: US agents pay Tom Ferry or Buffini <strong>$550–$1,300/month each</strong> for coaching alone — no systems, no infrastructure."
       }
     },
 
@@ -202,7 +212,7 @@ window.CONTENT = {
     },
 
     cta: {
-      heading: "Claim your territory.",
+      heading: "Let's talk.",
       body: "We build the system, train your agents, and deliver the training and system to all your team."
     },
 
@@ -210,7 +220,7 @@ window.CONTENT = {
       namePlaceholder: "Your name",
       emailPlaceholder: "Email",
       brokeragePlaceholder: "Brokerage & market",
-      submitLabel: "Agentic",
+      submitLabel: "Learn about Agentic",
       status: {
         thanks: "Thanks — we'll be in touch shortly.",
         invalid: "Please enter a valid email so we can reach you.",
@@ -219,20 +229,20 @@ window.CONTENT = {
     },
 
     footer: {
-      brand: "Stateside Certified™ is a venture of <strong>Roi Digital Consulting LLC</strong>.<br />We build the system. Your agents deliver the service.",
+      brand: "Stateside is a venture of <strong>Roi Digital Consulting LLC</strong>.<br />We build the system. Your agents deliver the service.",
       navProblem: "The Problem",
       navOffer: "The System",
       navPilot: "90-Day Sprint",
       navTeam: "Team",
       navContact: "Contact",
-      legal: "© <span id=\"year\"></span> Roi Digital Consulting LLC. Stateside Certified™ and AGENTIC Framework™ are marks of Roi Digital Consulting."
+      legal: "© <span id=\"year\"></span> Roi Digital Consulting LLC. Stateside and AGENTIC Framework™ are marks of Roi Digital Consulting."
     }
   },
 
   es: {
     meta: {
-      title: "Stateside Certified™ — Servicio inmobiliario de nivel estadounidense para Latinoamérica",
-      description: "La infraestructura de IA y la certificación de agentes que hacen que una inmobiliaria opere como la mejor firma de EE. UU. — un sprint de 90 días hacia una experiencia de cliente de nivel internacional."
+      title: "Stateside — Servicio inmobiliario de nivel estadounidense para Latinoamérica",
+      description: "La infraestructura de IA y la capacitación de agentes que hacen que una inmobiliaria opere como la mejor firma de EE. UU. — un sprint de 90 días hacia una experiencia de cliente de nivel internacional."
     },
 
     nav: {
@@ -240,13 +250,13 @@ window.CONTENT = {
       offer: "El Sistema",
       pilot: "Sprint de 90 Días",
       team: "Equipo",
-      cta: "Agentic"
+      cta: "Conozca Agentic"
     },
 
     hero: {
       title: "Compradores y vendedores exigen la confiabilidad del servicio <span class=\"accent\">Stateside</span>.",
-      sub: "La infraestructura de IA <strong>+</strong> la certificación de agentes que hacen que una inmobiliaria latinoamericana opere como la mejor firma de EE. UU.",
-      ctaPrimary: "Agentic",
+      sub: "La infraestructura de IA <strong>+</strong> la capacitación de agentes que hacen que una inmobiliaria latinoamericana opere como la mejor firma de EE. UU.",
+      ctaPrimary: "Conozca Agentic",
       ctaGhost: "Vea cómo funciona",
       stats: [
         { num: "24/7",    label: "Estándares de respuesta del mercado estadounidense" },
@@ -276,12 +286,13 @@ window.CONTENT = {
     offer: {
       kicker: "La Propuesta",
       heading: "Primero el sistema. Luego la capacitación.",
-      intro: "Dos capas que convierten el servicio de nivel estadounidense de aspiración en infraestructura — y luego certifican a quienes lo entregan.",
+      intro: "La mayoría de las inmobiliarias intentan resolver los problemas de servicio con más esfuerzo. Nosotros los resolvemos con infraestructura — y luego capacitamos a quienes la operan.",
 
       layer1: {
         tag: "Capa 1",
-        heading: "Stateside Systems",
-        body: "Construido sobre el <strong>AGENTIC Framework™</strong> — la infraestructura que hace que el servicio de nivel estadounidense sea automático, no aspiracional."
+        heading: "Stateside Systems™",
+        subtitle: "Construido sobre el AGENTIC Framework™",
+        body: "<p>Primero, le damos a su firma algo que la mayoría de las inmobiliarias nunca construyen: una estructura de datos real debajo del negocio.</p><p>Esa base es la parte que nadie ve y que todos necesitan. Es lo que permite que la IA funcione de verdad — no como un truco, sino como un sistema que captura cada prospecto, responde en minutos en lugar de días y nunca deja que un cliente se pierda. Su comunicación y flujo de prospectos se vuelven mediblemente más rápidos y precisos, rápidamente.</p><p>La mayoría de las firmas conectan la IA al caos y se preguntan por qué falla. Nosotros construimos la estructura primero. Por eso la nuestra funciona.</p>"
       },
 
       agentic: [
@@ -324,8 +335,9 @@ window.CONTENT = {
 
       layer2: {
         tag: "Capa 2",
-        heading: "Capacitación de Agentes Stateside Certified™",
-        body: "Certificación basada en equipo, construida sobre <strong>26 años</strong> de experiencia en inmobiliarias de EE. UU."
+        heading: "Stateside Training™",
+        subtitle: "La capa cultural",
+        body: "<p>Luego consolidamos el lado humano.</p><p>Stateside Training convierte sus estándares en un proceso repetible — de modo que la cultura de la inmobiliaria no quede atrapada en su cabeza ni encerrada en los instintos de su mejor productor. Los nuevos agentes avanzan más rápido porque el sistema <em>les enseña cómo usted opera.</em> La consistencia deja de ser algo que usted impone constantemente y se convierte en algo que la firma simplemente hace.</p><p>El sistema hace que el servicio sea rápido. La capacitación lo hace humano. Juntos lo hacen repetible — a escala, en dos idiomas, a ambos lados de la frontera.</p>"
       },
 
       training: [
@@ -351,7 +363,15 @@ window.CONTENT = {
         }
       ],
 
-      markNote: "Los agentes que completan la certificación obtienen la marca <span class=\"seal\">Stateside Certified™</span> — una señal de confianza que los clientes estadounidenses reconocen de inmediato."
+      automate: {
+        heading: "Luego automatizamos todo lo que debe serlo.",
+        body: "<p>Cada tarea que una máquina puede gestionar, la gestiona. Las horas que recupera su equipo se redistribuyen donde los seres humanos generan valor real — relaciones, negociación y cierre de negocios.</p><p>La misma nómina, más apalancamiento. O menos gasto, el mismo resultado. Usted elige en qué lado de la ecuación ganar.</p>"
+      },
+
+      roi: {
+        heading: "Por eso se llama Roi Consulting.",
+        body: "Ponemos el retorno <em>primero</em> en la ecuación — para que los números hablen por sí solos."
+      }
     },
 
     pilot: {
@@ -361,7 +381,7 @@ window.CONTENT = {
       cards: [
         {
           heading: "Alcance",
-          body: "Instalación completa del sistema para su inmobiliaria, más la certificación para todo su equipo de agentes."
+          body: "Instalación completa del sistema para su inmobiliaria, más la capacitación para todo su equipo de agentes."
         },
         {
           heading: "Métricas",
@@ -373,7 +393,7 @@ window.CONTENT = {
         },
         {
           heading: "Resultado",
-          body: "Un equipo certificado, un sistema funcionando y el caso de éxito que abre cada mercado corredor en Latinoamérica."
+          body: "Un equipo capacitado, un sistema funcionando y el caso de éxito que abre cada mercado corredor en Latinoamérica."
         }
       ],
 
@@ -390,7 +410,7 @@ window.CONTENT = {
             amount: "$3,500<span class=\"price-unit\">/mes</span>"
           },
           {
-            label: "Capacitación Stateside Certified",
+            label: "Capacitación Stateside",
             amount: "<span class=\"price-custom\">Plan personalizado tras la consulta inicial</span>"
           }
         ]
@@ -399,7 +419,7 @@ window.CONTENT = {
       math: {
         heading: "Los números",
         body: "El precio promedio de una propiedad en los principales corredores fue de <strong>~$569,000</strong> en 2025, con una comisión del 6% — aproximadamente <strong>$34,000 en comisión bruta por propiedad</strong>. La inversión total del primer año se recupera con <strong>dos cierres adicionales.</strong>",
-        context: "Para tener perspectiva: los agentes en EE. UU. pagan a Tom Ferry o Buffini <strong>$550–$1,300/mes cada uno</strong> solo por coaching — sin sistemas, sin infraestructura, sin certificación."
+        context: "Para tener perspectiva: los agentes en EE. UU. pagan a Tom Ferry o Buffini <strong>$550–$1,300/mes cada uno</strong> solo por coaching — sin sistemas, sin infraestructura."
       }
     },
 
@@ -432,7 +452,7 @@ window.CONTENT = {
     },
 
     cta: {
-      heading: "Reserve su territorio.",
+      heading: "Hablemos.",
       body: "Construimos el sistema, capacitamos a sus agentes y entregamos la formación y el sistema a todo su equipo."
     },
 
@@ -440,7 +460,7 @@ window.CONTENT = {
       namePlaceholder: "Su nombre",
       emailPlaceholder: "Correo electrónico",
       brokeragePlaceholder: "Inmobiliaria y mercado",
-      submitLabel: "Agentic",
+      submitLabel: "Conozca Agentic",
       status: {
         thanks: "Gracias — nos pondremos en contacto pronto.",
         invalid: "Ingrese un correo electrónico válido para poder contactarle.",
@@ -449,13 +469,13 @@ window.CONTENT = {
     },
 
     footer: {
-      brand: "Stateside Certified™ es una empresa de <strong>Roi Digital Consulting LLC</strong>.<br />Nosotros construimos el sistema. Sus agentes entregan el servicio.",
+      brand: "Stateside es una empresa de <strong>Roi Digital Consulting LLC</strong>.<br />Nosotros construimos el sistema. Sus agentes entregan el servicio.",
       navProblem: "El Problema",
       navOffer: "El Sistema",
       navPilot: "Sprint de 90 Días",
       navTeam: "Equipo",
       navContact: "Contacto",
-      legal: "© <span id=\"year\"></span> Roi Digital Consulting LLC. Stateside Certified™ y AGENTIC Framework™ son marcas de Roi Digital Consulting."
+      legal: "© <span id=\"year\"></span> Roi Digital Consulting LLC. Stateside y AGENTIC Framework™ son marcas de Roi Digital Consulting."
     }
   }
 };
