@@ -202,8 +202,7 @@ window.CONTENT = {
 
     corridor: {
       kicker: "The Bigger Picture",
-      heading: "Every brokerage has the same two problems: training and lead management.",
-      body: "We show you how to get a better return on investment (ROI) on your spend."
+      heading: "Every brokerage has the same two problems: training and lead management."
     },
 
     manifesto: {
@@ -442,8 +441,7 @@ window.CONTENT = {
 
     corridor: {
       kicker: "El Panorama General",
-      heading: "Toda inmobiliaria tiene los mismos dos problemas: capacitación y gestión de prospectos.",
-      body: "Le mostramos cómo obtener un mejor retorno de la inversión (ROI) en su gasto."
+      heading: "Toda inmobiliaria tiene los mismos dos problemas: capacitación y gestión de prospectos."
     },
 
     manifesto: {

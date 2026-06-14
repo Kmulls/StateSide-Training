@@ -415,7 +415,14 @@ a.lang-btn:hover { color: var(--navy-800); }
 .team-body p:last-child { color: var(--slate-500); }
 
 /* ---------- Corridor ---------- */
-.corridor { background: var(--paper-2); }
+.corridor { background: var(--paper-2); text-align: center; padding-block: clamp(46px, 7vw, 80px); }
+.corridor .section-head { max-width: 880px; margin-inline: auto; margin-bottom: 0; }
+.corridor .section-head h2 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); }
+/* transition flourish under the statement */
+.corridor .section-head h2::after {
+  content: ""; display: block; width: 64px; height: 3px; margin: 1.4rem auto 0;
+  background: linear-gradient(90deg, var(--amber-500), var(--terracotta)); border-radius: 2px;
+}
 .corridor-map {
   display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0;
   counter-reset: node; position: relative;
