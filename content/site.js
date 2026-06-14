@@ -196,6 +196,11 @@ window.CONTENT = {
       body: "We show you how to get a better return on investment (ROI) on your spend."
     },
 
+    manifesto: {
+      body: "You didn't build your firm to babysit it. But every untrained agent is a deal you're personally rescuing, a client who almost walked, a reputation you rebuilt one apology at a time. The best brokerages don't run on hustle and hope — they run on a system, with agents who deliver the same standard whether you're in the room or in another country. That's the firm you're trying to build.",
+      close: "Let's build it."
+    },
+
     cta: {
       heading: "Claim your territory.",
       body: "We build the system, train your agents, and deliver the training and system to all your team."
@@ -419,6 +424,11 @@ window.CONTENT = {
       kicker: "El Panorama General",
       heading: "Toda inmobiliaria tiene los mismos dos problemas: capacitación y gestión de prospectos.",
       body: "Le mostramos cómo obtener un mejor retorno de la inversión (ROI) en su gasto."
+    },
+
+    manifesto: {
+      body: "No construyó su firma para tener que cuidarla. Pero cada agente sin capacitar es un negocio que usted rescata en persona, un cliente que casi se va, una reputación que reconstruyó disculpa tras disculpa. Las mejores inmobiliarias no funcionan a base de empuje y esperanza — funcionan con un sistema, con agentes que entregan el mismo estándar, esté usted presente o en otro país. Esa es la firma que usted quiere construir.",
+      close: "Construyámosla."
     },
 
     cta: {
