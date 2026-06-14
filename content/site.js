@@ -231,7 +231,7 @@ window.CONTENT = {
     },
 
     footer: {
-      brand: "<strong>Roi Digital Consulting LLC</strong>",
+      brand: "<strong>Roi Digital Consulting LLC</strong><br />188 Grand St, Second Floor<br />New York, NY 10013",
       navProblem: "The Problem",
       navOffer: "The System",
       navPilot: "90-Day Sprint",
@@ -473,7 +473,7 @@ window.CONTENT = {
     },
 
     footer: {
-      brand: "<strong>Roi Digital Consulting LLC</strong>",
+      brand: "<strong>Roi Digital Consulting LLC</strong><br />188 Grand St, Second Floor<br />New York, NY 10013",
       navProblem: "El Problema",
       navOffer: "El Sistema",
       navPilot: "Sprint de 90 Días",
