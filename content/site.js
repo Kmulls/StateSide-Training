@@ -6,7 +6,7 @@ window.CONTENT = {
     },
 
     brand: {
-      tagline: "AI + Proper Training = Big Results"
+      tagline: "AI Stack + Proper Training"
     },
 
     nav: {
@@ -248,7 +248,7 @@ window.CONTENT = {
     },
 
     brand: {
-      tagline: "IA + Capacitación adecuada = Grandes resultados"
+      tagline: "Stack de IA + Capacitación adecuada"
     },
 
     nav: {
