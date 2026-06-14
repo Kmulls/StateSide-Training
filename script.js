@@ -74,20 +74,15 @@
     revealEls.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* Contact form.
-   * - If FORM_ENDPOINT is set (e.g. a Formspree URL), submits in the background.
-   * - Otherwise falls back to opening the visitor's email app, pre-filled.
-   * Messages come from window.FORM_MSGS (baked per language by build.js). */
-  var FORM_ENDPOINT = ""; // paste a Formspree URL here, e.g. "https://formspree.io/f/xxxxxxx"
-  var LEAD_TO = ["kmullaney67", "gmail.com"].join("@"); // interim destination; swap for hello@agenticsales.com when live
-
-  var form = document.querySelector(".cta-form");
-  if (form) {
-    var MSG = window.FORM_MSGS || {
-      thanks: "Thanks — we'll be in touch shortly.",
-      invalid: "Please enter a valid email so we can reach you.",
-      sending: "Sending…"
-    };
+  /* Forms — any <form data-endpoint="…"> posts to that endpoint (Formspree).
+     Status messages come from window.FORM_MSGS (baked per language by build.js). */
+  var MSG = window.FORM_MSGS || {
+    thanks: "Thanks — we'll be in touch shortly.",
+    invalid: "Please enter a valid email so we can reach you.",
+    sending: "Sending…",
+    error: "Something went wrong — please try again."
+  };
+  document.querySelectorAll("form[data-endpoint]").forEach(function (form) {
     var status = form.querySelector(".form-status");
     function show(text, color) {
       if (!status) return;
@@ -95,45 +90,26 @@
       status.style.color = color;
       status.textContent = text;
     }
-    var val = function (sel) { var el = form.querySelector(sel); return el ? el.value.trim() : ""; };
-
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var email = form.querySelector("#email");
-      if (!email.value || email.validity.typeMismatch || !email.validity.valid) {
+      var email = form.querySelector('input[type="email"]');
+      if (email && (!email.value || email.validity.typeMismatch || !email.validity.valid)) {
         show(MSG.invalid, "#f6d18a");
         email.focus();
         return;
       }
-
-      if (FORM_ENDPOINT) {
-        show(MSG.sending, "#f6d18a");
-        fetch(FORM_ENDPOINT, {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: new FormData(form)
-        }).then(function (r) {
-          if (!r.ok) throw new Error("bad response");
-          show(MSG.thanks, "#7ed8a8");
-          form.reset();
-        }).catch(function () {
-          show(MSG.invalid, "#f6d18a");
-        });
-        return;
-      }
-
-      // Fallback: open a pre-filled email to the lead inbox.
-      var subject = "Stateside — inquiry from " + (val("#name") || email.value);
-      var body =
-        "Name: " + val("#name") + "\n" +
-        "Email: " + email.value + "\n" +
-        "Brokerage & market: " + val("#brokerage") + "\n";
-      window.location.href =
-        "mailto:" + LEAD_TO +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-      show(MSG.thanks, "#7ed8a8");
-      form.reset();
+      show(MSG.sending, "#f6d18a");
+      fetch(form.getAttribute("data-endpoint"), {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form)
+      }).then(function (r) {
+        if (!r.ok) throw new Error("bad response");
+        show(MSG.thanks, "#7ed8a8");
+        form.reset();
+      }).catch(function () {
+        show(MSG.error, "#f6d18a");
+      });
     });
-  }
+  });
 })();

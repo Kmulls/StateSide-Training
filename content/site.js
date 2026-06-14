@@ -226,7 +226,8 @@ window.CONTENT = {
       status: {
         thanks: "Thanks — we'll be in touch shortly.",
         invalid: "Please enter a valid email so we can reach you.",
-        sending: "Sending…"
+        sending: "Sending…",
+        error: "Something went wrong — please try again."
       }
     },
 
@@ -468,7 +469,8 @@ window.CONTENT = {
       status: {
         thanks: "Gracias — nos pondremos en contacto pronto.",
         invalid: "Ingrese un correo electrónico válido para poder contactarle.",
-        sending: "Enviando…"
+        sending: "Enviando…",
+        error: "Algo salió mal — inténtelo de nuevo."
       }
     },
 
