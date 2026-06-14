@@ -163,7 +163,6 @@ window.CONTENT = {
 
       pricing: {
         heading: "Founding Rate Investment",
-        note: "Founding rate — in exchange for case study &amp; referral rights.",
         cards: [
           {
             label: "System build",
@@ -406,7 +405,6 @@ window.CONTENT = {
 
       pricing: {
         heading: "Inversión a Tarifa Fundadora",
-        note: "Tarifa fundadora — a cambio de derechos de caso de estudio &amp; referidos.",
         cards: [
           {
             label: "Construcción del sistema",
