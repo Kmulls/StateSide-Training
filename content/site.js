@@ -5,6 +5,10 @@ window.CONTENT = {
       description: "The AI infrastructure and agent training that makes a brokerage perform like a top US firm — a 90-day sprint to a US-grade client experience."
     },
 
+    brand: {
+      tagline: "AI + Proper Training = Big Results"
+    },
+
     nav: {
       problem: "The Problem",
       offer: "The System",
@@ -242,6 +246,10 @@ window.CONTENT = {
     meta: {
       title: "Stateside — Servicio inmobiliario de nivel estadounidense para Latinoamérica",
       description: "La infraestructura de IA y la capacitación de agentes que hacen que una inmobiliaria opere como la mejor firma de EE. UU. — un sprint de 90 días hacia una experiencia de cliente de nivel internacional."
+    },
+
+    brand: {
+      tagline: "IA + Capacitación adecuada = Grandes resultados"
     },
 
     nav: {
