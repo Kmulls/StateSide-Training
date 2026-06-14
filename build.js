@@ -17,7 +17,7 @@ const fs = require("fs");
 
 /* Absolute base URL of the live site. Used for OG/canonical/hreflang (these MUST be
  * absolute for crawlers). Update this one line when the custom domain goes live. */
-const BASE_URL = "https://kmulls.github.io/StateSide-Training";
+const BASE_URL = "https://agenticsales.com";
 
 global.window = {};
 require("./content/site.js");
