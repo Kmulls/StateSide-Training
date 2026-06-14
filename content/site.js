@@ -231,7 +231,7 @@ window.CONTENT = {
     },
 
     footer: {
-      brand: "Stateside is a venture of <strong>Roi Digital Consulting LLC</strong>.<br />We build the system. Your agents deliver the service.",
+      brand: "<strong>Roi Digital Consulting LLC</strong>",
       navProblem: "The Problem",
       navOffer: "The System",
       navPilot: "90-Day Sprint",
@@ -473,7 +473,7 @@ window.CONTENT = {
     },
 
     footer: {
-      brand: "Stateside es una empresa de <strong>Roi Digital Consulting LLC</strong>.<br />Nosotros construimos el sistema. Sus agentes entregan el servicio.",
+      brand: "<strong>Roi Digital Consulting LLC</strong>",
       navProblem: "El Problema",
       navOffer: "El Sistema",
       navPilot: "Sprint de 90 Días",
