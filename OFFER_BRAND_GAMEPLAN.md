@@ -38,8 +38,16 @@ are*, with *the people already near you*, on *the days the Earth itself turns*.
 ### Voice & Tone
 Warm, grounded, and invitational — *not* preachy or hype. Confident about the
 felt experience, humble about the mechanism. Speak in plain, sensory language
-(warmth, breath, soil, sound) more than jargon. Every touchpoint ends the same
-way: **host or join a hub.**
+(warmth, breath, soil, sound) more than jargon. The move is always
+**Invitation → Permission → Participation** — we open a door, we never push.
+Every touchpoint ends the same way: **host or join a hub.**
+
+### Three Modes of Engagement
+People plug in through one of three doors — meet them where they already are:
+- **Music — the Medium.** Sound is the carrier signal that imprints the moment.
+- **Dance / Movement — the Participation.** The body joining in, not just watching.
+- **Education — the Involvement.** Learning that deepens casual attendees into
+  committed practitioners (the on-ramp to The Field and to certification).
 
 ### Sensory / Visual Direction
 Natural light, warm neutrals and earth tones, hands and hearts, real homes and
@@ -108,10 +116,26 @@ delivery network *and* a revenue line.
 - **Model:** higher-ticket cohorts; optional annual renewal / listing.
 - **Goal served:** revenue + scalable delivery + leadership pipeline.
 
+**The Human Capacity Curriculum** — the training's spine. Its premise:
+*relationship requires capacity*, and capacity can be taught. It walks people
+from **Survival → Maintenance → Flourishing** across three content areas:
+- **Emotional Regulation** — self-regulation through somatic / fascia work.
+- **Financial Literacy** — resources and the choices they unlock.
+- **Caring for the Natural** — relationship with the larger living system you're
+  part of.
+
 ### The Flywheel
 Free hubs (**T0**) create seekers → seekers buy an Activation (**T1**) → attendees
 join The Field to stay connected (**T2**) → the most devoted get certified to host
 (**T3**) → certified hosts open more free hubs (**T0**). Each turn widens the base.
+
+### Why People Buy
+The experience is free to join, so the paid rungs sell **convenience and depth**,
+not access. Along the **buyer's journey**, each rung removes friction the last one
+exposed: T1 hands you a produced experience instead of a DIY one; T2 keeps the
+practice going between peaks so you don't have to; T3 gives you the full
+curriculum and credential to lead. **Convenience is the through-line of the
+paid offer.**
 
 ---
 
@@ -155,6 +179,10 @@ Package the traction for scale.
 - Use the Summer Solstice as the flagship, partner-backed activation.
 - **Success =** at least one signed partner/sponsor or artist; a repeatable
   playbook for every future peak.
+
+> **What we're really building:** social *and* financial **infrastructure** — not
+> just events. The hubs, the outlet-family network, the curriculum, and the
+> recurring revenue together form the durable system the activations run on.
 
 ### Metrics to Watch Throughout
 Hubs activated · attendees per activation · T0→T1→T2→T3 conversion · membership

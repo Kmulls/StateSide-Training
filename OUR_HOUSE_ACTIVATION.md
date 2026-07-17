@@ -15,13 +15,19 @@ The guiding idea:
 ## The Three Houses
 
 The concept scales the same act of care across three nested levels — body,
-community, and planet — so the microcosm mirrors the macrocosm.
+community, and planet — so the microcosm mirrors the macrocosm. Said plainly, it
+moves outward: **My House → Your House → Our House.**
 
-| House | What it is | The practice |
-| :--- | :--- | :--- |
-| **Physical (Body)** | The nervous system as a conductor | Breath and **fascia work** to release stored tension and open the body's capacity to send and receive energy |
-| **Social (Community)** | Regional "outlet families" and global nodes | Entrainment — smaller, scattered groups organize around one shared harmonic signal |
-| **Planetary (Earth)** | Solstice/equinox transition windows | Aligning collective intent with the Earth's natural turning points as an amplifier |
+| House | Scale | What it is | The practice |
+| :--- | :--- | :--- | :--- |
+| **My House** | Physical (Body) | The nervous system as a conductor | Breath and **fascia work** to release stored tension and open the body's capacity to send and receive energy |
+| **Your House** | Social (Community) | Regional "outlet families" and global nodes | Entrainment — smaller, scattered groups organize around one shared harmonic signal |
+| **Our House** | Planetary (Earth) | Solstice/equinox transition windows | Aligning collective intent with the Earth's natural turning points as an amplifier |
+
+The through-line across all three is **Capacity → Connection → Care**, moving from
+**self → others → world**. What makes it different is **integration**: the same
+practice done at every scale at once, which is what turns participation into
+**belonging**.
 
 The intended outcome is **coherence**: when body, community, and planet move in
 the same rhythm, the "static" of stress and separation quiets.
