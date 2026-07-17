@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our House — Work With Us</title>
+<meta name="description" content="Three ways to work with Our House: book us for an event, run your own network on our stack, or deluxe consulting — including The House Call, where we bring the whole toolkit to you.">
+<style>
+:root{
+  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
+  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
+  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
+  --thread:rgba(214,201,176,.55);
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;
+  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:light){
+  :root{
+    --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
+    --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
+    --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
+    --thread:rgba(80,66,44,.45);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
+  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
+  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
+  --thread:rgba(214,201,176,.55);
+}
+:root[data-theme="light"]{
+  --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
+  --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
+  --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
+  --thread:rgba(80,66,44,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--sans); font-size:clamp(1rem,.55vw + .9rem,1.14rem);
+  line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:0 clamp(1.2rem,4vw,2.4rem)}
+.measure{max-width:62ch}
+h1,h2,h3{font-family:var(--serif); font-weight:600; text-wrap:balance; line-height:1.08; margin:0}
+p{margin:0}
+a{color:inherit}
+.eyebrow{
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--foxfire-deep); margin:0 0 1.1rem;
+}
+@media (prefers-color-scheme:dark){.eyebrow{color:var(--foxfire)}}
+:root[data-theme="dark"] .eyebrow{color:var(--foxfire)}
+:root[data-theme="light"] .eyebrow{color:var(--foxfire-deep)}
+.lead{color:var(--muted); font-size:1.15rem}
+.kicker{color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.kicker{color:var(--foxfire)}}
+:root[data-theme="dark"] .kicker{color:var(--foxfire)}
+:root[data-theme="light"] .kicker{color:var(--foxfire-deep)}
+
+.toggle{
+  position:fixed; top:1rem; right:1rem; z-index:30;
+  font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase;
+  background:var(--surface); color:var(--ink); border:1px solid var(--line);
+  border-radius:999px; padding:.5rem .9rem; cursor:pointer;
+}
+.toggle:hover{border-color:var(--foxfire)}
+.toggle:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+
+.hero{padding:clamp(6rem,14vh,9rem) 0 clamp(3.5rem,7vw,5.5rem)}
+.hero h1{font-size:clamp(2.8rem,8vw,5.4rem); letter-spacing:-.015em}
+.hero .lead{margin-top:1.5rem; max-width:44ch; font-size:clamp(1.15rem,1.4vw,1.4rem); color:var(--ink)}
+
+section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
+.band h2{font-size:clamp(1.9rem,4.2vw,2.9rem); letter-spacing:-.01em; margin-bottom:1.4rem}
+.band p + p{margin-top:1.1rem}
+
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease}
+.reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none; transition:none}}
+
+/* offers */
+.offers{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2.6rem}
+@media (max-width:860px){.offers{grid-template-columns:1fr}}
+.offer{background:var(--ground-2); border:1px solid var(--line); border-radius:16px; padding:1.7rem 1.5rem; display:flex; flex-direction:column; gap:.8rem}
+.offer .num{font-family:var(--mono); font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.offer .num{color:var(--foxfire)}}
+:root[data-theme="dark"] .offer .num{color:var(--foxfire)}
+:root[data-theme="light"] .offer .num{color:var(--foxfire-deep)}
+.offer h3{font-size:1.45rem}
+.offer p{color:var(--muted); font-size:.97rem}
+.offer ul{margin:.2rem 0 0; padding-left:1.1rem; color:var(--muted); font-size:.93rem}
+.offer li{margin:.3rem 0}
+.offer .price{margin-top:auto; padding-top:1rem; font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); border-top:1px solid var(--line)}
+.offer .cta{align-self:flex-start; margin-top:.6rem; font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+  background:transparent; color:var(--ink); border:1px solid var(--foxfire); border-radius:999px; padding:.55rem 1rem; cursor:pointer; text-decoration:none}
+.offer .cta:hover{background:var(--foxfire); color:var(--ground)}
+.offer .cta:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+
+/* flagship */
+.flagship{margin-top:1.6rem; background:var(--ground-2); border:1px solid var(--ember); border-radius:18px; padding:clamp(1.6rem,4vw,2.6rem); position:relative; overflow:hidden}
+.flagship::before{content:""; position:absolute; inset:0; background:radial-gradient(80% 120% at 100% 0%, rgba(226,140,63,.12), transparent 60%); pointer-events:none}
+.flagship .num{font-family:var(--mono); font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ember)}
+.flagship h3{font-size:clamp(1.7rem,3.4vw,2.4rem); margin:.6rem 0 .9rem}
+.flagship .grid{display:grid; grid-template-columns:1.2fr .8fr; gap:2rem; align-items:start}
+@media (max-width:780px){.flagship .grid{grid-template-columns:1fr}}
+.flagship p{color:var(--muted)}
+.flagship p b{color:var(--ink)}
+.flagship ul{margin:1rem 0 0; padding-left:1.1rem; color:var(--muted); font-size:.95rem}
+.flagship li{margin:.4rem 0}
+.flagship .price-block{border-left:2px solid var(--ember); padding-left:1.2rem}
+.flagship .price-line{font-family:var(--serif); font-size:1.3rem; color:var(--ink); line-height:1.4}
+.flagship .price-sub{margin-top:.6rem; font-size:.9rem}
+.flagship .cta{display:inline-block; margin-top:1.2rem; font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--ember); color:var(--ground); border:1px solid var(--ember); border-radius:999px; padding:.6rem 1.1rem; cursor:pointer; text-decoration:none}
+.flagship .cta:hover{background:transparent; color:var(--ink)}
+.flagship .cta:focus-visible{outline:2px solid var(--ember); outline-offset:2px}
+
+/* intake form */
+.intake{margin-top:2.6rem; background:var(--ground-2); border:1px solid var(--line); border-radius:18px; padding:clamp(1.6rem,4vw,2.6rem)}
+.intake .fields{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem}
+@media (max-width:680px){.intake .fields{grid-template-columns:1fr}}
+.field{display:flex; flex-direction:column; gap:.4rem}
+.field.full{grid-column:1 / -1}
+.field label{font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.field input,.field select,.field textarea{
+  background:var(--ground); color:var(--ink); border:1px solid var(--line); border-radius:10px;
+  padding:.75rem .9rem; font-family:var(--sans); font-size:1rem;
+}
+.field textarea{min-height:120px; resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--foxfire); outline-offset:1px; border-color:var(--foxfire)}
+.intake .actions{margin-top:1.6rem; display:flex; flex-wrap:wrap; gap:.8rem; align-items:center}
+.btn{font-family:var(--mono); font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; border-radius:999px; padding:.7rem 1.3rem; cursor:pointer}
+.btn.primary{background:var(--foxfire); color:var(--ground); border:1px solid var(--foxfire)}
+.btn.primary:hover{background:transparent; color:var(--ink)}
+.btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--foxfire)}
+.btn:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+.form-note{margin-top:1rem; font-size:.88rem; color:var(--muted)}
+.copy-status{font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.copy-status{color:var(--foxfire)}}
+:root[data-theme="dark"] .copy-status{color:var(--foxfire)}
+:root[data-theme="light"] .copy-status{color:var(--foxfire-deep)}
+
+.close{text-align:center; padding:clamp(4.5rem,9vw,7rem) 0}
+.close h2{font-size:clamp(2rem,4.8vw,3.2rem); max-width:20ch; margin:0 auto 1.2rem}
+.close .lead{max-width:44ch; margin:0 auto}
+footer{border-top:1px solid var(--line); padding:2.4rem 0 3rem}
+footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:space-between;
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+</style>
+</head>
+<body>
+<button class="toggle" id="themeToggle" aria-label="Toggle light or dark theme">Theme</button>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Our House · Work With Us</p>
+    <h1>Three ways <span class="kicker">in.</span></h1>
+    <p class="lead">Book the experience, run your own network on our stack, or bring us all the way to your door. Every path starts with the same short application below.</p>
+  </div>
+</header>
+
+<main>
+<section class="band" id="services">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The services</p>
+    <h2>Pick your door.</h2>
+    <p>Same house, three entrances — sized to where you are and how deep you want to go.</p>
+  </div>
+  <div class="wrap">
+    <div class="offers">
+      <div class="offer reveal">
+        <span class="num">Offer 01 · Gather</span>
+        <h3>Book us for an event</h3>
+        <p>We bring the full Our House experience to your community, venue, or gathering — the music, the movement, the teaching, the whole room.</p>
+        <ul>
+          <li>Full event design &amp; facilitation</li>
+          <li>Music, somatics &amp; live teaching</li>
+          <li>Capture + follow-up so it compounds</li>
+        </ul>
+        <span class="price">Priced per event · inquire</span>
+        <a class="cta" href="#apply" data-offer="Book us for an event">Start here →</a>
+      </div>
+      <div class="offer reveal">
+        <span class="num">Offer 02 · Equip</span>
+        <h3>Run your own on our stack</h3>
+        <p>License the backend that runs our network — funnels, landing pages, checkouts, follow-up — so you host your own without becoming a tech person.</p>
+        <ul>
+          <li>The full stack, set up for you</li>
+          <li>Fast, adaptable, yours to run</li>
+          <li>Onboarding + ongoing support</li>
+        </ul>
+        <span class="price">License · inquire</span>
+        <a class="cta" href="#apply" data-offer="Buy the backend stack">Start here →</a>
+      </div>
+      <div class="offer reveal">
+        <span class="num">Offer 03 · Grow</span>
+        <h3>Deluxe 1:1 consulting</h3>
+        <p>Private, senior-level counsel for all things branding, growing, and scaling — your brand, your offers, your next chapter, worked side by side.</p>
+        <ul>
+          <li>Brand &amp; positioning deep-dives</li>
+          <li>Growth &amp; scaling strategy</li>
+          <li>Direct access, real accountability</li>
+        </ul>
+        <span class="price">Engagement · inquire</span>
+        <a class="cta" href="#apply" data-offer="Deluxe 1:1 consulting">Start here →</a>
+      </div>
+    </div>
+
+    <div class="flagship reveal">
+      <span class="num">The flagship · By application only</span>
+      <h3>The House Call</h3>
+      <div class="grid">
+        <div>
+          <p><b>We come to where you are.</b> The whole crew, flown to your location, embedded with your team. We install the full toolkit into your business, train your people on it in person, and stay long enough to hang out — because that's where the real transfer happens.</p>
+          <ul>
+            <li><b>Install</b> — the complete stack and protocols, placed into your operation</li>
+            <li><b>Train</b> — your team, hands-on, until it's theirs</li>
+            <li><b>Analyze &amp; synthesize</b> — your whole flow, tuned for maximum productivity</li>
+            <li><b>Integrate</b> — we work with you, eat with you, and leave the culture behind, not just the tools</li>
+          </ul>
+        </div>
+        <div class="price-block">
+          <p class="price-line">If you know, you know.</p>
+          <p class="price-sub">This is the everything-offer, priced like one. For the enterprise ready to transform all at once rather than one workshop at a time. Serious inquiries only.</p>
+          <a class="cta" href="#apply" data-offer="The House Call (flagship)">Apply for a House Call →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="apply">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The application</p>
+    <h2>Tell us what's alive.</h2>
+    <p>A few honest answers is all it takes. We read every application ourselves and reply personally — this is an intake, not a funnel trap.</p>
+  </div>
+  <div class="wrap reveal">
+    <form class="intake" id="intakeForm">
+      <div class="fields">
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Your email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-org">Organization / project</label>
+          <input id="f-org" name="org" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="f-offer">Which door?</label>
+          <select id="f-offer" name="offer">
+            <option>Book us for an event</option>
+            <option>Buy the backend stack</option>
+            <option>Deluxe 1:1 consulting</option>
+            <option>The House Call (flagship)</option>
+            <option>Not sure yet — help me choose</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="f-vision">What's alive for you — what are you building, and where does it hurt?</label>
+          <textarea id="f-vision" name="vision" required></textarea>
+        </div>
+        <div class="field full">
+          <label for="f-timing">Timing &amp; anything else we should know</label>
+          <input id="f-timing" name="timing" type="text" placeholder="e.g. next equinox, this quarter, team of 12…">
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn primary" type="submit">Send application ↗</button>
+        <button class="btn ghost" type="button" id="copyBtn">Copy application text</button>
+        <span class="copy-status" id="copyStatus" role="status"></span>
+      </div>
+      <p class="form-note">"Send" opens your email app with the application pre-filled — nothing is stored on this page. If your mail app doesn't open, use "Copy" and paste it into any email.</p>
+    </form>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:center">The promise</p>
+    <h2>Whichever door you choose, you end up in the same living room.</h2>
+    <p class="lead">More fun, more family, more richness — installed into the way you work.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Our House</span>
+    <span>Work with us</span>
+    <span>By application</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var INTAKE_EMAIL = "kmullaney67@gmail.com";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var root = document.documentElement, tog = document.getElementById('themeToggle');
+  function current(){
+    var set = root.getAttribute('data-theme');
+    if(set) return set;
+    return (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) ? 'dark' : 'light';
+  }
+  tog.addEventListener('click', function(){
+    var next = current()==='dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    tog.textContent = next==='dark' ? 'Light' : 'Dark';
+  });
+  tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  var reveals = [].slice.call(document.querySelectorAll('.reveal'));
+  if(reduce || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(ents){
+      ents.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  /* offer CTAs preselect the door */
+  var select = document.getElementById('f-offer');
+  [].slice.call(document.querySelectorAll('[data-offer]')).forEach(function(a){
+    a.addEventListener('click', function(){ select.value = a.getAttribute('data-offer'); });
+  });
+
+  /* intake: compose application */
+  var form = document.getElementById('intakeForm');
+  function val(id){ return (document.getElementById(id).value || '').trim(); }
+  function compose(){
+    return [
+      'OUR HOUSE — APPLICATION',
+      '',
+      'Name: ' + val('f-name'),
+      'Email: ' + val('f-email'),
+      'Organization / project: ' + (val('f-org') || '—'),
+      'Door: ' + select.value,
+      '',
+      "What's alive:",
+      val('f-vision'),
+      '',
+      'Timing & notes: ' + (val('f-timing') || '—')
+    ].join('\n');
+  }
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if(!form.reportValidity()) return;
+    var subject = 'Our House application — ' + select.value + ' — ' + val('f-name');
+    window.location.href = 'mailto:' + INTAKE_EMAIL +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(compose());
+  });
+  var status = document.getElementById('copyStatus');
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    if(!form.reportValidity()) return;
+    var text = compose() + '\n\nSend to: ' + INTAKE_EMAIL;
+    function done(ok){ status.textContent = ok ? 'Copied — paste into any email' : 'Copy failed — select and copy manually'; }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+    } else { done(false); }
+  });
+})();
+</script>
+</body>
+</html>
