@@ -70,7 +70,19 @@ a{color:inherit}
 .toggle:hover{border-color:var(--foxfire)}
 .toggle:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
 
-.hero{padding:clamp(6rem,14vh,9rem) 0 clamp(3.5rem,7vw,5.5rem)}
+/* growth marks */
+.sprout{display:block; width:24px; height:32px; margin:0 0 .7rem; overflow:visible}
+.sprout path{fill:none; stroke:var(--foxfire); stroke-width:1.8; stroke-linecap:round;
+  stroke-dasharray:70; stroke-dashoffset:70}
+.reveal.in .sprout .st{animation:sprout-grow 1s ease-out forwards}
+.reveal.in .sprout .l1{animation:sprout-grow .9s ease-out .45s forwards}
+.reveal.in .sprout .l2{animation:sprout-grow .9s ease-out .65s forwards}
+@keyframes sprout-grow{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.sprout path{stroke-dashoffset:0; animation:none !important}}
+
+.hero{position:relative; overflow:hidden; padding:clamp(6rem,14vh,9rem) 0 clamp(10rem,18vw,13rem)}
+.hero .wrap{position:relative; z-index:1}
+#roots{position:absolute; left:0; right:0; bottom:0; width:100%; height:160px; pointer-events:none}
 .hero h1{font-size:clamp(2.8rem,8vw,5.4rem); letter-spacing:-.015em}
 .hero .lead{margin-top:1.5rem; max-width:44ch; font-size:clamp(1.15rem,1.4vw,1.4rem); color:var(--ink)}
 
@@ -157,6 +169,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 <button class="toggle" id="themeToggle" aria-label="Toggle light or dark theme">Theme</button>
 
 <header class="hero">
+  <canvas id="roots" aria-hidden="true"></canvas>
   <div class="wrap">
     <p class="eyebrow">Our House · Work With Us</p>
     <h1>Three ways <span class="kicker">in.</span></h1>
@@ -275,11 +288,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
         </div>
       </div>
       <div class="actions">
-        <button class="btn primary" type="submit">Send application ↗</button>
-        <button class="btn ghost" type="button" id="copyBtn">Copy application text</button>
+        <button class="btn primary" type="submit">Copy my application</button>
         <span class="copy-status" id="copyStatus" role="status"></span>
       </div>
-      <p class="form-note">"Send" opens your email app with the application pre-filled — nothing is stored on this page. If your mail app doesn't open, use "Copy" and paste it into any email.</p>
+      <p class="form-note">The intake inbox is coming online. For now, this copies your application to the clipboard — send it to us on whichever channel we already share. Nothing is stored on this page.</p>
     </form>
   </div>
 </section>
@@ -304,7 +316,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 <script>
 (function(){
   "use strict";
-  var INTAKE_EMAIL = "kmullaney67@gmail.com";
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   var root = document.documentElement, tog = document.getElementById('themeToggle');
   function current(){
@@ -353,23 +364,69 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
       'Timing & notes: ' + (val('f-timing') || '—')
     ].join('\n');
   }
+  var status = document.getElementById('copyStatus');
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
     if(!form.reportValidity()) return;
-    var subject = 'Our House application — ' + select.value + ' — ' + val('f-name');
-    window.location.href = 'mailto:' + INTAKE_EMAIL +
-      '?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(compose());
-  });
-  var status = document.getElementById('copyStatus');
-  document.getElementById('copyBtn').addEventListener('click', function(){
-    if(!form.reportValidity()) return;
-    var text = compose() + '\n\nSend to: ' + INTAKE_EMAIL;
-    function done(ok){ status.textContent = ok ? 'Copied — paste into any email' : 'Copy failed — select and copy manually'; }
+    function done(ok){ status.textContent = ok ? 'Copied — send it our way' : 'Copy failed — select and copy manually'; }
     if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+      navigator.clipboard.writeText(compose()).then(function(){ done(true); }, function(){ done(false); });
     } else { done(false); }
   });
+
+  /* sprout marks: a seedling draws itself in as each section arrives */
+  var SPROUT = '<svg class="sprout" viewBox="0 0 24 32" aria-hidden="true">'+
+    '<path class="st" d="M12 31 C12 23 11 17 12 9"/>'+
+    '<path class="l1" d="M12 13 C8.5 11.5 5 11.5 2 8 C6.5 6 10.5 8 12 11.5"/>'+
+    '<path class="l2" d="M12 9 C15.5 7.5 19 7.5 22 4 C17.5 2 13.5 4 12 7.5"/></svg>';
+  [].slice.call(document.querySelectorAll('main .reveal .eyebrow')).forEach(function(eb){
+    var t = document.createElement('template'); t.innerHTML = SPROUT;
+    eb.parentNode.insertBefore(t.content.firstChild, eb);
+  });
+
+  /* hero roots: a root system grows down from the soil line */
+  (function(){
+    var cv = document.getElementById('roots'); if(!cv) return;
+    var ctx = cv.getContext('2d'), W,H,segs,grown,raf;
+    function build(){
+      var d = Math.min(window.devicePixelRatio||1, 2);
+      W = cv.clientWidth; H = cv.clientHeight;
+      cv.width = W*d; cv.height = H*d; ctx.setTransform(d,0,0,d,0,0);
+      segs = []; grown = 0;
+      var seeds = Math.max(4, Math.round(W/190));
+      for(var s=0; s<seeds; s++){
+        grow(W*(s+.5)/seeds + (Math.random()-.5)*40, 0, Math.PI/2 + (Math.random()-.5)*.4, 26+Math.random()*18, 0);
+      }
+    }
+    function grow(x,y,a,len,d){
+      if(d>4 || len<6) return;
+      var nx = x+Math.cos(a)*len, ny = y+Math.sin(a)*len;
+      segs.push({x1:x,y1:y,x2:nx,y2:ny,d:d});
+      var n = d<2 ? 2 : (Math.random()<.6 ? 2 : 1);
+      for(var b=0; b<n; b++) grow(nx,ny, a+(Math.random()-.5)*.9, len*(.68+Math.random()*.15), d+1);
+    }
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      var css = getComputedStyle(document.body);
+      ctx.save(); ctx.strokeStyle = css.getPropertyValue('--line').trim();
+      ctx.beginPath(); ctx.moveTo(0,.5); ctx.lineTo(W,.5); ctx.stroke(); ctx.restore();
+      ctx.strokeStyle = css.getPropertyValue('--thread').trim();
+      var shown = reduce ? segs.length : Math.floor(grown);
+      for(var i=0; i<shown && i<segs.length; i++){
+        var s = segs[i];
+        ctx.globalAlpha = .3 - s.d*.045; ctx.lineWidth = Math.max(.4, 1.5 - s.d*.3);
+        ctx.beginPath(); ctx.moveTo(s.x1,s.y1); ctx.lineTo(s.x2,s.y2); ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+      if(!reduce && grown < segs.length){ grown += segs.length/110; raf = requestAnimationFrame(draw); }
+    }
+    build(); draw();
+    tog.addEventListener('click', function(){ grown = segs.length; requestAnimationFrame(draw); });
+    var rt; window.addEventListener('resize', function(){
+      cancelAnimationFrame(raf); clearTimeout(rt);
+      rt = setTimeout(function(){ build(); grown = segs.length; draw(); }, 200);
+    });
+  })();
 })();
 </script>
 </body>
