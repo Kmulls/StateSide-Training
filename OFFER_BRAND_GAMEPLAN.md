@@ -59,8 +59,8 @@ across a map / across time zones** — as the signature visual.
 - **The Activation** — a single quarterly event.
 - **Outlet Families** — local hubs / host communities.
 - **The Field** — the ongoing membership container.
-- **Hub Host Certification** — the facilitator training track (the
-  "StateSide Training" arm).
+- **Hub Host Certification** — the facilitator training track, fully under
+  the Our House name.
 - **Unified Anthem** — the shared musical centerpiece.
 
 **Tagline candidates:** *"Come home — together."* · *"One wave, one house."* ·
@@ -109,7 +109,7 @@ recurring centerpiece.
 - **Goal served:** recurring revenue + retention + a warm base to seed hubs.
 
 ### T3 — Hub Host Certification *(training · practitioners)*
-The **StateSide Training** arm. A cohort-based program that certifies people —
+The training arm of **Our House**. A cohort-based program that certifies people —
 bodyworkers, musicians, coaches, community leaders — to host official Activations
 and run their own outlet families. Certified hosts become the distributed
 delivery network *and* a revenue line.
@@ -210,6 +210,5 @@ trauma," literal biological mechanisms), and add a light disclaimer that fascia
 
 ## Open Decisions
 - Price points for T1 tiers, T2 subscription, and T3 certification.
-- Is "StateSide" the training brand, or US-first geography? (Affects global framing.)
 - Legal entity / structure — for-profit, nonprofit, or hybrid?
 - Who owns/performs the Unified Anthem, and on what rights?
