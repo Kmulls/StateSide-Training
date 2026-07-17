@@ -1,65 +1,4 @@
-# MASTER BLUEPRINT: THE "OUR HOUSE" ACTIVATION
-
-A distributed, multi-hub gathering designed to synchronize communities through
-intention, sound, and celestial timing.
-
----
-
-## PART 1: THE FOUNDATIONAL METAPHYSICS
-
-The activation operates on a core metaphysical hypothesis:
-
-> **Intentional Love × Celestial Timing × Harmonic Sound = Unified Field Coherence**
-
-- **The Physical House (The Body):** Tuning the nervous system into a pristine
-  conductor of energy through deep breath, intention, and acoustic immersion.
-- **The Social House (Outlet Families & Community):** Linking regional "outlet
-  families" and global nodes into a synchronized network to achieve social and
-  emotional entrainment.
-- **The Planetary House (The Earth):** Capitalizing on astronomical solstices
-  and equinoxes to leverage natural planetary transit windows and maximize
-  energetic output.
-
----
-
-## PART 2: THE 5-STEP EVENT FRAMEWORK
-
-Instead of forcing everyone onto a rigid, single-moment live stream, this event
-operates as a **Rolling Wave**. Each location hosts their event during their own
-local daylight peak—ideally crossing over **Local Solar Noon (11:00 AM – 1:00 PM)**
-or **Local Solar Sunset (5:00 PM – 7:00 PM)**.
-
-| Time Markers | Duration | The Flow (Local Hub Execution) |
-| :--- | :--- | :--- |
-| **00:00 – 00:20** | 20 Mins | **Arrive & Clear:** Neighbors arrive. Hub leads ground the space, clear spatial static, and hand out clean water. |
-| **00:20 – 00:40** | 20 Mins | **The Intention & Breath Sync:** The room gathers in a circle for a brief, guided group breath connection to settle the nervous system. |
-| **00:40 – 01:20** | 40 Mins | **The Sonic Imprint:** Local musicians play live, or the hub plays the pre-recorded global "Unified Anthem" video track. |
-| **01:20 – 01:40** | 20 Mins | **Integration & Earth Silence:** Deep stillness in the room, followed by everyone putting bare feet directly on the local soil. |
-| **01:40 – 02:00+** | 20+ Mins | **The Social Bridge:** Food, community bonding, and uploading captured clips to pass the torch to the next time zone. |
-
----
-
-## PART 3: MASTER DEPLOYMENT CHECKLIST
-
-> Share this with all outlet family hubs and musicians **14 days before** the
-> cosmic peak.
-
-### 🏡 Spatial & Tech Setup (For All Hubs)
-
-- [ ] **Clear the Perimeter:** Deeply clean and declutter the central room to allow spatial energy to flow.
-- [ ] **Set the Boundary Grid:** Ground the four corners of your space using natural salt, sound, or crystals.
-- [ ] **High-Fidelity Audio:** Connect an external Bluetooth speaker or soundbar (avoid laptop/phone speakers).
-- [ ] **Dual-Device Station:** Set up one device for playing the audio/video, and a smartphone to record social clips.
-
-### 🧘 Individual Prep
-
-- [ ] **Comfortable Clothing:** Loose, relaxed garments that encourage deep diaphragmatic breathing.
-- [ ] **Hydration Station:** Clear pitchers of clean, pure water for arriving guests.
-- [ ] **Grounding Access:** Ensure easy access to a patch of bare earth, grass, or an indoor natural element.
-
----
-
-## PART 4: 21-DAY SOCIAL MEDIA CAMPAIGN STRATEGY
+# 21-DAY SOCIAL MEDIA CAMPAIGN STRATEGY
 
 > A three-week countdown that mirrors the event's own arc: **Prepare the Body →
 > Gather the Community → Align with the Planet.** Post daily, keep the visual
@@ -91,7 +30,7 @@ release the Master Deployment Checklist to confirmed hubs.
 | Day | Theme | Post Idea |
 | :--- | :--- | :--- |
 | 8 | **Meet the Outlet Families** | Spotlight confirmed regional hubs; humanize the network. |
-| 9 | **Checklist Drop** | Publish the Master Deployment Checklist (Part 3) as a shareable graphic. |
+| 9 | **Checklist Drop** | Publish the Master Deployment Checklist as a shareable graphic. |
 | 10 | **Host a Hub** | Step-by-step: how anyone can host their own living-room node. |
 | 11 | **The Boundary Grid** | Short demo of grounding the four corners (salt / sound / crystals). |
 | 12 | **Audio Setup** | Practical reel: getting high-fidelity sound without pro gear. |
@@ -119,8 +58,3 @@ they need to show up ready.
 - **Consistency:** Same color palette, same closing CTA, same hashtags on every post.
 - **Amplification:** Each confirmed hub reshares to their local audience to widen the net.
 - **Signals to watch:** Sign-ups to host, confirmed hub count, saves/shares (intent), and clips uploaded on Activation Day.
-
----
-
-*The house is a body, the neighborhood is a family, and the Earth is the room we
-all share. When each hub tunes itself, the wave carries the rest.*
