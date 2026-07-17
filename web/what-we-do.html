@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our House — What We Do</title>
+<meta name="description" content="Promotions, events, coaching, and training — all built on one simple network. We seed people with tech, tools, know-how, and a code of conduct, so we all grow in richness together.">
+<style>
+:root{
+  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
+  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
+  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
+  --thread:rgba(214,201,176,.55);
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;
+  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:light){
+  :root{
+    --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
+    --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
+    --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
+    --thread:rgba(80,66,44,.45);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
+  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
+  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
+  --thread:rgba(214,201,176,.55);
+}
+:root[data-theme="light"]{
+  --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
+  --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
+  --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
+  --thread:rgba(80,66,44,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--sans); font-size:clamp(1rem,.55vw + .9rem,1.14rem);
+  line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:0 clamp(1.2rem,4vw,2.4rem)}
+.measure{max-width:62ch}
+h1,h2,h3{font-family:var(--serif); font-weight:600; text-wrap:balance; line-height:1.08; margin:0}
+p{margin:0}
+.eyebrow{
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--foxfire-deep); margin:0 0 1.1rem;
+}
+@media (prefers-color-scheme:dark){.eyebrow{color:var(--foxfire)}}
+:root[data-theme="dark"] .eyebrow{color:var(--foxfire)}
+:root[data-theme="light"] .eyebrow{color:var(--foxfire-deep)}
+.lead{color:var(--muted); font-size:1.15rem}
+.kicker{color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.kicker{color:var(--foxfire)}}
+:root[data-theme="dark"] .kicker{color:var(--foxfire)}
+:root[data-theme="light"] .kicker{color:var(--foxfire-deep)}
+
+.toggle{
+  position:fixed; top:1rem; right:1rem; z-index:30;
+  font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase;
+  background:var(--surface); color:var(--ink); border:1px solid var(--line);
+  border-radius:999px; padding:.5rem .9rem; cursor:pointer;
+}
+.toggle:hover{border-color:var(--foxfire)}
+.toggle:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+
+/* hero */
+.hero{padding:clamp(6rem,14vh,9rem) 0 clamp(3.5rem,7vw,5.5rem)}
+.hero h1{font-size:clamp(2.8rem,8vw,5.4rem); letter-spacing:-.015em}
+.hero .lead{margin-top:1.5rem; max-width:42ch; font-size:clamp(1.15rem,1.4vw,1.4rem); color:var(--ink)}
+
+section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
+.band h2{font-size:clamp(1.9rem,4.2vw,2.9rem); letter-spacing:-.01em; margin-bottom:1.4rem}
+.band p + p{margin-top:1.1rem}
+
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease}
+.reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none; transition:none}}
+
+/* one network rail */
+.rail-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-top:2.6rem}
+@media (max-width:860px){.rail-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.rail-grid{grid-template-columns:1fr}}
+.offer{background:var(--ground-2); border:1px solid var(--line); border-radius:14px; padding:1.4rem 1.2rem; position:relative}
+.offer::after{content:""; position:absolute; left:50%; bottom:-1.05rem; transform:translateX(-50%);
+  width:2px; height:1.05rem; background:var(--thread)}
+.offer h3{font-size:1.25rem; margin-bottom:.4rem}
+.offer p{color:var(--muted); font-size:.94rem}
+.offer .cap{font-family:var(--mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
+.rail{margin-top:1.05rem; border-top:2px solid var(--foxfire); padding-top:.7rem; text-align:center;
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.rail{color:var(--foxfire)}}
+:root[data-theme="dark"] .rail{color:var(--foxfire)}
+:root[data-theme="light"] .rail{color:var(--foxfire-deep)}
+@media (max-width:860px){.offer::after{display:none}.rail{border-top-style:dashed}}
+
+/* oxygen */
+.oxy{display:grid; grid-template-columns:1.1fr .9fr; gap:2.5rem; align-items:start; margin-top:.4rem}
+@media (max-width:780px){.oxy{grid-template-columns:1fr}}
+.breath-list{list-style:none; margin:2rem 0 0; padding:0}
+.breath-list li{display:flex; gap:.9rem; align-items:baseline; padding:.75rem 0; border-bottom:1px solid var(--line)}
+.breath-list li:last-child{border-bottom:0}
+.breath-list .m{font-family:var(--mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--foxfire-deep); flex:0 0 auto; width:7.2rem}
+@media (prefers-color-scheme:dark){.breath-list .m{color:var(--foxfire)}}
+:root[data-theme="dark"] .breath-list .m{color:var(--foxfire)}
+:root[data-theme="light"] .breath-list .m{color:var(--foxfire-deep)}
+.breath-list b{display:block}
+.breath-list span.d{color:var(--muted); font-size:.93rem}
+
+/* seed model */
+.model-frame{margin-top:2.8rem; background:var(--ground-2); border:1px solid var(--line); border-radius:16px; padding:clamp(1rem,3vw,2rem); overflow-x:auto}
+.model-frame svg{display:block; width:100%; min-width:640px; height:auto}
+.seed-label{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; fill:var(--muted)}
+.seed-label.bright{fill:var(--ink)}
+.seed-title{font-family:var(--serif); font-size:17px; fill:var(--ink)}
+.in-box{fill:var(--surface); stroke:var(--line); rx:10}
+.flow{stroke:var(--thread); stroke-width:1.4; fill:none; stroke-dasharray:5 6}
+@media (prefers-reduced-motion:no-preference){
+  .flow{animation:flowmove 2.6s linear infinite}
+  @keyframes flowmove{to{stroke-dashoffset:-22}}
+  .seed-pulse{animation:pulse 3.2s ease-in-out infinite; transform-origin:center; transform-box:fill-box}
+  @keyframes pulse{0%,100%{opacity:.25}50%{opacity:.65}}
+}
+.out-dot{fill:var(--foxfire)}
+.out-thread{stroke:var(--thread); stroke-width:1; fill:none}
+.model-legend{margin-top:1.4rem; color:var(--muted); font-size:.95rem; max-width:60ch}
+
+/* richness */
+.quote{margin:2.6rem 0 0; border-left:3px solid var(--ember); padding:.4rem 0 .4rem 1.6rem}
+.quote .line{margin:0 0 1rem}
+.quote .who{font-family:var(--mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:.2rem}
+.quote .said{font-family:var(--serif); font-size:1.2rem; line-height:1.45}
+.quote .said.final{font-size:1.55rem; color:var(--ember)}
+.attrib{margin-top:1.2rem; font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+
+/* close */
+.close{text-align:center; padding:clamp(5rem,10vw,8rem) 0}
+.close h2{font-size:clamp(2rem,4.8vw,3.4rem); max-width:18ch; margin:0 auto 1.4rem}
+.close .lead{max-width:44ch; margin:0 auto}
+.close .signoff{margin-top:2.4rem; font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--muted)}
+footer{border-top:1px solid var(--line); padding:2.4rem 0 3rem}
+footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:space-between;
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+</style>
+</head>
+<body>
+<button class="toggle" id="themeToggle" aria-label="Toggle light or dark theme">Theme</button>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Our House · What We Do</p>
+    <h1>Four doors.<br>One simple <span class="kicker">network.</span></h1>
+    <p class="lead">The promotions, the events, the coaching, the training — all of it is built on one simple network, so the work stays about people, not plumbing.</p>
+  </div>
+</header>
+
+<main>
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The offerings</p>
+    <h2>Everything we do stands on the same ground.</h2>
+    <p>These aren't four separate businesses to juggle. They're four expressions of one body of work, sharing one audience, one back end, and one heartbeat.</p>
+  </div>
+  <div class="wrap reveal">
+    <div class="rail-grid">
+      <div class="offer"><span class="cap">Reach</span><h3>Promotions</h3><p>Telling the story and inviting people in — the network's voice.</p></div>
+      <div class="offer"><span class="cap">Gather</span><h3>Events</h3><p>Live rooms where connection actually happens — the network's heartbeat.</p></div>
+      <div class="offer"><span class="cap">Guide</span><h3>Coaching</h3><p>One-to-one and small-group depth — the network's hands.</p></div>
+      <div class="offer"><span class="cap">Multiply</span><h3>Training</h3><p>Teaching others to lead and host — the network's seeds.</p></div>
+    </div>
+    <div class="rail">One simple network</div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="oxy">
+      <div class="measure reveal">
+        <p class="eyebrow">The back end</p>
+        <h2>The tech is our <span class="kicker">oxygen.</span></h2>
+        <p>Most of us who are in this work did not get into it to do the techie backend stuff — and we shouldn't have to. So we built a tech stack that is <b>fast</b>, <b>adaptable</b>, and simply part of the network's body.</p>
+        <p>Just as we need oxygen to breathe, our work needs its marketing to move — funnels, landing pages, checkouts — without anyone gasping for it. You bring the gift; the network carries the breath.</p>
+      </div>
+      <div class="reveal">
+        <ul class="breath-list">
+          <li><span class="m">Funnels</span><span><b>The inhale</b><span class="d">A clear path from first hello to full participation.</span></span></li>
+          <li><span class="m">Landing pages</span><span><b>The doorway</b><span class="d">Every offering gets a warm, ready front door.</span></span></li>
+          <li><span class="m">Checkouts</span><span><b>The exchange</b><span class="d">Simple, honest ways for value to change hands.</span></span></li>
+          <li><span class="m">Follow-up</span><span><b>The exhale</b><span class="d">The connection continues after the room empties.</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The visual model</p>
+    <h2>We seed people, not just projects.</h2>
+    <p>Here is the model we're building by: take a person with a gift, and seed them with three things — the <b>tech and tools</b>, the <b>training and know-how</b>, and the <b>code of conduct</b> we ourselves want to live by. What grows from that seed is the life we're actually after.</p>
+  </div>
+  <div class="wrap reveal">
+    <div class="model-frame">
+      <svg viewBox="0 0 900 400" role="img" aria-label="Diagram: tech and tools, training and know-how, and a code of conduct flow into a seeded person, who grows a network producing more fun, more family, and more richness.">
+        <!-- input boxes -->
+        <rect class="in-box" x="20" y="52" width="200" height="72" rx="10"/>
+        <text class="seed-label bright" x="40" y="83">Tech &amp; Tools</text>
+        <text class="seed-label" x="40" y="102">Funnels · pages · checkouts</text>
+
+        <rect class="in-box" x="20" y="164" width="200" height="72" rx="10"/>
+        <text class="seed-label bright" x="40" y="195">Training &amp; Know-How</text>
+        <text class="seed-label" x="40" y="214">The craft, taught live</text>
+
+        <rect class="in-box" x="20" y="276" width="200" height="72" rx="10"/>
+        <text class="seed-label bright" x="40" y="307">Code of Conduct</text>
+        <text class="seed-label" x="40" y="326">How we choose to live</text>
+
+        <!-- flows into the seed -->
+        <path class="flow" d="M220,88 C300,88 330,170 396,192"/>
+        <path class="flow" d="M220,200 C290,200 330,200 392,200"/>
+        <path class="flow" d="M220,312 C300,312 330,230 396,208"/>
+
+        <!-- the seed -->
+        <circle class="seed-pulse" cx="440" cy="200" r="58" fill="var(--foxfire)" opacity=".35"/>
+        <circle cx="440" cy="200" r="38" fill="var(--ground)" stroke="var(--foxfire)" stroke-width="2"/>
+        <text class="seed-title" x="440" y="196" text-anchor="middle">A seeded</text>
+        <text class="seed-title" x="440" y="216" text-anchor="middle">human</text>
+
+        <!-- outward network -->
+        <path class="out-thread" d="M478,178 C560,130 600,110 668,96"/>
+        <path class="out-thread" d="M482,200 C560,200 600,200 664,200"/>
+        <path class="out-thread" d="M478,222 C560,270 600,290 668,304"/>
+        <circle class="out-dot" cx="560" cy="152" r="4"/>
+        <circle class="out-dot" cx="590" cy="200" r="4"/>
+        <circle class="out-dot" cx="560" cy="248" r="4"/>
+        <circle class="out-dot" cx="620" cy="120" r="4"/>
+        <circle class="out-dot" cx="630" cy="280" r="4"/>
+
+        <!-- outcomes -->
+        <text class="seed-title" x="684" y="100">More fun</text>
+        <text class="seed-label" x="684" y="119">Play returns to the work</text>
+        <text class="seed-title" x="684" y="204">More family</text>
+        <text class="seed-label" x="684" y="223">People like ourselves, found</text>
+        <text class="seed-title" x="684" y="308">More richness</text>
+        <text class="seed-label" x="684" y="327">Life, forever</text>
+      </svg>
+    </div>
+    <p class="model-legend">Each seeded person becomes a node who can seed the next — the network grows the way mycelium does: one living connection at a time. And in doing so, we create more chances to simply hang out with people like ourselves.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">What richness means here</p>
+    <h2>"My richness is life, forever."</h2>
+    <p>When we say richness, we mean it the way Bob Marley meant it, in an interview when a reporter pressed him about wealth:</p>
+    <div class="quote">
+      <p class="line"><span class="who">Reporter</span><span class="said">"Are you a rich man? Do you have a lot of possessions?"</span></p>
+      <p class="line"><span class="who">Marley</span><span class="said">"Possessions make you rich? I don't have that type of richness."</span></p>
+      <p class="line"><span class="who">Marley</span><span class="said final">"My richness is life, forever."</span></p>
+    </div>
+    <p class="attrib">— Bob Marley, televised interview, paraphrased from memory</p>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:center">Why it matters</p>
+    <h2>Our House is where we grow in all our richness together.</h2>
+    <p class="lead">As we grow one, we grow as the All.</p>
+    <p class="signoff">And so, dear and grateful heart — so happy to see you again.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Our House</span>
+    <span>What we do</span>
+    <span>One simple network</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var root = document.documentElement, tog = document.getElementById('themeToggle');
+  function current(){
+    var set = root.getAttribute('data-theme');
+    if(set) return set;
+    return (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) ? 'dark' : 'light';
+  }
+  tog.addEventListener('click', function(){
+    var next = current()==='dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    tog.textContent = next==='dark' ? 'Light' : 'Dark';
+  });
+  tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  var reveals = [].slice.call(document.querySelectorAll('.reveal'));
+  if(reduce || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(ents){
+      ents.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
