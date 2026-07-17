@@ -60,8 +60,20 @@ p{margin:0}
 :root[data-theme="dark"] .kicker{color:var(--foxfire)}
 :root[data-theme="light"] .kicker{color:var(--foxfire-deep)}
 
+/* nav */
+.nav{position:fixed; top:0; left:0; right:0; z-index:25; display:flex; align-items:center; gap:1.6rem;
+  padding:.8rem clamp(1.2rem,4vw,2.4rem); padding-right:6.5rem;
+  background:var(--ground); border-bottom:1px solid var(--line)}
+.nav a{text-decoration:none; font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+.nav a[aria-current]{color:var(--ink)}
+.nav .brand{font-family:var(--serif); font-size:1.05rem; letter-spacing:0; text-transform:none; color:var(--ink)}
+.navlinks{display:flex; gap:1.4rem; flex-wrap:wrap}
+@media (max-width:560px){.navlinks{gap:.9rem}.nav{gap:1rem}}
+.nav a:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+
 .toggle{
-  position:fixed; top:1rem; right:1rem; z-index:30;
+  position:fixed; top:.55rem; right:1rem; z-index:30;
   font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase;
   background:var(--surface); color:var(--ink); border:1px solid var(--line);
   border-radius:999px; padding:.5rem .9rem; cursor:pointer;
@@ -161,6 +173,14 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 </style>
 </head>
 <body>
+<nav class="nav" aria-label="Site">
+  <a class="brand" href="index.html">Our House</a>
+  <span class="navlinks">
+    <a href="story.html">The Story</a>
+    <a href="what-we-do.html" aria-current="page">What We Do</a>
+    <a href="business.html">Work With Us</a>
+  </span>
+</nav>
 <button class="toggle" id="themeToggle" aria-label="Toggle light or dark theme">Theme</button>
 
 <header class="hero">
