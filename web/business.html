@@ -68,7 +68,15 @@ a{color:inherit}
 .nav a{text-decoration:none; font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
 .nav a:hover{color:var(--ink)}
 .nav a[aria-current]{color:var(--ink)}
-.nav .brand{font-family:var(--serif); font-size:1.05rem; letter-spacing:0; text-transform:none; color:var(--ink)}
+.nav .brand{font-family:var(--serif); font-size:1.05rem; letter-spacing:0; text-transform:none; color:var(--ink); display:inline-flex; align-items:center}
+.eq{display:inline-flex; gap:2px; align-items:flex-end; height:13px; margin-right:.55rem}
+.eq i{width:3px; border-radius:1px; background:var(--foxfire); transform-origin:bottom; animation:eq-bounce 1.15s ease-in-out infinite}
+.eq i:nth-child(1){height:45%}
+.eq i:nth-child(2){height:90%; animation-delay:.18s}
+.eq i:nth-child(3){height:60%; animation-delay:.36s}
+.eq i:nth-child(4){height:100%; animation-delay:.54s}
+@keyframes eq-bounce{0%,100%{transform:scaleY(.45)}50%{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.eq i{animation:none}}
 .navlinks{display:flex; gap:1.4rem; flex-wrap:wrap}
 @media (max-width:560px){.navlinks{gap:.9rem}.nav{gap:1rem}}
 .nav a:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
@@ -179,7 +187,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 </head>
 <body>
 <nav class="nav" aria-label="Site">
-  <a class="brand" href="index.html">Our House</a>
+  <a class="brand" href="index.html"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Our House</a>
   <span class="navlinks">
     <a href="story.html">The Story</a>
     <a href="what-we-do.html">What We Do</a>
