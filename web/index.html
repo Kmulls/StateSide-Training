@@ -165,8 +165,20 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 
 /* rhythm strip */
 .rhythm{display:flex; flex-wrap:wrap; gap:1rem 2.5rem; align-items:baseline; margin-top:2.4rem}
-.rhythm .season{font-family:var(--serif); font-size:1.25rem}
-.rhythm .season span{display:block; font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-top:.2rem}
+.rhythm .season{font-family:var(--serif); font-weight:700; font-size:clamp(1.9rem,4vw,2.6rem); line-height:1.1}
+.rhythm .season span{display:block; font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-top:.35rem}
+/* season accent words (Kevin-specified colors, tuned for both themes) */
+.s-equinox{color:#6FA8DC}
+.s-solstice{color:#A87FD1}
+.s-plant{color:var(--foxfire)}
+.s-bloom{color:#E0B34A}
+.s-harvest{color:#E8D24A}
+.s-root{color:#B98A5E}
+:root[data-theme="light"] .s-equinox,@media (prefers-color-scheme:light){.s-equinox{color:#2A6BB0}}
+:root[data-theme="light"] .s-solstice,@media (prefers-color-scheme:light){.s-solstice{color:#6B3FA0}}
+:root[data-theme="light"] .s-bloom,@media (prefers-color-scheme:light){.s-bloom{color:#9A7110}}
+:root[data-theme="light"] .s-harvest,@media (prefers-color-scheme:light){.s-harvest{color:#8A7410}}
+:root[data-theme="light"] .s-root,@media (prefers-color-scheme:light){.s-root{color:#7A5228}}
 .rhythm-note{margin-top:2.2rem}
 
 .close{text-align:center; padding:clamp(5rem,10vw,8rem) 0}
@@ -291,10 +303,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     <p>Abundance = Circulation</p>
     <p>Together we can be in separate places with the same intention. And our Earth will never be the same, ever again.</p>
     <div class="rhythm">
-      <span class="season">Spring<span>Equinox · plant</span></span>
-      <span class="season">Summer<span>Solstice · bloom</span></span>
-      <span class="season">Autumn<span>Equinox · harvest</span></span>
-      <span class="season">Winter<span>Solstice · root</span></span>
+      <span class="season">Spring<span><b class="s-equinox">Equinox</b> · <b class="s-plant">plant</b></span></span>
+      <span class="season">Summer<span><b class="s-solstice">Solstice</b> · <b class="s-bloom">bloom</b></span></span>
+      <span class="season">Autumn<span><b class="s-equinox">Equinox</b> · <b class="s-harvest">harvest</b></span></span>
+      <span class="season">Winter<span><b class="s-solstice">Solstice</b> · <b class="s-root">root</b></span></span>
     </div>
   </div>
 </section>
