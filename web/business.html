@@ -6,8 +6,9 @@
 <title>Our House — Work With Us</title>
 <meta name="description" content="Work with Our House: come to a gathering, join The Toolkit, apply for The Cohort or The Buildout — or bring the whole crew to your door with The House Call.">
 <script>
-/* Swap the booking link once, here. */
+/* Swap these links once, here. */
 const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
+const APPLICATION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdXl56yb2uVhSDIdHZrGs1KYWXQhG0ew7Q2r3rLqnzFBq1_cA/viewform';
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,6 +165,7 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .field textarea{min-height:120px; resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--foxfire); outline-offset:1px; border-color:var(--foxfire)}
 .intake .actions{margin-top:1.6rem; display:flex; flex-wrap:wrap; gap:.8rem; align-items:center}
+.apply-card{display:flex; flex-direction:column; align-items:flex-start; gap:.4rem}
 .btn{font-family:var(--mono); font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; border-radius:999px; padding:.7rem 1.3rem; cursor:pointer}
 .btn.primary{background:var(--foxfire); color:var(--ground); border:1px solid var(--foxfire)}
 .btn.primary:hover{background:transparent; color:var(--ink)}
@@ -248,7 +250,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
         <div class="price-block">
           <p class="price-line">Founding rate — first cohort.</p>
           <p class="price-sub">Priced to seed proof: founding members get the lower rate, and in exchange we publish your honest before-and-after numbers. You leave with a launched, converting offer and a revenue plan.</p>
-          <a class="cta" href="#apply" data-offer="The Cohort (founding)">Apply for the Cohort →</a>
+          <a class="cta js-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdXl56yb2uVhSDIdHZrGs1KYWXQhG0ew7Q2r3rLqnzFBq1_cA/viewform" target="_blank" rel="noopener">Apply for the Cohort →</a>
         </div>
       </div>
     </div>
@@ -261,7 +263,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
       </div>
       <div class="side">
         <span class="price">5-figure · by application</span>
-        <a class="cta" href="#apply" data-offer="The House Call">Apply for a House Call →</a>
+        <a class="cta js-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdXl56yb2uVhSDIdHZrGs1KYWXQhG0ew7Q2r3rLqnzFBq1_cA/viewform" target="_blank" rel="noopener">Apply for a House Call →</a>
       </div>
     </div>
   </div>
@@ -274,43 +276,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     <p>That's exactly who this is for. A few honest answers is all it takes — we read every application ourselves and reply personally. This is an intake, not a funnel trap.</p>
   </div>
   <div class="wrap reveal">
-    <form class="intake" id="intakeForm">
-      <div class="fields">
-        <div class="field">
-          <label for="f-name">Your name</label>
-          <input id="f-name" name="name" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="f-email">Your email</label>
-          <input id="f-email" name="email" type="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label for="f-org">Organization / project</label>
-          <input id="f-org" name="org" type="text" autocomplete="organization">
-        </div>
-        <div class="field">
-          <label for="f-offer">Which offer?</label>
-          <select id="f-offer" name="offer">
-            <option>The Cohort (founding)</option>
-            <option>The House Call</option>
-            <option>Not sure yet — help me choose</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="f-vision">What's alive for you — what are you building, and where does it hurt?</label>
-          <textarea id="f-vision" name="vision" required></textarea>
-        </div>
-        <div class="field full">
-          <label for="f-timing">Timing &amp; anything else we should know</label>
-          <input id="f-timing" name="timing" type="text" placeholder="e.g. next equinox, this quarter, team of 12…">
-        </div>
-      </div>
-      <div class="actions">
-        <button class="btn primary" type="submit">Copy my application</button>
-        <span class="copy-status" id="copyStatus" role="status"></span>
-      </div>
-      <p class="form-note">The intake inbox is coming online. For now, this copies your application to the clipboard — send it to us on whichever channel we already share. Nothing is stored on this page.</p>
-    </form>
+    <div class="intake apply-card">
+      <a class="btn-book js-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdXl56yb2uVhSDIdHZrGs1KYWXQhG0ew7Q2r3rLqnzFBq1_cA/viewform" target="_blank" rel="noopener">Apply now →</a>
+      <p class="form-note">Opens a short application — about 3 minutes. We read every one ourselves and reply personally.</p>
+    </div>
   </div>
 </section>
 
@@ -351,6 +320,9 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   if(typeof BOOKING_URL === 'string' && BOOKING_URL){
     [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
   }
+  if(typeof APPLICATION_URL === 'string' && APPLICATION_URL){
+    [].slice.call(document.querySelectorAll('.js-apply')).forEach(function(a){ a.href = APPLICATION_URL; });
+  }
 
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   if(reduce || !('IntersectionObserver' in window)){
@@ -361,40 +333,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     }, {threshold:.14});
     reveals.forEach(function(el){ io.observe(el); });
   }
-
-  /* offer CTAs preselect the door */
-  var select = document.getElementById('f-offer');
-  [].slice.call(document.querySelectorAll('[data-offer]')).forEach(function(a){
-    a.addEventListener('click', function(){ select.value = a.getAttribute('data-offer'); });
-  });
-
-  /* intake: compose application */
-  var form = document.getElementById('intakeForm');
-  function val(id){ return (document.getElementById(id).value || '').trim(); }
-  function compose(){
-    return [
-      'OUR HOUSE — APPLICATION',
-      '',
-      'Name: ' + val('f-name'),
-      'Email: ' + val('f-email'),
-      'Organization / project: ' + (val('f-org') || '—'),
-      'Door: ' + select.value,
-      '',
-      "What's alive:",
-      val('f-vision'),
-      '',
-      'Timing & notes: ' + (val('f-timing') || '—')
-    ].join('\n');
-  }
-  var status = document.getElementById('copyStatus');
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    if(!form.reportValidity()) return;
-    function done(ok){ status.textContent = ok ? 'Copied — send it our way' : 'Copy failed — select and copy manually'; }
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(compose()).then(function(){ done(true); }, function(){ done(false); });
-    } else { done(false); }
-  });
 
   /* sprout marks: a seedling draws itself in as each section arrives */
   var SPROUT = '<svg class="sprout" viewBox="0 0 24 32" aria-hidden="true">'+
