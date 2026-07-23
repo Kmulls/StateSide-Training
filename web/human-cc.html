@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Our House — Welcome Home</title>
-<meta name="description" content="Our House is a living network — events, coaching, training, and tech — where we grow in all our richness together.">
+<title>Our House — The Human Capacity Curriculum</title>
+<meta name="description" content="The Human Capacity Curriculum — grow the whole person through four arts (music, art, movement, education), balance the active and receptive energies in everyone, and measure your life across the eight forms of capital.">
 <script>
 /* Swap the booking link once, here. Falls back to business.html#apply if empty. */
 const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
@@ -215,6 +215,35 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .nowrap-lg{white-space:nowrap}
 @media (max-width:640px){.nowrap-lg{white-space:normal}}
 
+/* HCC: four arts */
+.arts{display:grid; grid-template-columns:repeat(4,1fr); gap:1.1rem; margin-top:2.6rem}
+@media (max-width:860px){.arts{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.arts{grid-template-columns:1fr}}
+.art{background:var(--ground-2); border:1px solid var(--line); border-radius:16px; padding:1.5rem 1.3rem; display:flex; flex-direction:column; gap:.5rem}
+.art .cap{font-family:var(--mono); font-size:.66rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--warm-text)}
+.art h3{font-size:1.35rem}
+.art p{color:var(--muted); font-size:.95rem}
+/* HCC: balance */
+.balance{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2.4rem}
+@media (max-width:680px){.balance{grid-template-columns:1fr}}
+.pole{background:var(--ground-2); border:1px solid var(--line); border-radius:16px; padding:1.6rem}
+.pole .cap{display:block; font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:.5rem}
+.pole.yin .cap{color:var(--warm-text)}
+.pole.yang .cap{color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.pole.yang .cap{color:var(--foxfire)}}
+:root[data-theme="dark"] .pole.yang .cap{color:var(--foxfire)}
+:root[data-theme="light"] .pole.yang .cap{color:var(--foxfire-deep)}
+.pole p{color:var(--muted)}
+.pole b{color:var(--ink)}
+/* HCC: capitals */
+.capitals{display:grid; grid-template-columns:repeat(4,1fr); gap:.8rem; margin-top:2.4rem}
+@media (max-width:860px){.capitals{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.capitals{grid-template-columns:1fr}}
+.capital{background:var(--ground-2); border:1px solid var(--line); border-left:3px solid var(--ember); border-radius:12px; padding:1rem 1.1rem}
+.capital b{font-family:var(--serif); font-weight:700; font-size:1.05rem; display:block}
+.capital span{color:var(--muted); font-size:.88rem}
+.capnote{margin-top:1.6rem; color:var(--muted); font-size:.9rem}
+
 .close{text-align:center; padding:clamp(5rem,10vw,8rem) 0}
 .close .attrib{margin:0 auto 1.8rem; font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--muted)}
 .close h2{font-size:clamp(2rem,4.8vw,3.4rem); max-width:18ch; margin:0 auto 1.4rem}
@@ -228,10 +257,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 </head>
 <body>
 <nav class="nav" aria-label="Site">
-  <a class="brand" href="index.html" aria-current="page">Our House</a>
+  <a class="brand" href="index.html">Our House</a>
   <span class="navlinks">
     <a href="story.html">The Story</a>
-    <a href="human-cc.html">Human C.C.</a>
+    <a href="human-cc.html" aria-current="page">Human C.C.</a>
     <a href="business.html">Work With Us</a>
   </span>
 </nav>
@@ -245,116 +274,82 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
       <path class="l1" d="M12 13 C8.5 11.5 5 11.5 2 8 C6.5 6 10.5 8 12 11.5"/>
       <path class="l2" d="M12 9 C15.5 7.5 19 7.5 22 4 C17.5 2 13.5 4 12 7.5"/>
     </svg>
-    <p class="eyebrow">For coaches, facilitators, creators &amp; community-builders</p>
-    <h1>You bring the gift,<br><span class="kicker">We build yOUR HOUSE around it.</span></h1>
-    <p class="lead">Our House turns your gift into a business that runs — recurring revenue, less admin, your time back. Not more hustle. More capacity.</p>
+    <p class="eyebrow">The method · taught live</p>
+    <h1>Grow the whole <span class="kicker">human.</span></h1>
+    <p class="lead">The Human Capacity Curriculum builds the capacity to live well — taught through four human arts, tuned to the balance of active and receptive energy in everyone, and measured across the eight forms of capital that make a life whole.</p>
     <div class="hero-cta">
       <a class="btn-book js-book" href="business.html#apply">Book a call</a>
     </div>
-    <p class="micro">A 30-minute vision call. We'll map what's capping your growth — no pressure.</p>
-    <div class="meta">
-      <span>For practitioners with an audience, a practice, and a vision for something bigger.</span>
-      <span>Monthly cohorts are limited to 8–12 practitioners.</span>
-    </div>
+    <p class="micro">Four arts. One balance. Eight measures. Experienced live at every gathering.</p>
   </div>
 </header>
 
 <main>
 <section class="band accent-l">
   <div class="wrap measure reveal">
-    <p class="eyebrow">The problem</p>
-    <h2>The business feels like a <span class="kicker">second job.</span></h2>
-    <p style="font-weight:700">You're great at your craft — but revenue is feast-or-famine, every event or launch starts from scratch, and the invisible admin and marketing all lands on you. It's capping your growth and burning you out.</p>
-    <p style="font-weight:700">Here's the reframe: you probably don't have an audience problem. You have a systems gap — and systems can be installed.</p>
+    <p class="eyebrow">What it is</p>
+    <h2>A practice for the <span class="kicker">whole person.</span></h2>
+    <p>Most learning trains the mind and forgets the body, the heart, and the room. The Human Capacity Curriculum grows all of it at once — because relationship, revenue, and resilience rest on the same thing: capacity. And capacity can be taught.</p>
+    <p>It works in three layers: <b>four arts</b> deliver it, <b>one balance</b> is what they tune, and <b>eight capitals</b> are how you measure the life it builds.</p>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap measure reveal">
-    <p class="eyebrow">The promise</p>
-    <h2>Systems that run.<br>Offers that convert.<br>Your time back.</h2>
+    <p class="eyebrow">The four arts</p>
+    <h2>How it's taught.</h2>
+    <p>Not subjects — the oldest human technologies for changing a person. Every gathering moves through all four.</p>
   </div>
-  <div class="wrap">
-    <div class="pair">
-      <div class="pane reveal">
-        <span class="cap before">Before</span>
-        <p>"I know how to create value, but I rebuild everything from scratch and the money is unpredictable."</p>
-      </div>
-      <div class="pane reveal">
-        <span class="cap after">After</span>
-        <p>"I have systems that run, offers that convert, and recurring revenue — so I can spend my time on the work only I can do."</p>
-      </div>
-    </div>
-  </div>
-  <div class="wrap measure reveal">
-    <p class="soul">We strengthen the people who strengthen others.</p>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap measure reveal">
-    <p class="eyebrow">How it works</p>
-    <h2>One engine builds belonging <span class="kicker">and revenue.</span></h2>
-    <p>Your gift fills a room. We install the machinery that turns that room into a business — and each arrow below is a lever we set up for you.</p>
-    <div class="engine" aria-label="The revenue engine">
-      <span class="step">Your gift</span><span class="arrow">→</span>
-      <span class="step">Gathering / offer</span><span class="arrow">→</span>
-      <span class="step">Capture</span><span class="arrow">→</span>
-      <span class="step">Follow-up</span><span class="arrow">→</span>
-      <span class="step win">Recurring revenue</span><span class="arrow">→</span>
-      <span class="step">The room tells you what to build next</span>
-    </div>
-    <p style="margin-top:1.6rem">Events aren't the product — they're the top of a funnel that also happens to create a family.</p>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap measure reveal">
-    <p class="eyebrow">The build sequence</p>
-    <h2>Diagnosis to compounding in eight weeks.</h2>
-    <ul class="journey">
-      <li><span class="rail"><span class="dot"></span></span><span class="m">Week 0</span><span class="content"><b>Diagnose.</b> <span class="d">Map your ecosystem; name the gap capping revenue.</span></span></li>
-      <li><span class="rail"><span class="dot"></span></span><span class="m">Week 1</span><span class="content"><b>Front door live.</b> <span class="d">A landing page and checkout stood up — you can take money.</span></span></li>
-      <li class="gather"><span class="rail"><span class="dot"></span></span><span class="m">Weeks 2–4</span><span class="content"><b>Build &amp; test — together.</b> <span class="d">One offer redesigned and tested in the lab, with the cohort in the room.</span></span></li>
-      <li><span class="rail"><span class="dot"></span></span><span class="m">Weeks 5–8</span><span class="content"><b>Launch.</b> <span class="d">Run it for real; capture converts to recurring.</span></span></li>
-      <li><span class="rail"><span class="dot"></span></span><span class="m">Month 3</span><span class="content"><b>It compounds.</b> <span class="d">Systems running without you, recurring revenue moving, referrals pulling instead of leads being chased.</span></span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="band cta-band">
   <div class="wrap reveal">
-    <div class="hearth">
-    <p class="eyebrow" style="text-align:center">The Community Cohort</p>
-    <h2 style="margin-bottom:1.8rem">Now accepting 8 to 12 practitioners monthly.</h2>
-    <a class="btn-book js-book" href="business.html#apply">Book a call</a>
-    <p class="micro">A 30-minute vision call. We'll map what's capping your growth — no pressure.</p>
+    <div class="arts">
+      <div class="art"><span class="cap">Music</span><h3>Attunement</h3><p>Rhythm and resonance — the fastest way a room becomes one nervous system.</p></div>
+      <div class="art"><span class="cap">Art</span><h3>Expression</h3><p>Making the inner outer. Vision becomes something you can hold and share.</p></div>
+      <div class="art"><span class="cap">Movement · Healing</span><h3>Embodiment</h3><p>Breath, release, and strength — regulation you feel in the body, not just understand.</p></div>
+      <div class="art"><span class="cap">Education</span><h3>Understanding</h3><p>Frameworks and skill, so the experience becomes something you can repeat and teach.</p></div>
     </div>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap measure reveal">
-    <p class="eyebrow">The rhythm</p>
-    <h2>We gather when the Earth turns.<br><span class="nowrap-lg">We build the systems to make it easy.</span></h2>
-    <p>Four activations a year, on the solstices and equinoxes — a rolling wave of music, breath, and connection passing across every time zone.</p>
-    <p class="rhythm-note">We have pre-designed event templates for these Powerful and Sacred times — with all of the marketing parts, schedules, and contracts. All plug and play: Our House's secret sauce. Global Coherence event packages for any and all, globally. The initiative is to create the mycelium faster. Connectivity through events is the true source of currency.</p>
-    <p>Abundance = Circulation</p>
-    <p>Together we can be in separate places with the same intention. And our Earth will never be the same, ever again.</p>
-    <div class="rhythm">
-      <span class="season">Spring<span><b class="s-equinox">Equinox</b> · <b class="s-plant">plant</b></span></span>
-      <span class="season">Summer<span><b class="s-solstice">Solstice</b> · <b class="s-bloom">bloom</b></span></span>
-      <span class="season">Autumn<span><b class="s-equinox">Equinox</b> · <b class="s-harvest">harvest</b></span></span>
-      <span class="season">Winter<span><b class="s-solstice">Solstice</b> · <b class="s-root">root</b></span></span>
+    <p class="eyebrow">The balance</p>
+    <h2>Active and receptive, <span class="kicker">in everyone.</span></h2>
+    <p>Under the four arts, one thing is being tuned: the balance of yin and yang — the receptive and the active — that lives in every person, regardless of gender or age. Modern life over-trains one and starves the other. The curriculum moves you through both, so you leave centered.</p>
+  </div>
+  <div class="wrap reveal">
+    <div class="balance">
+      <div class="pole yin"><span class="cap">Yin · receive</span><p><b>The capacity to take in.</b> Rest, listen, feel, restore — without it, nothing you build can land.</p></div>
+      <div class="pole yang"><span class="cap">Yang · express</span><p><b>The capacity to put out.</b> Act, build, voice, create — without balance, it burns you down.</p></div>
     </div>
+    <p class="soul" style="margin-top:2.4rem">Come as you are. Leave in balance.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The measure</p>
+    <h2>Eight forms of capital.</h2>
+    <p>Capacity you can't measure, you can't adjust. The eight capitals are your dashboard — rate where you're rich, where you're bankrupt, where you're hoarding. The aim isn't to max one. It's to keep them all moving. <b>Abundance = circulation.</b></p>
+  </div>
+  <div class="wrap reveal">
+    <div class="capitals">
+      <div class="capital"><b>Social</b><span>Relationships, trust, belonging.</span></div>
+      <div class="capital"><b>Material</b><span>Tools, spaces, the physical.</span></div>
+      <div class="capital"><b>Financial</b><span>Money and what it unlocks.</span></div>
+      <div class="capital"><b>Living</b><span>Health, land, the natural world.</span></div>
+      <div class="capital"><b>Intellectual</b><span>Knowledge, ideas, know-how.</span></div>
+      <div class="capital"><b>Experiential</b><span>What you've lived and done.</span></div>
+      <div class="capital"><b>Spiritual</b><span>Meaning, practice, connection.</span></div>
+      <div class="capital"><b>Cultural</b><span>Story, art, shared identity.</span></div>
+    </div>
+    <p class="capnote">Framed experientially, not medically — a wellness practice, not treatment. What people report is feeling more regulated, more resourced, and more themselves.</p>
   </div>
 </section>
 
 <section class="close">
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center">The invitation</p>
-    <h2>Our richness is life, forever.</h2>
-    <p class="attrib">~ Bob</p>
+    <p class="eyebrow" style="text-align:center">Taught live</p>
+    <h2>You can't read your way to capacity.</h2>
     <a class="btn-book js-book" href="business.html#apply">Book a call</a>
   </div>
 </section>
