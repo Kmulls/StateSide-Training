@@ -5,35 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our House — Welcome Home</title>
 <meta name="description" content="Our House is a living network — events, coaching, training, and tech — where we grow in all our richness together.">
+<script>
+/* Swap the booking link once, here. Falls back to business.html#apply if empty. */
+const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
-  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
-  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
-  --thread:rgba(214,201,176,.55);
-  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;
-  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-  --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
+  --ground:#FBF6EC; --ground-2:#FFFDF8; --surface:#F3ECDD;
+  --ink:#221C15; --muted:#6B6053; --line:rgba(34,28,21,.12);
+  --foxfire:#1F7A4C; --foxfire-deep:#17603C; --ember:#E8A93F;
+  --warm-text:#A05E0B; --thread:rgba(34,28,21,.22);
+  --serif:'Bricolage Grotesque',system-ui,sans-serif;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  --mono:'Hanken Grotesk',system-ui,sans-serif;
 }
-@media (prefers-color-scheme:light){
+@media (prefers-color-scheme:dark){
   :root{
-    --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
-    --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
-    --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
-    --thread:rgba(80,66,44,.45);
+    --ground:#1A1410; --ground-2:#241C16; --surface:#2A2018;
+    --ink:#F2E9DA; --muted:#BFB09A; --line:rgba(242,233,218,.14);
+    --foxfire:#3FA96B; --foxfire-deep:#5FC489; --ember:#E8A93F;
+    --warm-text:#EFB859; --thread:rgba(242,233,218,.26);
   }
 }
 :root[data-theme="dark"]{
-  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
-  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
-  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
-  --thread:rgba(214,201,176,.55);
+  --ground:#1A1410; --ground-2:#241C16; --surface:#2A2018;
+  --ink:#F2E9DA; --muted:#BFB09A; --line:rgba(242,233,218,.14);
+  --foxfire:#3FA96B; --foxfire-deep:#5FC489; --ember:#E8A93F;
+  --warm-text:#EFB859; --thread:rgba(242,233,218,.26);
 }
 :root[data-theme="light"]{
-  --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
-  --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
-  --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
-  --thread:rgba(80,66,44,.45);
+  --ground:#FBF6EC; --ground-2:#FFFDF8; --surface:#F3ECDD;
+  --ink:#221C15; --muted:#6B6053; --line:rgba(34,28,21,.12);
+  --foxfire:#1F7A4C; --foxfire-deep:#17603C; --ember:#E8A93F;
+  --warm-text:#A05E0B; --thread:rgba(34,28,21,.22);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -50,11 +57,11 @@ p{margin:0}
 a{color:inherit}
 .eyebrow{
   font-family:var(--mono); font-size:.72rem; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--foxfire-deep); margin:0 0 1.1rem;
+  text-transform:uppercase; color:var(--warm-text); font-weight:700; margin:0 0 1.1rem;
 }
-@media (prefers-color-scheme:dark){.eyebrow{color:var(--foxfire)}}
-:root[data-theme="dark"] .eyebrow{color:var(--foxfire)}
-:root[data-theme="light"] .eyebrow{color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.eyebrow{color:var(--warm-text)}}
+:root[data-theme="dark"] .eyebrow{color:var(--warm-text)}
+:root[data-theme="light"] .eyebrow{color:var(--warm-text)}
 .lead{color:var(--muted); font-size:1.15rem}
 .kicker{color:var(--foxfire-deep)}
 @media (prefers-color-scheme:dark){.kicker{color:var(--foxfire)}}
@@ -94,13 +101,22 @@ a{color:inherit}
 
 /* hero */
 .hero{position:relative; overflow:hidden; min-height:88vh; display:flex; align-items:center;
-  padding:clamp(7rem,16vh,10rem) 0 clamp(10rem,18vw,13rem)}
+  padding:clamp(5.5rem,10vh,7.5rem) 0 clamp(10rem,18vw,13rem)}
 .hero .wrap{position:relative; z-index:1}
 #roots{position:absolute; left:0; right:0; bottom:0; width:100%; height:180px; pointer-events:none}
-.hero h1{font-size:clamp(3rem,9vw,6rem); letter-spacing:-.015em}
-.hero .lead{margin-top:1.6rem; max-width:42ch; font-size:clamp(1.15rem,1.5vw,1.45rem); color:var(--ink)}
+.hero h1{font-size:clamp(2.5rem,6.5vw,4.6rem); letter-spacing:-.015em; max-width:16ch}
+.hero .lead{margin-top:1.6rem; max-width:52ch; font-size:clamp(1.15rem,1.5vw,1.4rem); color:var(--ink)}
 .hero .sub{margin-top:1.1rem; max-width:46ch; color:var(--muted)}
-.hero-sprout{display:block; width:clamp(54px,8vw,84px); height:auto; margin-bottom:1.6rem; overflow:visible}
+.hero-cta{display:flex; flex-wrap:wrap; align-items:center; gap:1.1rem 1.5rem; margin-top:2.2rem}
+.btn-book{display:inline-block; box-shadow:0 6px 18px -8px rgba(31,122,76,.55); transition:background .18s ease,transform .18s ease,box-shadow .2s ease; font-family:var(--mono); font-size:.84rem; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--foxfire); color:var(--ground); border:1px solid var(--foxfire); border-radius:999px;
+  padding:1rem 2rem; cursor:pointer; text-decoration:none}
+.btn-book:hover{background:var(--foxfire-deep); color:var(--ground); transform:translateY(-2px); box-shadow:0 10px 24px -8px rgba(31,122,76,.5)}
+.btn-book:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+.hero .micro{margin-top:.9rem; font-size:clamp(1.15rem,1.5vw,1.4rem); color:var(--muted)}
+.hero .meta{margin-top:2.4rem; padding-top:1rem; border-top:1px solid var(--line);
+  display:flex; flex-wrap:wrap; gap:.4rem 2.2rem; font-size:clamp(1.15rem,1.5vw,1.4rem); color:var(--muted); max-width:72ch}
+.hero-sprout{display:block; width:clamp(48px,6vw,68px); height:auto; margin-bottom:1.2rem; overflow:visible}
 .hero-sprout path{fill:none; stroke:var(--foxfire); stroke-width:1.6; stroke-linecap:round;
   stroke-dasharray:90; stroke-dashoffset:90}
 .in .hero-sprout .st{animation:sprout-grow 1.4s ease-out .2s forwards}
@@ -116,33 +132,79 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .reveal.in{opacity:1; transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none; transition:none}}
 
-/* doors */
-.doors{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2.6rem}
-@media (max-width:820px){.doors{grid-template-columns:1fr}}
-.door{display:flex; flex-direction:column; gap:.7rem; background:var(--ground-2); border:1px solid var(--line);
-  border-radius:16px; padding:1.7rem 1.5rem; text-decoration:none; transition:border-color .25s ease, transform .25s ease}
-.door:hover{border-color:var(--foxfire); transform:translateY(-3px)}
-@media (prefers-reduced-motion:reduce){.door:hover{transform:none}}
-.door:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
-.door .cap{font-family:var(--mono); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--foxfire-deep)}
-@media (prefers-color-scheme:dark){.door .cap{color:var(--foxfire)}}
-:root[data-theme="dark"] .door .cap{color:var(--foxfire)}
-:root[data-theme="light"] .door .cap{color:var(--foxfire-deep)}
-.door h3{font-size:1.45rem}
-.door p{color:var(--muted); font-size:.97rem}
-.door .go{margin-top:auto; padding-top:1rem; font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink)}
+/* v3: pain → promise */
+.pair{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2.4rem}
+@media (max-width:680px){.pair{grid-template-columns:1fr}}
+.pane{background:var(--ground-2); border:1px solid var(--line); border-radius:16px; padding:1.5rem}
+.pane .cap{display:block; font-family:var(--mono); font-size:.95rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:.6rem}
+.pane .cap.before{color:#D75A45}
+@media (prefers-color-scheme:light){.pane .cap.before{color:#A73A28}}
+:root[data-theme="dark"] .pane .cap.before{color:#D75A45}
+:root[data-theme="light"] .pane .cap.before{color:#A73A28}
+.pane .cap.after{color:var(--foxfire)}
+.pane p{font-family:var(--serif); font-size:1.12rem; line-height:1.5}
+.soul{margin-top:2.2rem; font-family:var(--serif); font-weight:700; font-size:clamp(1.9rem,4.2vw,2.9rem); line-height:1.08; letter-spacing:-.01em; text-wrap:balance; color:var(--ink)}
+
+/* v3: revenue engine */
+.engine{display:flex; flex-wrap:wrap; align-items:center; gap:.55rem .6rem; margin-top:2.2rem}
+.engine .step{font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
+  border:1px solid var(--line); border-radius:999px; padding:.5rem .85rem; background:var(--ground-2)}
+.engine .arrow{color:var(--foxfire)}
+
+/* v3: member journey */
+.journey{list-style:none; margin:2.2rem 0 0; padding:0}
+.journey li{display:flex; gap:1rem; align-items:baseline; padding:.75rem 0; border-bottom:1px solid var(--line)}
+.journey li:last-child{border-bottom:0}
+.journey .m{font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--foxfire-deep); flex:0 0 7.5rem}
+@media (prefers-color-scheme:dark){.journey .m{color:var(--foxfire)}}
+:root[data-theme="dark"] .journey .m{color:var(--foxfire)}
+:root[data-theme="light"] .journey .m{color:var(--foxfire-deep)}
+.journey b{font-family:var(--serif); font-weight:600}
+.journey .d{color:var(--muted); font-size:.95rem}
+
+/* v3: founding CTA */
+.cta-band{text-align:center}
+.cta-band .micro{margin-top:.9rem; font-size:.88rem; color:var(--muted)}
 
 /* rhythm strip */
 .rhythm{display:flex; flex-wrap:wrap; gap:1rem 2.5rem; align-items:baseline; margin-top:2.4rem}
-.rhythm .season{font-family:var(--serif); font-size:1.25rem}
-.rhythm .season span{display:block; font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-top:.2rem}
+.rhythm .season{font-family:var(--serif); font-weight:700; font-size:clamp(1.9rem,4vw,2.6rem); line-height:1.1}
+.rhythm .season span{display:block; font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-top:.35rem}
+/* season accent words (Kevin-specified colors, tuned for both themes) */
+.s-equinox{color:#6FA8DC}
+.s-solstice{color:#A87FD1}
+.s-plant{color:var(--foxfire)}
+.s-bloom{color:#E0B34A}
+.s-harvest{color:#E8D24A}
+.s-root{color:#B98A5E}
+@media (prefers-color-scheme:light){
+  .s-equinox{color:#2A6BB0}
+  .s-solstice{color:#6B3FA0}
+  .s-bloom{color:#9A7110}
+  .s-harvest{color:#8A7410}
+  .s-root{color:#7A5228}
+}
+:root[data-theme="light"] .s-equinox{color:#2A6BB0}
+:root[data-theme="light"] .s-solstice{color:#6B3FA0}
+:root[data-theme="light"] .s-bloom{color:#9A7110}
+:root[data-theme="light"] .s-harvest{color:#8A7410}
+:root[data-theme="light"] .s-root{color:#7A5228}
+:root[data-theme="dark"] .s-equinox{color:#6FA8DC}
+:root[data-theme="dark"] .s-solstice{color:#A87FD1}
+:root[data-theme="dark"] .s-bloom{color:#E0B34A}
+:root[data-theme="dark"] .s-harvest{color:#E8D24A}
+:root[data-theme="dark"] .s-root{color:#B98A5E}
+.rhythm-note{margin-top:2.2rem}
 
 .close{text-align:center; padding:clamp(5rem,10vw,8rem) 0}
+.close .attrib{margin:0 auto 1.8rem; font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--muted)}
 .close h2{font-size:clamp(2rem,4.8vw,3.4rem); max-width:18ch; margin:0 auto 1.4rem}
 .close .lead{max-width:44ch; margin:0 auto}
 footer{border-top:1px solid var(--line); padding:2.4rem 0 3rem}
 footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:space-between;
   font-family:var(--mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.btn-book:hover{transform:none}}
+.eyebrow{letter-spacing:.14em}
 </style>
 </head>
 <body>
@@ -150,7 +212,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <a class="brand" href="index.html" aria-current="page">Our House</a>
   <span class="navlinks">
     <a href="story.html">The Story</a>
-    <a href="what-we-do.html">What We Do</a>
     <a href="business.html">Work With Us</a>
   </span>
 </nav>
@@ -164,52 +225,105 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
       <path class="l1" d="M12 13 C8.5 11.5 5 11.5 2 8 C6.5 6 10.5 8 12 11.5"/>
       <path class="l2" d="M12 9 C15.5 7.5 19 7.5 22 4 C17.5 2 13.5 4 12 7.5"/>
     </svg>
-    <h1>Welcome <span class="kicker">home.</span></h1>
-    <p class="lead">Our House is a living network — events, coaching, training, and the tech that carries them — where we grow in all our richness together.</p>
+    <p class="eyebrow">For coaches, facilitators, creators &amp; community-builders</p>
+    <h1>You bring the gift,<br><span class="kicker">We build yOUR HOUSE around it.</span></h1>
+    <p class="lead">Our House turns your gift into a business that runs — recurring revenue, less admin, your time back. Not more hustle. More capacity.</p>
+    <div class="hero-cta">
+      <a class="btn-book js-book" href="business.html#apply">Book a call</a>
+    </div>
+    <p class="micro">A 30-minute vision call. We'll map what's capping your growth — no pressure.</p>
+    <div class="meta">
+      <span>For practitioners with an audience, a practice, and a vision for something bigger.</span>
+      <span>Monthly cohorts are limited to 8–12 practitioners.</span>
+    </div>
   </div>
 </header>
 
 <main>
 <section class="band">
   <div class="wrap measure reveal">
-    <p class="eyebrow">Come on in</p>
-    <h2>Three doors, one living room.</h2>
-    <p>Start wherever you're drawn. Every door leads to the same place — people like ourselves, growing on purpose.</p>
+    <p class="eyebrow">The problem</p>
+    <h2>The business feels like a <span class="kicker">second job.</span></h2>
+    <p style="font-weight:700">You're great at your craft — but revenue is feast-or-famine, every event or launch starts from scratch, and the invisible admin and marketing all lands on you. It's capping your growth and burning you out.</p>
+    <p style="font-weight:700">Here's the reframe: you probably don't have an audience problem. You have a systems gap — and systems can be installed.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The promise</p>
+    <h2>Systems that run.<br>Offers that convert.<br>Your time back.</h2>
   </div>
   <div class="wrap">
-    <div class="doors">
-      <a class="door reveal" href="story.html">
-        <span class="cap">The Story</span>
-        <h3>Why we exist</h3>
-        <p>Mending the sacred hoop, the eight forms of capital, and why the economy should grow like mycelium — not silos.</p>
-        <span class="go">Enter →</span>
-      </a>
-      <a class="door reveal" href="what-we-do.html">
-        <span class="cap">What We Do</span>
-        <h3>How it works</h3>
-        <p>Promotions, events, coaching, and training — four doors built on one simple network, with tech as our oxygen.</p>
-        <span class="go">Enter →</span>
-      </a>
-      <a class="door reveal" href="business.html">
-        <span class="cap">Work With Us</span>
-        <h3>Bring it to yours</h3>
-        <p>Book us for an event, run your own on our stack, or apply for The House Call — we come to where you are.</p>
-        <span class="go">Enter →</span>
-      </a>
+    <div class="pair">
+      <div class="pane reveal">
+        <span class="cap before">Before</span>
+        <p>"I know how to create value, but I rebuild everything from scratch and the money is unpredictable."</p>
+      </div>
+      <div class="pane reveal">
+        <span class="cap after">After</span>
+        <p>"I have systems that run, offers that convert, and recurring revenue — so I can spend my time on the work only I can do."</p>
+      </div>
     </div>
+  </div>
+  <div class="wrap measure reveal">
+    <p class="soul">We strengthen the people who strengthen others.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">How it works</p>
+    <h2>One engine builds belonging <span class="kicker">and revenue.</span></h2>
+    <p>Your gift fills a room. We install the machinery that turns that room into a business — and each arrow below is a lever we set up for you.</p>
+    <div class="engine" aria-label="The revenue engine">
+      <span class="step">Your gift</span><span class="arrow">→</span>
+      <span class="step">Gathering / offer</span><span class="arrow">→</span>
+      <span class="step">Capture</span><span class="arrow">→</span>
+      <span class="step">Follow-up</span><span class="arrow">→</span>
+      <span class="step">Recurring revenue</span><span class="arrow">→</span>
+      <span class="step">The room tells you what to build next</span>
+    </div>
+    <p style="margin-top:1.6rem">Events aren't the product — they're the top of a funnel that also happens to create a family.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The build sequence</p>
+    <h2>Diagnosis to compounding in eight weeks.</h2>
+    <ul class="journey">
+      <li><span class="m">Week 0</span><span><b>Diagnose.</b> <span class="d">Map your ecosystem; name the gap capping revenue.</span></span></li>
+      <li><span class="m">Week 1</span><span><b>Front door live.</b> <span class="d">A landing page and checkout stood up — you can take money.</span></span></li>
+      <li><span class="m">Weeks 2–4</span><span><b>Build &amp; test.</b> <span class="d">One offer redesigned and tested in the lab, follow-up automated.</span></span></li>
+      <li><span class="m">Weeks 5–8</span><span><b>Launch.</b> <span class="d">Run it for real; capture converts to recurring.</span></span></li>
+      <li><span class="m">Month 3</span><span><b>It compounds.</b> <span class="d">Systems running without you, recurring revenue moving, referrals pulling instead of leads being chased.</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band cta-band">
+  <div class="wrap reveal">
+    <p class="eyebrow" style="text-align:center">The Community Cohort</p>
+    <h2 style="margin-bottom:1.8rem">Now accepting 8 to 12 practitioners monthly.</h2>
+    <a class="btn-book js-book" href="business.html#apply">Book a call</a>
+    <p class="micro">A 30-minute vision call. We'll map what's capping your growth — no pressure.</p>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap measure reveal">
     <p class="eyebrow">The rhythm</p>
-    <h2>We gather when the Earth turns.</h2>
+    <h2>We gather when the Earth turns.<br><span style="white-space:nowrap">We build the systems to make it easy.</span></h2>
     <p>Four activations a year, on the solstices and equinoxes — a rolling wave of music, breath, and connection passing across every time zone.</p>
+    <p class="rhythm-note">We have pre-designed event templates for these Powerful and Sacred times — with all of the marketing parts, schedules, and contracts. All plug and play: Our House's secret sauce. Global Coherence event packages for any and all, globally. The initiative is to create the mycelium faster. Connectivity through events is the true source of currency.</p>
+    <p>Abundance = Circulation</p>
+    <p>Together we can be in separate places with the same intention. And our Earth will never be the same, ever again.</p>
     <div class="rhythm">
-      <span class="season">Spring<span>Equinox · plant</span></span>
-      <span class="season">Summer<span>Solstice · bloom</span></span>
-      <span class="season">Autumn<span>Equinox · harvest</span></span>
-      <span class="season">Winter<span>Solstice · root</span></span>
+      <span class="season">Spring<span><b class="s-equinox">Equinox</b> · <b class="s-plant">plant</b></span></span>
+      <span class="season">Summer<span><b class="s-solstice">Solstice</b> · <b class="s-bloom">bloom</b></span></span>
+      <span class="season">Autumn<span><b class="s-equinox">Equinox</b> · <b class="s-harvest">harvest</b></span></span>
+      <span class="season">Winter<span><b class="s-solstice">Solstice</b> · <b class="s-root">root</b></span></span>
     </div>
   </div>
 </section>
@@ -218,6 +332,8 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <div class="wrap">
     <p class="eyebrow" style="text-align:center">The invitation</p>
     <h2>Our richness is life, forever.</h2>
+    <p class="attrib">~ Bob</p>
+    <a class="btn-book js-book" href="business.html#apply">Book a call</a>
   </div>
 </section>
 </main>
@@ -246,6 +362,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     tog.textContent = next==='dark' ? 'Light' : 'Dark';
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  if(typeof BOOKING_URL === 'string' && BOOKING_URL){
+    [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
+  }
 
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   if(reduce || !('IntersectionObserver' in window)){

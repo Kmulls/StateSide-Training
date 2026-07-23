@@ -22,6 +22,6 @@ Pages content and inheriting its custom domain. Untangling that cost real
 time. Don't repeat it.
 
 ## Layout
-- `web/` — the four-page static site (index, story, what-we-do, business)
+- `web/` — the three-page static site (index, story, business)
 - `.github/workflows/pages.yml` — deploys `web/` to Pages on push to main
 - `OUR_HOUSE_ACTIVATION.md`, `OFFER_BRAND_GAMEPLAN.md` — brand & strategy docs

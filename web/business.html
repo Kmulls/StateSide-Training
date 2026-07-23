@@ -4,36 +4,43 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our House — Work With Us</title>
-<meta name="description" content="Three ways to work with Our House: book us for an event, run your own network on our stack, or deluxe consulting — including The House Call, where we bring the whole toolkit to you.">
+<meta name="description" content="Work with Our House: come to a gathering, join The Toolkit, apply for The Cohort or The Buildout — or bring the whole crew to your door with The House Call.">
+<script>
+/* Swap the booking link once, here. */
+const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
-  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
-  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
-  --thread:rgba(214,201,176,.55);
-  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;
-  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-  --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
+  --ground:#FBF6EC; --ground-2:#FFFDF8; --surface:#F3ECDD;
+  --ink:#221C15; --muted:#6B6053; --line:rgba(34,28,21,.12);
+  --foxfire:#1F7A4C; --foxfire-deep:#17603C; --ember:#E8A93F;
+  --warm-text:#A05E0B; --thread:rgba(34,28,21,.22);
+  --serif:'Bricolage Grotesque',system-ui,sans-serif;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  --mono:'Hanken Grotesk',system-ui,sans-serif;
 }
-@media (prefers-color-scheme:light){
+@media (prefers-color-scheme:dark){
   :root{
-    --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
-    --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
-    --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
-    --thread:rgba(80,66,44,.45);
+    --ground:#1A1410; --ground-2:#241C16; --surface:#2A2018;
+    --ink:#F2E9DA; --muted:#BFB09A; --line:rgba(242,233,218,.14);
+    --foxfire:#3FA96B; --foxfire-deep:#5FC489; --ember:#E8A93F;
+    --warm-text:#EFB859; --thread:rgba(242,233,218,.26);
   }
 }
 :root[data-theme="dark"]{
-  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
-  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
-  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
-  --thread:rgba(214,201,176,.55);
+  --ground:#1A1410; --ground-2:#241C16; --surface:#2A2018;
+  --ink:#F2E9DA; --muted:#BFB09A; --line:rgba(242,233,218,.14);
+  --foxfire:#3FA96B; --foxfire-deep:#5FC489; --ember:#E8A93F;
+  --warm-text:#EFB859; --thread:rgba(242,233,218,.26);
 }
 :root[data-theme="light"]{
-  --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
-  --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
-  --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
-  --thread:rgba(80,66,44,.45);
+  --ground:#FBF6EC; --ground-2:#FFFDF8; --surface:#F3ECDD;
+  --ink:#221C15; --muted:#6B6053; --line:rgba(34,28,21,.12);
+  --foxfire:#1F7A4C; --foxfire-deep:#17603C; --ember:#E8A93F;
+  --warm-text:#A05E0B; --thread:rgba(34,28,21,.22);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -50,11 +57,11 @@ p{margin:0}
 a{color:inherit}
 .eyebrow{
   font-family:var(--mono); font-size:.72rem; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--foxfire-deep); margin:0 0 1.1rem;
+  text-transform:uppercase; color:var(--warm-text); font-weight:700; margin:0 0 1.1rem;
 }
-@media (prefers-color-scheme:dark){.eyebrow{color:var(--foxfire)}}
-:root[data-theme="dark"] .eyebrow{color:var(--foxfire)}
-:root[data-theme="light"] .eyebrow{color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.eyebrow{color:var(--warm-text)}}
+:root[data-theme="dark"] .eyebrow{color:var(--warm-text)}
+:root[data-theme="light"] .eyebrow{color:var(--warm-text)}
 .lead{color:var(--muted); font-size:1.15rem}
 .kicker{color:var(--foxfire-deep)}
 @media (prefers-color-scheme:dark){.kicker{color:var(--foxfire)}}
@@ -110,10 +117,10 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .offers{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2.6rem}
 @media (max-width:860px){.offers{grid-template-columns:1fr}}
 .offer{background:var(--ground-2); border:1px solid var(--line); border-radius:16px; padding:1.7rem 1.5rem; display:flex; flex-direction:column; gap:.8rem}
-.offer .num{font-family:var(--mono); font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--foxfire-deep)}
-@media (prefers-color-scheme:dark){.offer .num{color:var(--foxfire)}}
-:root[data-theme="dark"] .offer .num{color:var(--foxfire)}
-:root[data-theme="light"] .offer .num{color:var(--foxfire-deep)}
+.offer .num{font-family:var(--mono); font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--warm-text)}
+@media (prefers-color-scheme:dark){.offer .num{color:var(--warm-text)}}
+:root[data-theme="dark"] .offer .num{color:var(--warm-text)}
+:root[data-theme="light"] .offer .num{color:var(--warm-text)}
 .offer h3{font-size:1.45rem}
 .offer p{color:var(--muted); font-size:.97rem}
 .offer ul{margin:.2rem 0 0; padding-left:1.1rem; color:var(--muted); font-size:.93rem}
@@ -126,8 +133,8 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 
 /* flagship */
 .flagship{margin-top:1.6rem; background:var(--ground-2); border:1px solid var(--ember); border-radius:18px; padding:clamp(1.6rem,4vw,2.6rem); position:relative; overflow:hidden}
-.flagship::before{content:""; position:absolute; inset:0; background:radial-gradient(80% 120% at 100% 0%, rgba(226,140,63,.12), transparent 60%); pointer-events:none}
-.flagship .num{font-family:var(--mono); font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ember)}
+.flagship::before{content:""; position:absolute; inset:0; background:radial-gradient(80% 120% at 100% 0%, rgba(232,169,63,.16), transparent 60%); pointer-events:none}
+.flagship .num{font-family:var(--mono); font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--warm-text)}
 .flagship h3{font-size:clamp(1.7rem,3.4vw,2.4rem); margin:.6rem 0 .9rem}
 .flagship .grid{display:grid; grid-template-columns:1.2fr .8fr; gap:2rem; align-items:start}
 @media (max-width:780px){.flagship .grid{grid-template-columns:1fr}}
@@ -139,9 +146,9 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .flagship .price-line{font-family:var(--serif); font-size:1.3rem; color:var(--ink); line-height:1.4}
 .flagship .price-sub{margin-top:.6rem; font-size:.9rem}
 .flagship .cta{display:inline-block; margin-top:1.2rem; font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
-  background:var(--ember); color:var(--ground); border:1px solid var(--ember); border-radius:999px; padding:.6rem 1.1rem; cursor:pointer; text-decoration:none}
-.flagship .cta:hover{background:transparent; color:var(--ink)}
-.flagship .cta:focus-visible{outline:2px solid var(--ember); outline-offset:2px}
+  background:var(--foxfire); color:var(--ground); border:1px solid var(--foxfire); border-radius:999px; padding:.7rem 1.3rem; cursor:pointer; text-decoration:none; box-shadow:0 6px 18px -8px rgba(31,122,76,.55); transition:background .18s ease,transform .18s ease}
+.flagship .cta:hover{background:var(--foxfire-deep); color:var(--ground); transform:translateY(-2px)}
+.flagship .cta:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
 
 /* intake form */
 .intake{margin-top:2.6rem; background:var(--ground-2); border:1px solid var(--line); border-radius:18px; padding:clamp(1.6rem,4vw,2.6rem)}
@@ -163,6 +170,23 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line)}
 .btn.ghost:hover{border-color:var(--foxfire)}
 .btn:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+.btn-book{display:inline-block; box-shadow:0 6px 18px -8px rgba(31,122,76,.55); transition:background .18s ease,transform .18s ease,box-shadow .2s ease; font-family:var(--mono); font-size:.84rem; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--foxfire); color:var(--ground); border:1px solid var(--foxfire); border-radius:999px;
+  padding:1rem 2rem; cursor:pointer; text-decoration:none}
+.btn-book:hover{background:var(--foxfire-deep); color:var(--ground); transform:translateY(-2px); box-shadow:0 10px 24px -8px rgba(31,122,76,.5)}
+.btn-book:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+.hero-cta{margin-top:2.2rem}
+.hero .micro{margin-top:.9rem; font-size:.88rem; color:var(--muted)}
+.housecall{margin-top:1.6rem; background:var(--ground-2); border:1px solid var(--line); border-radius:18px;
+  padding:clamp(1.4rem,3.5vw,2.2rem); display:flex; flex-wrap:wrap; gap:1rem 2rem; align-items:baseline; justify-content:space-between}
+.housecall .blurb{flex:1 1 32ch; max-width:60ch}
+.housecall h3{font-size:1.45rem; margin-bottom:.4rem}
+.housecall p{color:var(--muted); font-size:.97rem}
+.housecall .side{display:flex; flex-direction:column; gap:.8rem; align-items:flex-start}
+.housecall .num{display:block; margin-bottom:.4rem; font-family:var(--mono); font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.housecall .num{color:var(--foxfire)}}
+:root[data-theme="dark"] .housecall .num{color:var(--foxfire)}
+:root[data-theme="light"] .housecall .num{color:var(--foxfire-deep)}
 .form-note{margin-top:1rem; font-size:.88rem; color:var(--muted)}
 .copy-status{font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--foxfire-deep)}
 @media (prefers-color-scheme:dark){.copy-status{color:var(--foxfire)}}
@@ -175,6 +199,8 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 footer{border-top:1px solid var(--line); padding:2.4rem 0 3rem}
 footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:space-between;
   font-family:var(--mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.btn-book:hover{transform:none}}
+.eyebrow{letter-spacing:.14em}
 </style>
 </head>
 <body>
@@ -182,7 +208,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <a class="brand" href="index.html">Our House</a>
   <span class="navlinks">
     <a href="story.html">The Story</a>
-    <a href="what-we-do.html">What We Do</a>
     <a href="business.html" aria-current="page">Work With Us</a>
   </span>
 </nav>
@@ -192,77 +217,51 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <canvas id="roots" aria-hidden="true"></canvas>
   <div class="wrap">
     <p class="eyebrow">Our House · Work With Us</p>
-    <h1>Three ways <span class="kicker">in.</span></h1>
-    <p class="lead">Book the experience, run your own network on our stack, or bring us all the way to your door. Every path starts with the same short application below.</p>
+    <h1>Now let's build <span class="kicker">yOUR HOUSE.</span></h1>
+    <div class="hero-cta">
+      <a class="btn-book js-book" href="#apply">Book a call</a>
+    </div>
+    <p class="micro">A 30-minute vision call. We'll map what's capping your growth — no pressure.</p>
   </div>
 </header>
 
 <main>
 <section class="band" id="services">
   <div class="wrap measure reveal">
-    <p class="eyebrow">The services</p>
-    <h2>Pick your door.</h2>
-    <p>Same house, three entrances — sized to where you are and how deep you want to go.</p>
+    <p class="eyebrow">The offers</p>
+    <h2>Two ways to work with us.</h2>
   </div>
   <div class="wrap">
-    <div class="offers">
-      <div class="offer reveal">
-        <span class="num">Offer 01 · Gather</span>
-        <h3>Book us for an event</h3>
-        <p>We bring the full Our House experience to your community, venue, or gathering — the music, the movement, the teaching, the whole room.</p>
-        <ul>
-          <li>Full event design &amp; facilitation</li>
-          <li>Music, somatics, live art &amp; teaching</li>
-          <li>Family-friendly, all ages by design</li>
-          <li>Capture + follow-up so it compounds</li>
-        </ul>
-        <span class="price">Priced per event · inquire</span>
-        <a class="cta" href="#apply" data-offer="Book us for an event">Start here →</a>
-      </div>
-      <div class="offer reveal">
-        <span class="num">Offer 02 · Equip</span>
-        <h3>Run your own on our stack</h3>
-        <p>License the backend that runs our network — funnels, landing pages, checkouts, follow-up — so you host your own without becoming a tech person.</p>
-        <ul>
-          <li>The full stack, set up for you</li>
-          <li>Fast, adaptable, yours to run</li>
-          <li>Onboarding + ongoing support</li>
-        </ul>
-        <span class="price">License · inquire</span>
-        <a class="cta" href="#apply" data-offer="Buy the backend stack">Start here →</a>
-      </div>
-      <div class="offer reveal">
-        <span class="num">Offer 03 · Grow</span>
-        <h3>Deluxe 1:1 consulting</h3>
-        <p>Private, senior-level counsel for all things branding, growing, and scaling — your brand, your offers, your next chapter, worked side by side.</p>
-        <ul>
-          <li>Brand &amp; positioning deep-dives</li>
-          <li>Growth &amp; scaling strategy</li>
-          <li>Direct access, real accountability</li>
-        </ul>
-        <span class="price">Engagement · inquire</span>
-        <a class="cta" href="#apply" data-offer="Deluxe 1:1 consulting">Start here →</a>
-      </div>
-    </div>
-
     <div class="flagship reveal">
-      <span class="num">The flagship · By application only</span>
-      <h3>The House Call</h3>
+      <span class="num">The flagship — start here</span>
+      <h3>The Cohort</h3>
       <div class="grid">
         <div>
-          <p><b>We come to where you are.</b> The whole crew, flown to your location, embedded with your team. We install the full toolkit into your business, train your people on it in person, and stay long enough to hang out — because that's where the real transfer happens.</p>
+          <p><b>Systems installed with you — not sold to you.</b> Six to eight weeks, 8 to 12 practitioners. We stand up your funnels, pages, checkout, and follow-up; redesign one offer; test it in the lab; and launch it for real.</p>
           <ul>
-            <li><b>Install</b> — the complete stack and protocols, placed into your operation</li>
-            <li><b>Train</b> — your team, hands-on, until it's theirs</li>
-            <li><b>Analyze &amp; synthesize</b> — your whole flow, tuned for maximum productivity</li>
-            <li><b>Integrate</b> — we work with you, eat with you, and leave the culture behind, not just the tools</li>
+            <li><b>Week 0 — Diagnose.</b> Name the gap capping your revenue</li>
+            <li><b>Week 1 — Front door live.</b> Landing page + checkout stood up</li>
+            <li><b>Weeks 2–4 — Build &amp; test.</b> One offer redesigned, follow-up automated</li>
+            <li><b>Weeks 5–8 — Launch.</b> Run it for real; capture converts to recurring</li>
           </ul>
         </div>
         <div class="price-block">
-          <p class="price-line">If you know, you know.</p>
-          <p class="price-sub">This is the everything-offer, priced like one. For the enterprise ready to transform all at once rather than one workshop at a time. Serious inquiries only.</p>
-          <a class="cta" href="#apply" data-offer="The House Call (flagship)">Apply for a House Call →</a>
+          <p class="price-line">Founding rate — first cohort.</p>
+          <p class="price-sub">Priced to seed proof: founding members get the lower rate, and in exchange we publish your honest before-and-after numbers. You leave with a launched, converting offer and a revenue plan.</p>
+          <a class="cta" href="#apply" data-offer="The Cohort (founding)">Apply for the Cohort →</a>
         </div>
+      </div>
+    </div>
+
+    <div class="housecall reveal">
+      <div class="blurb">
+        <span class="num">Enterprise</span>
+        <h3>The House Call</h3>
+        <p>The whole crew, installed on-site — done-for-you, for organizations ready to transform all at once. We install the full stack, train your people in person, and leave the culture behind, not just the tools.</p>
+      </div>
+      <div class="side">
+        <span class="price">5-figure · by application</span>
+        <a class="cta" href="#apply" data-offer="The House Call">Apply for a House Call →</a>
       </div>
     </div>
   </div>
@@ -271,8 +270,8 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 <section class="band" id="apply">
   <div class="wrap measure reveal">
     <p class="eyebrow">The application</p>
-    <h2>Tell us what's alive.</h2>
-    <p>A few honest answers is all it takes. We read every application ourselves and reply personally — this is an intake, not a funnel trap.</p>
+    <h2>Great at your craft, but the business feels like a <span class="kicker">second job?</span></h2>
+    <p>That's exactly who this is for. A few honest answers is all it takes — we read every application ourselves and reply personally. This is an intake, not a funnel trap.</p>
   </div>
   <div class="wrap reveal">
     <form class="intake" id="intakeForm">
@@ -290,12 +289,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
           <input id="f-org" name="org" type="text" autocomplete="organization">
         </div>
         <div class="field">
-          <label for="f-offer">Which door?</label>
+          <label for="f-offer">Which offer?</label>
           <select id="f-offer" name="offer">
-            <option>Book us for an event</option>
-            <option>Buy the backend stack</option>
-            <option>Deluxe 1:1 consulting</option>
-            <option>The House Call (flagship)</option>
+            <option>The Cohort (founding)</option>
+            <option>The House Call</option>
             <option>Not sure yet — help me choose</option>
           </select>
         </div>
@@ -320,8 +317,8 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 <section class="close">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center">The promise</p>
-    <h2>Whichever door you choose, you end up in the same living room.</h2>
-    <p class="lead">More fun, more family, more richness — installed into the way you work.</p>
+    <h2>We make the systems that communities need to thrive, not just survive, so you can go back to enjoying your time in them.</h2>
+    <a class="btn-book js-book" href="#apply" style="margin-top:2rem">Book a call</a>
   </div>
 </section>
 </main>
@@ -350,6 +347,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     tog.textContent = next==='dark' ? 'Light' : 'Dark';
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  if(typeof BOOKING_URL === 'string' && BOOKING_URL){
+    [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
+  }
 
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   if(reduce || !('IntersectionObserver' in window)){
