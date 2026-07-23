@@ -133,7 +133,12 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .pair{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2.4rem}
 @media (max-width:680px){.pair{grid-template-columns:1fr}}
 .pane{background:var(--ground-2); border:1px solid var(--line); border-radius:16px; padding:1.5rem}
-.pane .cap{display:block; font-family:var(--mono); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:.6rem}
+.pane .cap{display:block; font-family:var(--mono); font-size:.95rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:.6rem}
+.pane .cap.before{color:#D75A45}
+@media (prefers-color-scheme:light){.pane .cap.before{color:#A73A28}}
+:root[data-theme="dark"] .pane .cap.before{color:#D75A45}
+:root[data-theme="light"] .pane .cap.before{color:#A73A28}
+.pane .cap.after{color:var(--foxfire)}
 .pane p{font-family:var(--serif); font-size:1.12rem; line-height:1.5}
 .soul{margin-top:2.2rem; font-family:var(--serif); font-weight:700; font-size:clamp(1.9rem,4.2vw,2.9rem); line-height:1.08; letter-spacing:-.01em; text-wrap:balance; color:var(--ink)}
 
@@ -223,11 +228,11 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <div class="wrap">
     <div class="pair">
       <div class="pane reveal">
-        <span class="cap">Before</span>
+        <span class="cap before">Before</span>
         <p>"I know how to create value, but I rebuild everything from scratch and the money is unpredictable."</p>
       </div>
       <div class="pane reveal">
-        <span class="cap">After</span>
+        <span class="cap after">After</span>
         <p>"I have systems that run, offers that convert, and recurring revenue — so I can spend my time on the work only I can do."</p>
       </div>
     </div>
