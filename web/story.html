@@ -98,13 +98,13 @@ a{color:inherit}
 .hero .wrap{position:relative; z-index:2}
 .hero::after{content:""; position:absolute; inset:0; z-index:1;
   background:radial-gradient(120% 90% at 15% 30%, transparent 40%, var(--ground) 100%)}
-.hero h1{font-size:clamp(2.5rem,6.5vw,4.6rem); letter-spacing:-.015em}
+.hero h1{font-size:clamp(2.8rem,8vw,5.4rem); font-weight:700; letter-spacing:-.02em}
 .hero h1 .amp{color:var(--foxfire); font-style:italic}
 .hero .lead{margin-top:1.6rem; max-width:52ch; font-size:clamp(1.15rem,1.5vw,1.4rem); color:var(--ink)}
 .hero .sub{margin-top:1.2rem; max-width:46ch; color:var(--muted)}
 .taglets{margin-top:2.4rem; display:flex; flex-wrap:wrap; gap:.6rem}
-.tag{font-family:var(--mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase;
-  border:1px solid var(--line); border-radius:999px; padding:.45rem .85rem; color:var(--muted)}
+.tag{font-family:var(--mono); font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  border:1px solid var(--ember); background:rgba(232,169,63,.07); border-radius:999px; padding:.45rem .85rem; color:var(--warm-text)}
 
 /* section rhythm */
 section.band{padding:clamp(4.5rem,9vw,7.5rem) 0; border-top:1px solid var(--line); position:relative}
@@ -229,7 +229,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <canvas id="myco" aria-hidden="true"></canvas>
   <div class="wrap">
     <p class="eyebrow">A Multi-Generational Regenerative Business</p>
-    <h1>Our&nbsp;House</h1>
+    <h1>Our&nbsp;<span class="kicker">House</span></h1>
     <p class="lead">We're in the business of helping humans <em>human</em> — better, and clearer. Through education and innovation.</p>
     <p class="sub">How we mend the sacred hoop is to put the eight forms of capital into motion. Our network should be more like mycelium and not silos.</p>
     <div class="taglets">
