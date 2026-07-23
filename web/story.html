@@ -5,35 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our House — Mending the Sacred Hoop</title>
 <meta name="description" content="A multi-generational regenerative business helping humans human better and clearer — through the 8 forms of capital, moved like mycelium instead of hoarded in silos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
-  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
-  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
-  --thread:rgba(214,201,176,.55);
-  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;
-  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-  --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
+  --ground:#FBF6EC; --ground-2:#FFFDF8; --surface:#F3ECDD;
+  --ink:#221C15; --muted:#6B6053; --line:rgba(34,28,21,.12);
+  --foxfire:#1F7A4C; --foxfire-deep:#17603C; --ember:#E8A93F;
+  --warm-text:#A05E0B; --thread:rgba(34,28,21,.22);
+  --serif:'Bricolage Grotesque',system-ui,sans-serif;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  --mono:'Hanken Grotesk',system-ui,sans-serif;
 }
-@media (prefers-color-scheme:light){
+@media (prefers-color-scheme:dark){
   :root{
-    --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
-    --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
-    --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
-    --thread:rgba(80,66,44,.45);
+    --ground:#1A1410; --ground-2:#241C16; --surface:#2A2018;
+    --ink:#F2E9DA; --muted:#BFB09A; --line:rgba(242,233,218,.14);
+    --foxfire:#3FA96B; --foxfire-deep:#5FC489; --ember:#E8A93F;
+    --warm-text:#EFB859; --thread:rgba(242,233,218,.26);
   }
 }
 :root[data-theme="dark"]{
-  --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
-  --ink:#ECE3D2; --muted:#A2937A; --line:rgba(236,227,210,.12);
-  --foxfire:#B4D45A; --foxfire-deep:#8CAD3A; --ember:#E28C3F;
-  --thread:rgba(214,201,176,.55);
+  --ground:#1A1410; --ground-2:#241C16; --surface:#2A2018;
+  --ink:#F2E9DA; --muted:#BFB09A; --line:rgba(242,233,218,.14);
+  --foxfire:#3FA96B; --foxfire-deep:#5FC489; --ember:#E8A93F;
+  --warm-text:#EFB859; --thread:rgba(242,233,218,.26);
 }
 :root[data-theme="light"]{
-  --ground:#E6E0D1; --ground-2:#EDE7DA; --surface:#F2EDE1;
-  --ink:#221B12; --muted:#6B6050; --line:rgba(34,27,18,.14);
-  --foxfire:#5C7A16; --foxfire-deep:#41560F; --ember:#B0611F;
-  --thread:rgba(80,66,44,.45);
+  --ground:#FBF6EC; --ground-2:#FFFDF8; --surface:#F3ECDD;
+  --ink:#221C15; --muted:#6B6053; --line:rgba(34,28,21,.12);
+  --foxfire:#1F7A4C; --foxfire-deep:#17603C; --ember:#E8A93F;
+  --warm-text:#A05E0B; --thread:rgba(34,28,21,.22);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -50,11 +53,11 @@ p{margin:0}
 a{color:inherit}
 .eyebrow{
   font-family:var(--mono); font-size:.72rem; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--foxfire-deep); margin:0 0 1.1rem;
+  text-transform:uppercase; color:var(--warm-text); font-weight:700; margin:0 0 1.1rem;
 }
-@media (prefers-color-scheme:dark){.eyebrow{color:var(--foxfire)}}
-:root[data-theme="dark"] .eyebrow{color:var(--foxfire)}
-:root[data-theme="light"] .eyebrow{color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.eyebrow{color:var(--warm-text)}}
+:root[data-theme="dark"] .eyebrow{color:var(--warm-text)}
+:root[data-theme="light"] .eyebrow{color:var(--warm-text)}
 .lead{color:var(--muted); font-size:1.15rem}
 
 /* growth marks */
@@ -177,8 +180,8 @@ section.band{padding:clamp(4.5rem,9vw,7.5rem) 0; border-top:1px solid var(--line
 .list .t b{display:block}
 .list .t span{color:var(--muted); font-size:.92rem}
 .subhead{font-family:var(--mono); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:1rem}
-.incubate .m{color:var(--ember)}
-.badge{display:inline-block; font-family:var(--mono); font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ember); border:1px solid var(--ember); border-radius:999px; padding:.1rem .5rem; margin-left:.5rem; vertical-align:middle}
+.incubate .m{color:var(--warm-text)}
+.badge{display:inline-block; font-family:var(--mono); font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; color:var(--warm-text); border:1px solid var(--ember); border-radius:999px; padding:.1rem .5rem; margin-left:.5rem; vertical-align:middle}
 
 /* build sequence */
 .seq{margin-top:2.8rem; position:relative}
@@ -208,6 +211,8 @@ footer{border-top:1px solid var(--line); padding:2.4rem 0 3rem}
 footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:space-between;
   font-family:var(--mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
 .foot-note{font-family:var(--sans); text-transform:none; letter-spacing:0; font-size:.82rem; color:var(--muted); max-width:52ch; margin-top:1.2rem; line-height:1.5}
+@media (prefers-reduced-motion:reduce){.btn-book:hover{transform:none}}
+.eyebrow{letter-spacing:.14em}
 </style>
 </head>
 <body>
