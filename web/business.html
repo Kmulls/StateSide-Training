@@ -44,7 +44,7 @@ const APPLICATION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdXl56yb2uVhSD
   --warm-text:#A05E0B; --thread:rgba(34,28,21,.22);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth; overflow-x:hidden; scroll-snap-type:y proximity; scroll-padding-top:3.5rem}
+html{scroll-behavior:smooth; overflow-x:hidden; scroll-snap-type:y mandatory; scroll-padding-top:3.5rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .hero,.band,.close{scroll-snap-align:start}
 @media (prefers-reduced-motion:reduce){html{scroll-snap-type:none}}
@@ -205,6 +205,27 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   font-family:var(--mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.btn-book:hover{transform:none}}
 .eyebrow{letter-spacing:.14em}
+/* HCC secret popup */
+.hcc-link{color:var(--foxfire-deep); text-decoration:underline; text-underline-offset:2px; background:none; border:0; padding:0; font:inherit; cursor:pointer}
+@media (prefers-color-scheme:dark){.hcc-link{color:var(--foxfire)}}
+:root[data-theme="dark"] .hcc-link{color:var(--foxfire)}
+:root[data-theme="light"] .hcc-link{color:var(--foxfire-deep)}
+.hcc-link:hover{color:var(--foxfire)}
+.hcc-modal{width:min(92vw,640px); max-height:88vh; overflow:auto; border:1px solid var(--ember); border-radius:18px; background:var(--ground-2); color:var(--ink); padding:clamp(1.5rem,4vw,2.6rem); position:relative; box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+.hcc-modal::backdrop{background:rgba(10,8,5,.6)}
+.hcc-close{position:absolute; top:.6rem; right:.85rem; background:none; border:0; color:var(--muted); font-size:1.7rem; line-height:1; cursor:pointer}
+.hcc-close:hover{color:var(--ink)}
+.hcc-modal .eyebrow{color:var(--warm-text)}
+.hcc-modal h2{font-size:clamp(1.6rem,3.5vw,2.2rem); margin:.2rem 0 .8rem}
+.hcc-lead{color:var(--muted); font-size:1.05rem; margin-bottom:1.4rem}
+.hcc-arts{display:grid; grid-template-columns:1fr 1fr; gap:.7rem; margin-bottom:1.3rem}
+@media (max-width:520px){.hcc-arts{grid-template-columns:1fr}}
+.hcc-arts div{background:var(--ground); border:1px solid var(--line); border-radius:12px; padding:.7rem .9rem}
+.hcc-arts b{font-family:var(--serif); font-weight:700; display:block}
+.hcc-arts span{font-family:var(--mono); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; color:var(--warm-text)}
+.hcc-row{color:var(--muted); margin:.8rem 0; font-size:.97rem}
+.hcc-row b{color:var(--ink)}
+.hcc-quote{margin-top:1.4rem; font-family:var(--serif); font-weight:700; font-size:1.3rem; color:var(--ink); border-left:4px solid var(--ember); padding-left:1rem}
 </style>
 </head>
 <body>
@@ -212,7 +233,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <a class="brand" href="index.html">Our House</a>
   <span class="navlinks">
     <a href="story.html">The Story</a>
-    <a href="human-cc.html">Human C.C.</a>
     <a href="business.html" aria-current="page">Work With Us</a>
   </span>
 </nav>
@@ -242,11 +262,11 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
       <h3>The Cohort</h3>
       <div class="grid">
         <div>
-          <p><b>Systems installed with you — not sold to you.</b> Six to eight weeks, 8 to 12 practitioners. We stand up your funnels, pages, checkout, and follow-up; redesign one offer; test it in the lab; and launch it for real.</p>
+          <p><b>Systems installed with you — not sold to you.</b> Six to eight weeks, 8 to 12 practitioners. We stand up your funnels, pages, checkout, and follow-up; redesign one offer; test it in the lab; and launch it for real — with the <button type="button" class="hcc-link">Human Capacity Curriculum</button> woven through, so you build capacity, not just funnels.</p>
           <ul>
-            <li><b>Week 0 — Diagnose.</b> Name the gap capping your revenue</li>
+            <li><b>Week 0 — Diagnose.</b> Name the gap capping your revenue — and the one capping your capacity</li>
             <li><b>Week 1 — Front door live.</b> Landing page + checkout stood up</li>
-            <li><b>Weeks 2–4 — Build &amp; test.</b> One offer redesigned, follow-up automated</li>
+            <li><b>Weeks 2–4 — Build &amp; test.</b> One offer redesigned, follow-up automated — tuned in the room, where music, art &amp; movement do real work</li>
             <li><b>Weeks 5–8 — Launch.</b> Run it for real; capture converts to recurring</li>
           </ul>
         </div>
@@ -295,6 +315,22 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 </section>
 </main>
 
+<dialog class="hcc-modal" id="hccModal" aria-label="The Human Capacity Curriculum">
+  <button class="hcc-close" type="button" aria-label="Close">&times;</button>
+  <p class="eyebrow">The soul under the systems</p>
+  <h2>The Human Capacity Curriculum</h2>
+  <p class="hcc-lead">We don't just install funnels — we grow the whole person. Four arts, tuned to the balance in everyone, measured across eight forms of capital.</p>
+  <div class="hcc-arts">
+    <div><b>Music</b><span>Attunement</span></div>
+    <div><b>Art</b><span>Expression</span></div>
+    <div><b>Movement &middot; Healing</b><span>Embodiment</span></div>
+    <div><b>Education</b><span>Understanding</span></div>
+  </div>
+  <p class="hcc-row"><b>The balance &mdash;</b> every session moves you between yin (receive, restore) and yang (act, create): the active and receptive energy in everyone, regardless of gender or age, so you leave centered.</p>
+  <p class="hcc-row"><b>The measure &mdash;</b> Social &middot; Material &middot; Financial &middot; Living &middot; Intellectual &middot; Experiential &middot; Spiritual &middot; Cultural. Not to max one &mdash; to keep them circulating. Abundance = circulation.</p>
+  <p class="hcc-quote">Come as you are. Leave in balance.</p>
+</dialog>
+
 <footer>
   <div class="wrap">
     <span>Our House</span>
@@ -319,6 +355,17 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     tog.textContent = next==='dark' ? 'Light' : 'Dark';
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  /* HCC secret popup */
+  var hcc = document.getElementById('hccModal');
+  if(hcc){
+    document.addEventListener('click', function(e){
+      var link = e.target.closest ? e.target.closest('.hcc-link') : null;
+      if(link){ e.preventDefault(); if(hcc.showModal){ try{ hcc.showModal(); }catch(_){ hcc.setAttribute('open',''); } } else { hcc.setAttribute('open',''); } return; }
+      if(e.target.closest && e.target.closest('.hcc-close')){ if(hcc.close) hcc.close(); else hcc.removeAttribute('open'); }
+    });
+    hcc.addEventListener('click', function(e){ if(e.target===hcc && hcc.close) hcc.close(); });
+  }
 
   if(typeof BOOKING_URL === 'string' && BOOKING_URL){
     [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
