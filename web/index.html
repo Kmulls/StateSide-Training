@@ -224,6 +224,67 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   font-family:var(--mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.btn-book:hover{transform:none}}
 .eyebrow{letter-spacing:.14em}
+/* HCC secret popup */
+.hcc-link{color:var(--foxfire-deep); text-decoration:underline; text-underline-offset:2px; background:none; border:0; padding:0; font:inherit; cursor:pointer}
+@media (prefers-color-scheme:dark){.hcc-link{color:var(--foxfire)}}
+:root[data-theme="dark"] .hcc-link{color:var(--foxfire)}
+:root[data-theme="light"] .hcc-link{color:var(--foxfire-deep)}
+.hcc-link:hover{color:var(--foxfire)}
+.hcc-modal{width:min(92vw,640px); max-height:88vh; overflow:auto; border:1px solid var(--ember); border-radius:18px; background:var(--ground-2); color:var(--ink); padding:clamp(1.5rem,4vw,2.6rem); position:fixed; inset:0; margin:auto; z-index:1000; box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+.hcc-modal[open]:not(:modal){box-shadow:0 30px 80px -20px rgba(0,0,0,.5), 0 0 0 100vmax rgba(10,8,5,.6)}
+.hcc-modal::backdrop{background:rgba(10,8,5,.6)}
+.hcc-close{position:absolute; top:.6rem; right:.85rem; background:none; border:0; color:var(--muted); font-size:1.7rem; line-height:1; cursor:pointer}
+.hcc-close:hover{color:var(--ink)}
+.hcc-modal .eyebrow{color:var(--warm-text)}
+.hcc-modal h2{font-size:clamp(1.6rem,3.5vw,2.2rem); margin:.2rem 0 .8rem}
+.hcc-lead{color:var(--muted); font-size:1.05rem; margin-bottom:1.4rem}
+.hcc-arts{display:grid; grid-template-columns:1fr 1fr; gap:.7rem; margin-bottom:1.3rem}
+@media (max-width:520px){.hcc-arts{grid-template-columns:1fr}}
+.hcc-arts div{background:var(--ground); border:1px solid var(--line); border-radius:12px; padding:.7rem .9rem}
+.hcc-arts b{font-family:var(--serif); font-weight:700; display:block}
+.hcc-arts span{font-family:var(--mono); font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; color:var(--warm-text)}
+.hcc-row{color:var(--muted); margin:.8rem 0; font-size:.97rem}
+.hcc-row b{color:var(--ink)}
+.hcc-quote{margin-top:1.4rem; font-family:var(--serif); font-weight:700; font-size:1.3rem; color:var(--ink); border-left:4px solid var(--ember); padding-left:1rem}
+/* HCC: the capacity practice */
+.cap-practice{margin-top:2rem; padding-top:2rem; border-top:1px solid var(--line)}
+.cap-head{display:flex; align-items:center; gap:1rem; margin-bottom:1rem}
+.cap-mark{width:58px; height:58px; flex:0 0 auto}
+.cap-head h3{font-family:var(--serif); font-weight:700; font-size:clamp(1.4rem,3.2vw,1.95rem); line-height:1.03}
+.cap-body{color:var(--muted); margin:.7rem 0; font-size:1rem; line-height:1.62}
+.cap-body b{color:var(--ink)}
+.dropcap{float:left; font-family:var(--serif); font-weight:700; font-size:3.1rem; line-height:.72; padding:.15rem .55rem 0 0; color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.dropcap{color:var(--foxfire)}}
+:root[data-theme="dark"] .dropcap{color:var(--foxfire)}
+:root[data-theme="light"] .dropcap{color:var(--foxfire-deep)}
+.cap-pull{font-family:var(--serif); font-weight:700; font-size:clamp(1.3rem,3vw,1.7rem); line-height:1.15; color:var(--ink); border-left:4px solid var(--foxfire); padding-left:1rem; margin:1.5rem 0}
+.cap-sub{font-family:var(--serif); font-weight:700; font-size:1.3rem; margin:1.7rem 0 .3rem; color:var(--ink)}
+.cap-sub .kick{color:var(--foxfire-deep)}
+@media (prefers-color-scheme:dark){.cap-sub .kick{color:var(--foxfire)}}
+:root[data-theme="dark"] .cap-sub .kick{color:var(--foxfire)}
+:root[data-theme="light"] .cap-sub .kick{color:var(--foxfire-deep)}
+.cap-order{list-style:none; margin:1.1rem 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.6rem}
+@media (max-width:520px){.cap-order{grid-template-columns:1fr}}
+.cap-order li{display:flex; align-items:baseline; gap:.55rem; background:var(--ground); border:1px solid var(--line); border-radius:12px; padding:.7rem .9rem; font-family:var(--serif); font-weight:700; font-size:1.1rem}
+.cap-order li span{font-family:var(--mono); font-size:.64rem; letter-spacing:.1em; color:var(--warm-text); font-weight:700}
+.cap-order li em{margin-left:auto; font-style:normal; font-family:var(--mono); font-size:.58rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:400}
+.cap-box{margin-top:1.4rem; background:radial-gradient(130% 140% at 0% 0%, rgba(232,169,63,.16), transparent 60%), var(--ground); border:1px solid var(--ember); border-radius:14px; padding:1.2rem 1.3rem; font-family:var(--serif); font-weight:700; font-size:1.15rem; line-height:1.25; color:var(--ink)}
+/* HCC: yin-yang turns slowly (stays circular); hover pauses + glows */
+.cap-mark{transform-origin:50% 50%; animation:yy-turn 26s linear infinite}
+.cap-mark:hover{animation-play-state:paused; filter:drop-shadow(0 0 7px rgba(232,169,63,.55))}
+@keyframes yy-turn{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.cap-mark{animation:none}}
+/* HCC popup hover lifts */
+.hcc-arts div,.cap-order li,.cap-box{transition:transform .18s ease, border-color .18s ease}
+.hcc-arts div:hover{transform:translateY(-2px); border-color:var(--ember)}
+.cap-order li:hover{transform:translateY(-2px); border-color:var(--foxfire)}
+.cap-box:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.hcc-arts div,.cap-order li,.cap-box{transition:none}.hcc-arts div:hover,.cap-order li:hover,.cap-box:hover{transform:none}}
+/* HCC nav tab (opens the popup, not a page) */
+.nav .hcc-link{font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-decoration:none; font-weight:400}
+.nav .hcc-link:hover{color:var(--ink)}
+.nav .hcc-link:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+@media (max-width:560px){.nav .hcc-link{font-size:.64rem; letter-spacing:.1em}}
 </style>
 </head>
 <body>
@@ -232,6 +293,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <span class="navlinks">
     <a href="story.html">The Story</a>
     <a href="business.html">Work With Us</a>
+    <button type="button" class="hcc-link">Human C.C.</button>
   </span>
 </nav>
 <button class="toggle" id="themeToggle" aria-label="Toggle light or dark theme">Theme</button>
@@ -359,6 +421,52 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 </section>
 </main>
 
+<dialog class="hcc-modal" id="hccModal" aria-label="The Human Capacity Curriculum">
+  <button class="hcc-close" type="button" aria-label="Close">&times;</button>
+  <p class="eyebrow">The soul under the systems</p>
+  <h2>The Human Capacity Curriculum</h2>
+  <p class="hcc-lead">We don't just install funnels — we grow the whole person. Four arts, tuned to the balance in everyone, measured across eight forms of capital.</p>
+  <div class="hcc-arts">
+    <div><b>Music</b><span>Attunement</span></div>
+    <div><b>Art</b><span>Expression</span></div>
+    <div><b>Movement &middot; Healing</b><span>Embodiment</span></div>
+    <div><b>Education</b><span>Understanding</span></div>
+  </div>
+  <p class="hcc-row"><b>The balance &mdash;</b> every session moves you between yin (receive, restore) and yang (act, create): the active and receptive energy in everyone, regardless of gender or age, so you leave centered.</p>
+  <p class="hcc-row"><b>The measure &mdash;</b> Social &middot; Material &middot; Financial &middot; Living &middot; Intellectual &middot; Experiential &middot; Spiritual &middot; Cultural. Not to max one &mdash; to keep them circulating. Abundance = circulation.</p>
+  <p class="hcc-quote">Come as you are. Leave in balance.</p>
+
+  <div class="cap-practice">
+    <div class="cap-head">
+      <svg class="cap-mark" viewBox="0 0 100 100" role="img" aria-label="Balance">
+        <circle cx="50" cy="50" r="48" fill="var(--ember)"/>
+        <path d="M50 2 a48 48 0 0 1 0 96 a24 24 0 0 1 0 -48 a24 24 0 0 0 0 -48 z" fill="var(--foxfire)"/>
+        <circle cx="50" cy="26" r="7" fill="var(--ember)"/>
+        <circle cx="50" cy="74" r="7" fill="var(--foxfire)"/>
+        <circle cx="50" cy="50" r="48" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+      </svg>
+      <div>
+        <p class="eyebrow">The capacity practice</p>
+        <h3>You don&rsquo;t have a discipline problem.</h3>
+      </div>
+    </div>
+    <p class="cap-body"><span class="dropcap">Y</span>ou have a capacity problem &mdash; and every strategy you stack on top of a depleted nervous system degrades on contact. That&rsquo;s why you know exactly what to do and still don&rsquo;t do it. It&rsquo;s why you underprice work you&rsquo;d defend for anyone else.</p>
+    <p class="cap-body">The prescription you&rsquo;ve been handed is to become more relentless, and it isn&rsquo;t working because it asks you to abandon the exact thing you&rsquo;re built on.</p>
+    <p class="cap-pull">You don&rsquo;t need more drive. You need structure around the gift you already have.</p>
+
+    <h4 class="cap-sub">So we build <span class="kick">capacity first.</span></h4>
+    <p class="cap-body">Every gathering runs four elements &mdash; <b>in that order</b> &mdash; because a body has to settle before a mind can learn anything worth keeping.</p>
+    <ol class="cap-order">
+      <li><span>01</span> Music <em>settle</em></li>
+      <li><span>02</span> Movement <em>release</em></li>
+      <li><span>03</span> Art <em>express</em></li>
+      <li><span>04</span> Teaching <em>keep</em></li>
+    </ol>
+    <p class="cap-body">Then we count what you actually own. Money is one of <b>eight forms of wealth</b>, and most people here are quietly rich in the wrong currency for the problem in front of them: deep social capital they&rsquo;ve never converted, hard-won knowledge they&rsquo;ve never written down.</p>
+    <div class="cap-box">We find the one resource capping your growth &mdash; and the surplus you already have to fix it.</div>
+  </div>
+</dialog>
+
 <footer>
   <div class="wrap">
     <span>Our House</span>
@@ -383,6 +491,17 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     tog.textContent = next==='dark' ? 'Light' : 'Dark';
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  /* HCC secret popup */
+  var hcc = document.getElementById('hccModal');
+  if(hcc){
+    document.addEventListener('click', function(e){
+      var link = e.target.closest ? e.target.closest('.hcc-link') : null;
+      if(link){ e.preventDefault(); if(hcc.showModal){ try{ hcc.showModal(); }catch(_){ hcc.setAttribute('open',''); } } else { hcc.setAttribute('open',''); } return; }
+      if(e.target.closest && e.target.closest('.hcc-close')){ if(hcc.close) hcc.close(); else hcc.removeAttribute('open'); }
+    });
+    hcc.addEventListener('click', function(e){ if(e.target===hcc && hcc.close) hcc.close(); });
+  }
 
   if(typeof BOOKING_URL === 'string' && BOOKING_URL){
     [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
