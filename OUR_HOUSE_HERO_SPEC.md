@@ -30,8 +30,8 @@ becoming a full-time marketer or tech person.
   gift into a business that runs — recurring revenue, less admin, your time back.
   Not more hustle. More capacity.
 - Primary CTA (button): Book a call
-- CTA microcopy: A no-pressure, 30-minute vision call. We'll map what's capping
-  your growth — no pitch.
+- CTA microcopy: A 30-minute vision call. We'll map what's capping your growth —
+  no pressure.
 - (Secondary "or come to a gathering →" link removed 2026-07-23 at Kevin's
   direction — one action only.)
 - Qualifier line: For practitioners with an audience, a practice, and a vision for

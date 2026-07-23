@@ -145,6 +145,49 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .door p{color:var(--muted); font-size:.97rem}
 .door .go{margin-top:auto; padding-top:1rem; font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink)}
 
+/* v3: pain → promise */
+.pair{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2.4rem}
+@media (max-width:680px){.pair{grid-template-columns:1fr}}
+.pane{background:var(--ground-2); border:1px solid var(--line); border-radius:16px; padding:1.5rem}
+.pane .cap{display:block; font-family:var(--mono); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:.6rem}
+.pane p{font-family:var(--serif); font-size:1.12rem; line-height:1.5}
+.soul{margin-top:1.8rem; font-family:var(--serif); font-style:italic; color:var(--muted)}
+
+/* v3: revenue engine */
+.engine{display:flex; flex-wrap:wrap; align-items:center; gap:.55rem .6rem; margin-top:2.2rem}
+.engine .step{font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
+  border:1px solid var(--line); border-radius:999px; padding:.5rem .85rem; background:var(--ground-2)}
+.engine .arrow{color:var(--foxfire)}
+
+/* v3: offer ladder */
+.ladder{margin-top:2.4rem}
+.rung{display:grid; grid-template-columns:1.05fr 1.4fr .55fr; gap:1rem; align-items:baseline;
+  padding:1.1rem .2rem; border-bottom:1px solid var(--line)}
+.rung:first-child{border-top:1px solid var(--line)}
+@media (max-width:680px){.rung{grid-template-columns:1fr; gap:.3rem}}
+.rung .name{font-family:var(--serif); font-size:1.2rem}
+.rung .name span{display:block; font-family:var(--mono); font-size:.64rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-top:.15rem}
+.rung .what{color:var(--muted); font-size:.95rem}
+.rung .anchor{font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; text-align:right}
+@media (max-width:680px){.rung .anchor{text-align:left}}
+.rung.star{background:var(--ground-2); border:1px solid var(--foxfire); border-radius:12px; padding:1.1rem 1rem; margin:.4rem 0}
+.ladder-note{margin-top:1.6rem; color:var(--muted); font-size:.95rem}
+
+/* v3: member journey */
+.journey{list-style:none; margin:2.2rem 0 0; padding:0}
+.journey li{display:flex; gap:1rem; align-items:baseline; padding:.75rem 0; border-bottom:1px solid var(--line)}
+.journey li:last-child{border-bottom:0}
+.journey .m{font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--foxfire-deep); flex:0 0 7.5rem}
+@media (prefers-color-scheme:dark){.journey .m{color:var(--foxfire)}}
+:root[data-theme="dark"] .journey .m{color:var(--foxfire)}
+:root[data-theme="light"] .journey .m{color:var(--foxfire-deep)}
+.journey b{font-family:var(--serif); font-weight:600}
+.journey .d{color:var(--muted); font-size:.95rem}
+
+/* v3: founding CTA */
+.cta-band{text-align:center}
+.cta-band .micro{margin-top:.9rem; font-size:.88rem; color:var(--muted)}
+
 /* rhythm strip */
 .rhythm{display:flex; flex-wrap:wrap; gap:1rem 2.5rem; align-items:baseline; margin-top:2.4rem}
 .rhythm .season{font-family:var(--serif); font-size:1.25rem}
@@ -182,9 +225,9 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     <h1>You create the magic. <span class="kicker">We build what carries it.</span></h1>
     <p class="lead">Our House gives you the systems, the tech, and the community to turn your gift into a business that runs — recurring revenue, less admin, your time back. Not more hustle. More capacity.</p>
     <div class="hero-cta">
-      <a class="btn-book" id="bookCall" href="business.html#apply">Book a call</a>
+      <a class="btn-book js-book" href="business.html#apply">Book a call</a>
     </div>
-    <p class="micro">A no-pressure, 30-minute vision call. We'll map what's capping your growth — no pitch.</p>
+    <p class="micro">A 30-minute vision call. We'll map what's capping your growth — no pressure.</p>
     <div class="meta">
       <span>For practitioners with an audience, a practice, and a vision for something bigger.</span>
       <span>Now assembling the first cohort — 8 to 12 practitioners.</span>
@@ -193,6 +236,115 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 </header>
 
 <main>
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The problem</p>
+    <h2>The business feels like a <span class="kicker">second job.</span></h2>
+    <p>You're great at your craft — but revenue is feast-or-famine, every event or launch starts from scratch, and the invisible admin and marketing all lands on you. It's capping your growth and burning you out.</p>
+    <p>Here's the reframe: you probably don't have an audience problem. You have a systems gap — and systems can be installed.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The promise</p>
+    <h2>Systems that run. Offers that convert. Your time back.</h2>
+  </div>
+  <div class="wrap">
+    <div class="pair">
+      <div class="pane reveal">
+        <span class="cap">Before</span>
+        <p>"I know how to create value, but I rebuild everything from scratch and the money is unpredictable."</p>
+      </div>
+      <div class="pane reveal">
+        <span class="cap">After</span>
+        <p>"I have systems that run, offers that convert, and recurring revenue — so I can spend my time on the work only I can do."</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap measure reveal">
+    <p class="soul">We strengthen the people who strengthen others.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">How it works</p>
+    <h2>One engine builds belonging <span class="kicker">and revenue.</span></h2>
+    <p>Your gift fills a room. We install the machinery that turns that room into a business — and each arrow below is a lever we set up for you.</p>
+    <div class="engine" aria-label="The revenue engine">
+      <span class="step">Your gift</span><span class="arrow">→</span>
+      <span class="step">Gathering / offer</span><span class="arrow">→</span>
+      <span class="step">Capture</span><span class="arrow">→</span>
+      <span class="step">Follow-up</span><span class="arrow">→</span>
+      <span class="step">Recurring revenue</span><span class="arrow">→</span>
+      <span class="step">The room tells you what to build next</span>
+    </div>
+    <p style="margin-top:1.6rem">Events aren't the product — they're the top of a funnel that also happens to create a family.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The offers</p>
+    <h2>Five doors, priced in plain sight.</h2>
+  </div>
+  <div class="wrap reveal">
+    <div class="ladder">
+      <div class="rung">
+        <span class="name">Come to a Gathering<span>Participants</span></span>
+        <span class="what">The experience — music, movement, connection. Anyone curious is welcome.</span>
+        <span class="anchor">Ticket price</span>
+      </div>
+      <div class="rung">
+        <span class="name">The Toolkit<span>Community · recurring</span></span>
+        <span class="what">Templates, SOPs, curriculum, the network, and gathering access — for DIY builders.</span>
+        <span class="anchor">From $33/mo</span>
+      </div>
+      <div class="rung star">
+        <span class="name">The Cohort<span>Flagship · start here</span></span>
+        <span class="what">6–8 weeks, 8–12 practitioners. Systems installed with you, one offer tested and launched, a revenue plan, a peer network.</span>
+        <span class="anchor">Founding rate · apply</span>
+      </div>
+      <div class="rung">
+        <span class="name">The Buildout<span>Done-with-you · recurring</span></span>
+        <span class="what">Ongoing system builds, coaching on offers and pricing, the practice lab, all gatherings.</span>
+        <span class="anchor">From $333/mo</span>
+      </div>
+      <div class="rung">
+        <span class="name">The House Call<span>Enterprise · done-for-you</span></span>
+        <span class="what">The whole crew, installed on-site. For organizations ready to transform.</span>
+        <span class="anchor">By application</span>
+      </div>
+    </div>
+    <p class="ladder-note">The Cohort is where most people start — you leave with real systems and a launched, converting offer. <a href="business.html#apply">See the full offers and apply →</a></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap measure reveal">
+    <p class="eyebrow">The build sequence</p>
+    <h2>Diagnosis to compounding in eight weeks.</h2>
+    <ul class="journey">
+      <li><span class="m">Week 0</span><span><b>Diagnose.</b> <span class="d">Map your ecosystem; name the gap capping revenue.</span></span></li>
+      <li><span class="m">Week 1</span><span><b>Front door live.</b> <span class="d">A landing page and checkout stood up — you can take money.</span></span></li>
+      <li><span class="m">Weeks 2–4</span><span><b>Build &amp; test.</b> <span class="d">One offer redesigned and tested in the lab, follow-up automated.</span></span></li>
+      <li><span class="m">Weeks 5–8</span><span><b>Launch.</b> <span class="d">Run it for real; capture converts to recurring.</span></span></li>
+      <li><span class="m">Month 3</span><span><b>It compounds.</b> <span class="d">Systems running without you, recurring revenue moving, referrals pulling instead of leads being chased.</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band cta-band">
+  <div class="wrap reveal">
+    <p class="eyebrow" style="text-align:center">The founding cohort</p>
+    <h2>Now assembling — 8 to 12 practitioners.</h2>
+    <p class="micro" style="margin-bottom:1.8rem">Founding-rate seats, in exchange for the honest before-and-after numbers that become our proof.</p>
+    <a class="btn-book js-book" href="business.html#apply">Book a call</a>
+    <p class="micro">A 30-minute vision call. We'll map what's capping your growth — no pressure.</p>
+  </div>
+</section>
+
 <section class="band">
   <div class="wrap measure reveal">
     <p class="eyebrow">Come on in</p>
@@ -272,8 +424,9 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
 
-  var book = document.getElementById('bookCall');
-  if(book && typeof BOOKING_URL === 'string' && BOOKING_URL){ book.href = BOOKING_URL; }
+  if(typeof BOOKING_URL === 'string' && BOOKING_URL){
+    [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
+  }
 
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   if(reduce || !('IntersectionObserver' in window)){
