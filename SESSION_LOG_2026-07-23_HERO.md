@@ -45,6 +45,21 @@ headline, the ecosystem/community as the method and moat. Where the older
 strategy docs (OFFER_BRAND_GAMEPLAN.md seeker/hub funnel) conflict with v3,
 v3 wins. Site copy should be brought into line with v3, not the reverse.
 
+## v3 build-out (later same session, after Kevin shared the v3 doc)
+Kevin approved a full v3 build-out against the doc's 15 points:
+- Homepage: problem → promise (before/after + soul line) → revenue engine →
+  five-door ladder (Cohort highlighted) → member journey → founding-cohort CTA,
+  then the original doors/rhythm/close. Hero microcopy final: "A 30-minute
+  vision call. We'll map what's capping your growth — no pressure."
+- Business page: v3 hero + vision-call CTA, ladder offers (Gathering, Toolkit,
+  Cohort as ember flagship, Buildout, House Call), pain-first intake, ladder
+  names in the form select.
+- Story page: kept as-is except "The sequence." section removed (Kevin).
+- what-we-do-v3.html: unlinked draft with v3 voice shifts, for side-by-side
+  comparison against the untouched what-we-do.html. Kevin picks the winner.
+- **OPEN: price anchors** ($33–49, $2–4k, $333–500) are the v3 doc's anchors —
+  the doc itself says only Kevin can set the numbers. Confirm before merge.
+
 ## Verification
 Rendered headlessly (Chromium) at 1440×900 dark, 1440×900 light, 390×844
 mobile, plus a toggle-click test: no JS errors, CTA href resolves to the
