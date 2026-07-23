@@ -143,24 +143,35 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 :root[data-theme="light"] .pane .cap.before{color:#A73A28}
 .pane .cap.after{color:var(--foxfire)}
 .pane p{font-family:var(--serif); font-size:1.12rem; line-height:1.5}
-.soul{margin-top:2.2rem; font-family:var(--serif); font-weight:700; font-size:clamp(1.9rem,4.2vw,2.9rem); line-height:1.08; letter-spacing:-.01em; text-wrap:balance; color:var(--ink)}
+.soul{margin-top:2.4rem; font-family:var(--serif); font-weight:700; font-size:clamp(1.9rem,4.2vw,2.9rem); line-height:1.1; letter-spacing:-.01em; color:var(--ink); border-left:4px solid var(--ember); padding-left:1.4rem}
 
 /* v3: revenue engine */
 .engine{display:flex; flex-wrap:wrap; align-items:center; gap:.55rem .6rem; margin-top:2.2rem}
-.engine .step{font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
-  border:1px solid var(--line); border-radius:999px; padding:.5rem .85rem; background:var(--ground-2)}
-.engine .arrow{color:var(--foxfire)}
+.engine .step{font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  border:1px solid var(--line); border-radius:999px; padding:.55rem .95rem; background:var(--ground-2); transition:transform .15s ease, border-color .15s ease}
+.engine .step:hover{transform:translateY(-2px); border-color:var(--foxfire)}
+.engine .step.win{background:var(--foxfire); color:var(--ground); border-color:var(--foxfire)}
+.engine .arrow{color:var(--foxfire); font-weight:700}
+@media (prefers-reduced-motion:reduce){.engine .step:hover{transform:none}}
 
 /* v3: member journey */
-.journey{list-style:none; margin:2.2rem 0 0; padding:0}
-.journey li{display:flex; gap:1rem; align-items:baseline; padding:.75rem 0; border-bottom:1px solid var(--line)}
-.journey li:last-child{border-bottom:0}
-.journey .m{font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--foxfire-deep); flex:0 0 7.5rem}
+.journey{list-style:none; margin:2.4rem 0 0; padding:0}
+.journey li{display:grid; grid-template-columns:1.6rem 7rem 1fr; gap:1rem; align-items:start; padding:1.05rem 0; border-top:1px solid var(--line)}
+.journey li:first-child{border-top:0}
+.journey .rail{position:relative; display:flex; justify-content:center; padding-top:.4rem}
+.journey .rail::before{content:""; position:absolute; top:1.1rem; bottom:-1.35rem; width:2px; background:linear-gradient(var(--foxfire), rgba(31,122,76,.2))}
+.journey li:last-child .rail::before{display:none}
+.journey .dot{width:11px; height:11px; border-radius:50%; background:var(--foxfire); position:relative; z-index:1}
+.journey li.gather .dot{background:var(--ember); box-shadow:0 0 0 5px rgba(232,169,63,.16)}
+.journey li.gather .rail::before{background:linear-gradient(var(--ember), rgba(31,122,76,.2))}
+.journey .m{font-family:var(--mono); font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--foxfire-deep); padding-top:.2rem}
 @media (prefers-color-scheme:dark){.journey .m{color:var(--foxfire)}}
 :root[data-theme="dark"] .journey .m{color:var(--foxfire)}
 :root[data-theme="light"] .journey .m{color:var(--foxfire-deep)}
-.journey b{font-family:var(--serif); font-weight:600}
+.journey li.gather .m{color:var(--warm-text)}
+.journey .content b{font-family:var(--serif); font-weight:700}
 .journey .d{color:var(--muted); font-size:.95rem}
+@media (max-width:560px){.journey li{grid-template-columns:1.6rem 1fr}.journey .m{grid-column:2; padding-top:0; margin-bottom:.1rem}.journey .content{grid-column:2}}
 
 /* v3: founding CTA */
 .cta-band{text-align:center}
@@ -285,7 +296,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
       <span class="step">Gathering / offer</span><span class="arrow">→</span>
       <span class="step">Capture</span><span class="arrow">→</span>
       <span class="step">Follow-up</span><span class="arrow">→</span>
-      <span class="step">Recurring revenue</span><span class="arrow">→</span>
+      <span class="step win">Recurring revenue</span><span class="arrow">→</span>
       <span class="step">The room tells you what to build next</span>
     </div>
     <p style="margin-top:1.6rem">Events aren't the product — they're the top of a funnel that also happens to create a family.</p>
@@ -297,11 +308,11 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     <p class="eyebrow">The build sequence</p>
     <h2>Diagnosis to compounding in eight weeks.</h2>
     <ul class="journey">
-      <li><span class="m">Week 0</span><span><b>Diagnose.</b> <span class="d">Map your ecosystem; name the gap capping revenue.</span></span></li>
-      <li><span class="m">Week 1</span><span><b>Front door live.</b> <span class="d">A landing page and checkout stood up — you can take money.</span></span></li>
-      <li><span class="m">Weeks 2–4</span><span><b>Build &amp; test.</b> <span class="d">One offer redesigned and tested in the lab, follow-up automated.</span></span></li>
-      <li><span class="m">Weeks 5–8</span><span><b>Launch.</b> <span class="d">Run it for real; capture converts to recurring.</span></span></li>
-      <li><span class="m">Month 3</span><span><b>It compounds.</b> <span class="d">Systems running without you, recurring revenue moving, referrals pulling instead of leads being chased.</span></span></li>
+      <li><span class="rail"><span class="dot"></span></span><span class="m">Week 0</span><span class="content"><b>Diagnose.</b> <span class="d">Map your ecosystem; name the gap capping revenue.</span></span></li>
+      <li><span class="rail"><span class="dot"></span></span><span class="m">Week 1</span><span class="content"><b>Front door live.</b> <span class="d">A landing page and checkout stood up — you can take money.</span></span></li>
+      <li class="gather"><span class="rail"><span class="dot"></span></span><span class="m">Weeks 2–4</span><span class="content"><b>Build &amp; test — together.</b> <span class="d">One offer redesigned and tested in the lab, with the cohort in the room.</span></span></li>
+      <li><span class="rail"><span class="dot"></span></span><span class="m">Weeks 5–8</span><span class="content"><b>Launch.</b> <span class="d">Run it for real; capture converts to recurring.</span></span></li>
+      <li><span class="rail"><span class="dot"></span></span><span class="m">Month 3</span><span class="content"><b>It compounds.</b> <span class="d">Systems running without you, recurring revenue moving, referrals pulling instead of leads being chased.</span></span></li>
     </ul>
   </div>
 </section>
