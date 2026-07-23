@@ -52,7 +52,9 @@ a{color:inherit}
   font-family:var(--mono); font-size:.72rem; letter-spacing:.22em;
   text-transform:uppercase; color:var(--foxfire-deep); margin:0 0 1.1rem;
 }
-:root[data-theme="dark"] .eyebrow,@media (prefers-color-scheme:dark){.eyebrow{color:var(--foxfire)}}
+@media (prefers-color-scheme:dark){.eyebrow{color:var(--foxfire)}}
+:root[data-theme="dark"] .eyebrow{color:var(--foxfire)}
+:root[data-theme="light"] .eyebrow{color:var(--foxfire-deep)}
 .lead{color:var(--muted); font-size:1.15rem}
 
 /* growth marks */
