@@ -43,7 +43,7 @@ const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
   --warm-text:#A05E0B; --thread:rgba(34,28,21,.22);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth; overflow-x:hidden}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   margin:0; background:var(--ground); color:var(--ink);
@@ -77,7 +77,7 @@ a{color:inherit}
 .nav a[aria-current]{color:var(--ink)}
 .nav .brand{font-family:var(--serif); font-size:1.05rem; letter-spacing:0; text-transform:none; color:var(--ink)}
 .navlinks{display:flex; gap:1.4rem; flex-wrap:wrap}
-@media (max-width:560px){.navlinks{gap:.9rem}.nav{gap:1rem}}
+@media (max-width:560px){.navlinks{gap:.9rem}.nav{gap:.9rem; padding-right:4.6rem}.nav .brand{font-size:.98rem}.nav a{font-size:.64rem; letter-spacing:.1em}}
 .nav a:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
 
 .toggle{
@@ -210,6 +210,8 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 :root[data-theme="dark"] .s-harvest{color:#E8D24A}
 :root[data-theme="dark"] .s-root{color:#B98A5E}
 .rhythm-note{margin-top:2.2rem}
+.nowrap-lg{white-space:nowrap}
+@media (max-width:640px){.nowrap-lg{white-space:normal}}
 
 .close{text-align:center; padding:clamp(5rem,10vw,8rem) 0}
 .close .attrib{margin:0 auto 1.8rem; font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--muted)}
@@ -331,7 +333,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 <section class="band">
   <div class="wrap measure reveal">
     <p class="eyebrow">The rhythm</p>
-    <h2>We gather when the Earth turns.<br><span style="white-space:nowrap">We build the systems to make it easy.</span></h2>
+    <h2>We gather when the Earth turns.<br><span class="nowrap-lg">We build the systems to make it easy.</span></h2>
     <p>Four activations a year, on the solstices and equinoxes — a rolling wave of music, breath, and connection passing across every time zone.</p>
     <p class="rhythm-note">We have pre-designed event templates for these Powerful and Sacred times — with all of the marketing parts, schedules, and contracts. All plug and play: Our House's secret sauce. Global Coherence event packages for any and all, globally. The initiative is to create the mycelium faster. Connectivity through events is the true source of currency.</p>
     <p>Abundance = Circulation</p>
