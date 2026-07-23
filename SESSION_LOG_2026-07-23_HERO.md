@@ -39,6 +39,12 @@ the first-draft homepage was fine, and the copy edits will be made by hand.
 The PR therefore contains the hero rebuild only. The sweep survives in git
 history (commit fdf2064, reverted) if any of it is wanted later.
 
+## Positioning ruling (Kevin, 2026-07-23)
+**v3 hybrid positioning overrides everything** — business outcome in the
+headline, the ecosystem/community as the method and moat. Where the older
+strategy docs (OFFER_BRAND_GAMEPLAN.md seeker/hub funnel) conflict with v3,
+v3 wins. Site copy should be brought into line with v3, not the reverse.
+
 ## Verification
 Rendered headlessly (Chromium) at 1440×900 dark, 1440×900 light, 390×844
 mobile, plus a toggle-click test: no JS errors, CTA href resolves to the
