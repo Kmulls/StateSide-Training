@@ -36,7 +36,9 @@ becoming a full-time marketer or tech person.
   direction — one action only.)
 - Qualifier line: For practitioners with an audience, a practice, and a vision for
   something bigger.
-- Scarcity line: Now assembling the first cohort — 8 to 12 practitioners.
+- Scarcity line: Monthly cohorts are limited to 8–12 practitioners.
+  (was "Now assembling the first cohort — 8 to 12 practitioners."; changed
+  2026-07-23 at Kevin's direction)
 
 Alt headline if business-forward is preferred: "Build a real business around your
 gift — without becoming a full-time marketer." Default to the H1 above.
