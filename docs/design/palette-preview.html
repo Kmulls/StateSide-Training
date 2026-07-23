@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our House — Redesign Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Hanken+Grotesk:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Figtree:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    background: #F5F1E8;
+    color: #201D16;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .page-head {
+    max-width: 1300px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+  }
+
+  .page-head h1 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .page-head p {
+    margin: 0;
+    color: #57503f;
+    font-size: 1.05rem;
+  }
+
+  .grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  @media (max-width: 1000px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ---------- Card shell (shared, direction-agnostic) ---------- */
+  .card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,.10);
+  }
+
+  .card-meta {
+    padding: 0.85rem 1.25rem;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    background: rgba(0,0,0,.06);
+    color: inherit;
+    opacity: 0.75;
+  }
+
+  .card-meta strong {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    opacity: 1;
+    margin-bottom: 0.15rem;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .eyebrow {
+    display: block;
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.9rem;
+  }
+
+  .headline {
+    font-weight: 700;
+    font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+  }
+
+  .body-copy {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 42ch;
+    margin: 0 0 1.6rem;
+  }
+
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.98rem;
+    color: #fffdf9;
+    border: none;
+    cursor: pointer;
+    transition: background-color .18s ease, transform .18s ease, box-shadow .18s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: background-color .18s ease; }
+    .btn:hover { transform: none; }
+  }
+
+  .secondary-link {
+    font-weight: 600;
+    font-size: 0.98rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color .15s ease;
+  }
+
+  .divider {
+    height: 1px;
+    border: none;
+    margin: 0 0 1.25rem;
+  }
+
+  .week-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .week-label {
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .week-copy {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  footer.note {
+    max-width: 1300px;
+    margin: 2.5rem auto 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #7a7260;
+  }
+
+  /* =========================================================
+     Direction A — First Light
+     ========================================================= */
+  .dir-a {
+    background: #FCF7EC;
+    color: #201D16;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  }
+  .dir-a .card-meta { background: #F5ECD9; color: #201D16; }
+  .dir-a .headline,
+  .dir-a .eyebrow-font { font-family: 'Bricolage Grotesque', system-ui, sans-serif; }
+  .dir-a .headline { font-family: 'Bricolage Grotesque', system-ui, sans-serif; }
+  .dir-a .eyebrow { color: #0A7C3D; }
+  .dir-a .accent-text { color: #0A7C3D; }
+  .dir-a .body-copy { color: #665E4E; }
+  .dir-a .divider { background: rgba(32,29,22,.14); }
+  .dir-a .btn {
+    background: #0A7C3D;
+    border-radius: 999px;
+  }
+  .dir-a .btn:hover {
+    background: #096A34;
+    box-shadow: 0 8px 20px rgba(10,124,61,.35);
+  }
+  .dir-a .btn:focus-visible {
+    outline: 3px solid #22C55E;
+    outline-offset: 3px;
+  }
+  .dir-a .secondary-link {
+    color: #0A7C3D;
+  }
+  .dir-a .secondary-link:hover { color: #201D16; }
+  .dir-a .secondary-link:focus-visible {
+    outline: 3px solid #22C55E;
+    outline-offset: 3px;
+  }
+  .dir-a .week-label { color: #E8590C; }
+  .dir-a .week-copy { color: #201D16; }
+
+  /* =========================================================
+     Direction B — Golden Hour
+     ========================================================= */
+  .dir-b {
+    background: #FBF4E9;
+    color: #292018;
+    font-family: 'Figtree', system-ui, sans-serif;
+  }
+  .dir-b .card-meta { background: #F3E8D6; color: #292018; }
+  .dir-b .headline {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+  }
+  .dir-b .eyebrow { color: #B54718; }
+  .dir-b .accent-text { color: #B54718; }
+  .dir-b .body-copy { color: #6E5F4C; }
+  .dir-b .divider { background: rgba(41,32,24,.14); }
+  .dir-b .btn {
+    background: #B54718;
+    border-radius: 14px;
+  }
+  .dir-b .btn:hover {
+    background: #9C3D13;
+    box-shadow: 0 8px 20px rgba(181,71,24,.35);
+  }
+  .dir-b .btn:focus-visible {
+    outline: 3px solid #158A52;
+    outline-offset: 3px;
+  }
+  .dir-b .secondary-link {
+    color: #B54718;
+  }
+  .dir-b .secondary-link:hover { color: #292018; }
+  .dir-b .secondary-link:focus-visible {
+    outline: 3px solid #158A52;
+    outline-offset: 3px;
+  }
+  .dir-b .week-label { color: #158A52; }
+  .dir-b .week-copy { color: #292018; }
+
+  /* =========================================================
+     Direction C — Clear Morning
+     ========================================================= */
+  .dir-c {
+    background: #F8F7F2;
+    color: #1C2530;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .dir-c .card-meta { background: #EEEEE7; color: #1C2530; }
+  .dir-c .headline {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 700;
+  }
+  .dir-c .eyebrow { color: #0B6DA3; }
+  .dir-c .accent-text { color: #0B6DA3; }
+  .dir-c .body-copy { color: #566070; }
+  .dir-c .divider { background: rgba(28,37,48,.12); }
+  .dir-c .btn {
+    background: #0B6DA3;
+    border-radius: 10px;
+  }
+  .dir-c .btn:hover {
+    background: #095A88;
+    box-shadow: 0 8px 20px rgba(14,127,191,.35);
+  }
+  .dir-c .btn:focus-visible {
+    outline: 3px solid #22A05B;
+    outline-offset: 3px;
+  }
+  .dir-c .secondary-link {
+    color: #0B6DA3;
+  }
+  .dir-c .secondary-link:hover { color: #1C2530; }
+  .dir-c .secondary-link:focus-visible {
+    outline: 3px solid #22A05B;
+    outline-offset: 3px;
+  }
+  .dir-c .week-label { color: #22A05B; }
+  .dir-c .week-copy { color: #1C2530; }
+</style>
+</head>
+<body>
+
+  <div class="page-head">
+    <h1>Our House — Redesign Directions</h1>
+    <p>Pick one, or mix. Same content, new skin.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- ============ Direction A — First Light ============ -->
+    <section class="card dir-a">
+      <div class="card-meta">
+        <strong>Direction A — First Light (bold &amp; punchy)</strong>
+        #FCF7EC · #F5ECD9 · #201D16 · #665E4E · #0A7C3D · #096A34 · #22C55E · #E8590C<br>
+        Headings: Bricolage Grotesque · Body/eyebrow: Hanken Grotesk
+      </div>
+      <div class="card-body">
+        <span class="eyebrow">For coaches, facilitators, creators &amp; community-builders</span>
+        <h1 class="headline">You bring the gift, we build <span class="accent-text">yOUR HOUSE</span> around it.</h1>
+        <p class="body-copy">Our House gives you the systems, the tech, and the community to turn your gift into a business that runs — recurring revenue, less admin, your time back.</p>
+        <div class="cta-row">
+          <button class="btn">Book a call</button>
+          <a href="#" class="secondary-link">or read the story →</a>
+        </div>
+        <hr class="divider">
+        <div class="week-row">
+          <span class="week-label">Week 0 · Diagnose</span>
+          <span class="week-copy">Name the gap that's capping your revenue.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Direction B — Golden Hour ============ -->
+    <section class="card dir-b">
+      <div class="card-meta">
+        <strong>Direction B — Golden Hour (warm &amp; editorial)</strong>
+        #FBF4E9 · #F3E8D6 · #292018 · #6E5F4C · #B54718 · #9C3D13 · #158A52<br>
+        Headings: Fraunces · Body/eyebrow: Figtree
+      </div>
+      <div class="card-body">
+        <span class="eyebrow">For coaches, facilitators, creators &amp; community-builders</span>
+        <h1 class="headline">You bring the gift, we build <span class="accent-text">yOUR HOUSE</span> around it.</h1>
+        <p class="body-copy">Our House gives you the systems, the tech, and the community to turn your gift into a business that runs — recurring revenue, less admin, your time back.</p>
+        <div class="cta-row">
+          <button class="btn">Book a call</button>
+          <a href="#" class="secondary-link">or read the story →</a>
+        </div>
+        <hr class="divider">
+        <div class="week-row">
+          <span class="week-label">Week 0 · Diagnose</span>
+          <span class="week-copy">Name the gap that's capping your revenue.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Direction C — Clear Morning ============ -->
+    <section class="card dir-c">
+      <div class="card-meta">
+        <strong>Direction C — Clear Morning (clean &amp; airy)</strong>
+        #F8F7F2 · #EEEEE7 · #1C2530 · #566070 · #0B6DA3 · #095A88 · #22A05B<br>
+        Headings: Plus Jakarta Sans · Body/eyebrow: Inter
+      </div>
+      <div class="card-body">
+        <span class="eyebrow">For coaches, facilitators, creators &amp; community-builders</span>
+        <h1 class="headline">You bring the gift, we build <span class="accent-text">yOUR HOUSE</span> around it.</h1>
+        <p class="body-copy">Our House gives you the systems, the tech, and the community to turn your gift into a business that runs — recurring revenue, less admin, your time back.</p>
+        <div class="cta-row">
+          <button class="btn">Book a call</button>
+          <a href="#" class="secondary-link">or read the story →</a>
+        </div>
+        <hr class="divider">
+        <div class="week-row">
+          <span class="week-label">Week 0 · Diagnose</span>
+          <span class="week-copy">Name the gap that's capping your revenue.</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="note">Preview only — nothing here is applied to the live site yet.</footer>
+
+</body>
+</html>
