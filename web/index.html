@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our House — Welcome Home</title>
 <meta name="description" content="Our House is a living network — events, coaching, training, and tech — where we grow in all our richness together.">
+<script>
+/* Swap the booking link once, here. Falls back to business.html#apply if empty. */
+const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
+</script>
 <style>
 :root{
   --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
@@ -94,13 +98,25 @@ a{color:inherit}
 
 /* hero */
 .hero{position:relative; overflow:hidden; min-height:88vh; display:flex; align-items:center;
-  padding:clamp(7rem,16vh,10rem) 0 clamp(10rem,18vw,13rem)}
+  padding:clamp(5.5rem,10vh,7.5rem) 0 clamp(10rem,18vw,13rem)}
 .hero .wrap{position:relative; z-index:1}
 #roots{position:absolute; left:0; right:0; bottom:0; width:100%; height:180px; pointer-events:none}
-.hero h1{font-size:clamp(3rem,9vw,6rem); letter-spacing:-.015em}
-.hero .lead{margin-top:1.6rem; max-width:42ch; font-size:clamp(1.15rem,1.5vw,1.45rem); color:var(--ink)}
+.hero h1{font-size:clamp(2.5rem,6.5vw,4.6rem); letter-spacing:-.015em; max-width:16ch}
+.hero .lead{margin-top:1.6rem; max-width:52ch; font-size:clamp(1.15rem,1.5vw,1.4rem); color:var(--ink)}
 .hero .sub{margin-top:1.1rem; max-width:46ch; color:var(--muted)}
-.hero-sprout{display:block; width:clamp(54px,8vw,84px); height:auto; margin-bottom:1.6rem; overflow:visible}
+.hero-cta{display:flex; flex-wrap:wrap; align-items:center; gap:1.1rem 1.5rem; margin-top:2.2rem}
+.btn-book{display:inline-block; font-family:var(--mono); font-size:.84rem; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--foxfire); color:var(--ground); border:1px solid var(--foxfire); border-radius:999px;
+  padding:1rem 2rem; cursor:pointer; text-decoration:none}
+.btn-book:hover{background:transparent; color:var(--ink)}
+.btn-book:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+.hero .alt-link{color:var(--muted); text-decoration:underline; text-underline-offset:3px}
+.hero .alt-link:hover{color:var(--ink)}
+.hero .alt-link:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+.hero .micro{margin-top:.9rem; font-size:.88rem; color:var(--muted)}
+.hero .meta{margin-top:2.4rem; padding-top:1rem; border-top:1px solid var(--line);
+  display:flex; flex-wrap:wrap; gap:.4rem 2.2rem; font-size:.82rem; color:var(--muted); max-width:72ch}
+.hero-sprout{display:block; width:clamp(48px,6vw,68px); height:auto; margin-bottom:1.2rem; overflow:visible}
 .hero-sprout path{fill:none; stroke:var(--foxfire); stroke-width:1.6; stroke-linecap:round;
   stroke-dasharray:90; stroke-dashoffset:90}
 .in .hero-sprout .st{animation:sprout-grow 1.4s ease-out .2s forwards}
@@ -164,8 +180,18 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
       <path class="l1" d="M12 13 C8.5 11.5 5 11.5 2 8 C6.5 6 10.5 8 12 11.5"/>
       <path class="l2" d="M12 9 C15.5 7.5 19 7.5 22 4 C17.5 2 13.5 4 12 7.5"/>
     </svg>
-    <h1>Welcome <span class="kicker">home.</span></h1>
-    <p class="lead">Our House is a living network — events, coaching, training, and the tech that carries them — where we grow in all our richness together.</p>
+    <p class="eyebrow">For coaches, facilitators, creators &amp; community-builders</p>
+    <h1>You create the magic. <span class="kicker">We build what carries it.</span></h1>
+    <p class="lead">Our House gives you the systems, the tech, and the community to turn your gift into a business that runs — recurring revenue, less admin, your time back. Not more hustle. More capacity.</p>
+    <div class="hero-cta">
+      <a class="btn-book" id="bookCall" href="business.html#apply">Book a call</a>
+      <a class="alt-link" href="what-we-do.html">or come to a gathering →</a>
+    </div>
+    <p class="micro">A 20-minute call. We'll map what's capping your growth — no pitch.</p>
+    <div class="meta">
+      <span>For practitioners with an audience, a practice, and a vision for something bigger.</span>
+      <span>Now assembling the first cohort — 8 to 12 practitioners.</span>
+    </div>
   </div>
 </header>
 
@@ -246,6 +272,9 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     tog.textContent = next==='dark' ? 'Light' : 'Dark';
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  var book = document.getElementById('bookCall');
+  if(book && typeof BOOKING_URL === 'string' && BOOKING_URL){ book.href = BOOKING_URL; }
 
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   if(reduce || !('IntersectionObserver' in window)){
