@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our House — What We Do</title>
 <meta name="description" content="Promotions, events, coaching, and training — all built on one simple network. We seed people with tech, tools, know-how, and a code of conduct, so we all grow in richness together.">
+<script>
+/* Swap the booking link once, here. */
+const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
+</script>
 <style>
 :root{
   --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
@@ -154,13 +158,11 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .out-thread{stroke:var(--thread); stroke-width:1; fill:none}
 .model-legend{margin-top:1.4rem; color:var(--muted); font-size:.95rem; max-width:60ch}
 
-/* richness */
-.quote{margin:2.6rem 0 0; border-left:3px solid var(--ember); padding:.4rem 0 .4rem 1.6rem}
-.quote .line{margin:0 0 1rem}
-.quote .who{font-family:var(--mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:.2rem}
-.quote .said{font-family:var(--serif); font-size:1.2rem; line-height:1.45}
-.quote .said.final{font-size:1.55rem; color:var(--ember)}
-.attrib{margin-top:1.2rem; font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.btn-book{display:inline-block; font-family:var(--mono); font-size:.84rem; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--foxfire); color:var(--ground); border:1px solid var(--foxfire); border-radius:999px;
+  padding:1rem 2rem; cursor:pointer; text-decoration:none}
+.btn-book:hover{background:transparent; color:var(--ink)}
+.btn-book:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
 
 /* close */
 .close{text-align:center; padding:clamp(5rem,10vw,8rem) 0}
@@ -287,24 +289,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   </div>
 </section>
 
-<section class="band">
-  <div class="wrap measure reveal">
-    <p class="eyebrow">What richness means here</p>
-    <h2>"My richness is life, forever."</h2>
-    <p>When we say richness, we mean it the way Bob Marley meant it, in an interview when a reporter pressed him about wealth:</p>
-    <div class="quote">
-      <p class="line"><span class="who">Reporter</span><span class="said">"Are you a rich man? Do you have a lot of possessions?"</span></p>
-      <p class="line"><span class="who">Marley</span><span class="said">"Possessions make you rich? I don't have that type of richness."</span></p>
-      <p class="line"><span class="who">Marley</span><span class="said final">"My richness is life, forever."</span></p>
-    </div>
-    <p class="attrib">— Bob Marley, televised interview, paraphrased from memory</p>
-  </div>
-</section>
-
 <section class="close">
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center">Why it matters</p>
-    <h2>Our House is where we grow in all our richness together.</h2>
+    <h2>Ready when you are.</h2>
+    <a class="btn-book js-book" href="business.html#apply">Book a call</a>
   </div>
 </section>
 </main>
@@ -333,6 +321,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     tog.textContent = next==='dark' ? 'Light' : 'Dark';
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  if(typeof BOOKING_URL === 'string' && BOOKING_URL){
+    [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
+  }
 
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   if(reduce || !('IntersectionObserver' in window)){

@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our House — Work With Us</title>
 <meta name="description" content="Three ways to work with Our House: book us for an event, run your own network on our stack, or deluxe consulting — including The House Call, where we bring the whole toolkit to you.">
+<script>
+/* Swap the booking link once, here. */
+const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
+</script>
 <style>
 :root{
   --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
@@ -163,6 +167,11 @@ section.band{padding:clamp(4.5rem,9vw,7rem) 0; border-top:1px solid var(--line)}
 .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line)}
 .btn.ghost:hover{border-color:var(--foxfire)}
 .btn:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+.btn-book{display:inline-block; font-family:var(--mono); font-size:.84rem; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--foxfire); color:var(--ground); border:1px solid var(--foxfire); border-radius:999px;
+  padding:1rem 2rem; cursor:pointer; text-decoration:none}
+.btn-book:hover{background:transparent; color:var(--ink)}
+.btn-book:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
 .form-note{margin-top:1rem; font-size:.88rem; color:var(--muted)}
 .copy-status{font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--foxfire-deep)}
 @media (prefers-color-scheme:dark){.copy-status{color:var(--foxfire)}}
@@ -319,9 +328,8 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 
 <section class="close">
   <div class="wrap">
-    <p class="eyebrow" style="text-align:center">The promise</p>
-    <h2>Whichever door you choose, you end up in the same living room.</h2>
-    <p class="lead">More fun, more family, more richness — installed into the way you work.</p>
+    <h2>Ready when you are.</h2>
+    <a class="btn-book js-book" href="#apply">Book a call</a>
   </div>
 </section>
 </main>
@@ -350,6 +358,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     tog.textContent = next==='dark' ? 'Light' : 'Dark';
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  if(typeof BOOKING_URL === 'string' && BOOKING_URL){
+    [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
+  }
 
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   if(reduce || !('IntersectionObserver' in window)){

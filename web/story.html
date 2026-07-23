@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our House — Mending the Sacred Hoop</title>
 <meta name="description" content="A multi-generational regenerative business helping humans human better and clearer — through the 8 forms of capital, moved like mycelium instead of hoarded in silos.">
+<script>
+/* Swap the booking link once, here. */
+const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
+</script>
 <style>
 :root{
   --ground:#161009; --ground-2:#1E160D; --surface:#241A10;
@@ -198,6 +202,11 @@ section.band{padding:clamp(4.5rem,9vw,7.5rem) 0; border-top:1px solid var(--line
 .seq p{color:var(--muted); font-size:.98rem; max-width:56ch}
 
 /* close */
+.btn-book{display:inline-block; font-family:var(--mono); font-size:.84rem; letter-spacing:.12em; text-transform:uppercase;
+  background:var(--foxfire); color:var(--ground); border:1px solid var(--foxfire); border-radius:999px;
+  padding:1rem 2rem; cursor:pointer; text-decoration:none}
+.btn-book:hover{background:transparent; color:var(--ink)}
+.btn-book:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
 .close{text-align:center; padding:clamp(5rem,10vw,8rem) 0}
 .close h2{font-size:clamp(2.2rem,5vw,3.6rem); max-width:16ch; margin:0 auto 1.4rem}
 .close .lead{max-width:44ch; margin:0 auto}
@@ -355,10 +364,8 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 
 <section class="close">
   <div class="wrap">
-    <svg class="hoop-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26" fill="none" stroke="var(--foxfire)" stroke-width="2" stroke-dasharray="150 13" stroke-linecap="round" transform="rotate(-90 32 32)"/></svg>
-    <p class="eyebrow" style="text-align:center">The invitation</p>
-    <h2>To be abundant, we share.</h2>
-    <p class="lead">Our House is the framework, the back end, and the family — built so humans can human better, together, for generations.</p>
+    <h2>Ready when you are.</h2>
+    <a class="btn-book js-book" href="business.html#apply">Book a call</a>
   </div>
 </section>
 </main>
@@ -392,6 +399,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     tog.textContent = next==='dark' ? 'Light' : 'Dark';
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
+
+  if(typeof BOOKING_URL === 'string' && BOOKING_URL){
+    [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
+  }
 
   function cssv(name){ return getComputedStyle(document.body).getPropertyValue(name).trim(); }
 
