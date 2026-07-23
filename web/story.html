@@ -61,6 +61,11 @@ a{color:inherit}
 :root[data-theme="dark"] .eyebrow{color:var(--warm-text)}
 :root[data-theme="light"] .eyebrow{color:var(--warm-text)}
 .lead{color:var(--muted); font-size:1.15rem}
+.ilink{color:var(--foxfire-deep); text-decoration:underline; text-underline-offset:2px}
+@media (prefers-color-scheme:dark){.ilink{color:var(--foxfire)}}
+:root[data-theme="dark"] .ilink{color:var(--foxfire)}
+:root[data-theme="light"] .ilink{color:var(--foxfire-deep)}
+.ilink:hover{color:var(--foxfire)}
 
 /* growth marks */
 .sprout{display:block; width:24px; height:32px; margin:0 0 .7rem; overflow:visible}
@@ -222,6 +227,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <a class="brand" href="index.html">Our House</a>
   <span class="navlinks">
     <a href="story.html" aria-current="page">The Story</a>
+    <a href="human-cc.html">Human C.C.</a>
     <a href="business.html">Work With Us</a>
   </span>
 </nav>
@@ -326,7 +332,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
           <li><span class="m">Music</span><span class="t"><b>The medium</b><span>Sound as the carrier signal of the moment.</span></span></li>
           <li><span class="m">Movement</span><span class="t"><b>The participation</b><span>Breath, fascia work, and dance — the body joining in.</span></span></li>
           <li><span class="m">Art</span><span class="t"><b>The creation</b><span>Live art made in the room while the music plays — the moment, made visible.</span></span></li>
-          <li><span class="m">Education</span><span class="t"><b>The involvement</b><span>The Human Capacity Curriculum, taught live.</span></span></li>
+          <li><span class="m">Education</span><span class="t"><b>The involvement</b><span><a class="ilink" href="human-cc.html">The Human Capacity Curriculum</a>, taught live.</span></span></li>
         </ul>
       </div>
       <div class="reveal incubate">
@@ -483,7 +489,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     {n:'Social',   what:'Relationships, networks, belonging, mutual trust.', role:'Outlet families', expr:'The hub network — turning scattered people into an interconnected, resilient grid.'},
     {n:'Cultural', what:'Shared story, art, ritual, and song of a community.', role:'The Unified Anthem', expr:'Music, ceremony, and a common ritual that gives the movement its identity.'},
     {n:'Experiential', what:'Embodied wisdom that only comes from doing.', role:'Fascia + breath work', expr:'Somatic practice done live — knowledge you feel in the body, not just hear.'},
-    {n:'Intellectual', what:'Knowledge, ideas, frameworks, know-how.', role:'The Curriculum', expr:'The Human Capacity Curriculum — regulation, literacy, and relationship, taught.'},
+    {n:'Intellectual', what:'Knowledge, ideas, frameworks, know-how.', role:'The Curriculum', expr:'<a class="ilink" href="human-cc.html">The Human Capacity Curriculum</a> — regulation, literacy, and relationship, taught.'},
     {n:'Spiritual', what:'Meaning, presence, connection to something larger.', role:'Coherence', expr:'The felt state the whole event is designed to reach — the mended hoop itself.'},
     {n:'Material', what:'Physical infrastructure, tools, and built things.', role:'Hubs + tech back end', expr:'The spaces, the speakers, and the platform that carry the work between peaks.'},
     {n:'Financial', what:'Money, currency, and the exchange that sustains it.', role:'The shared commons', expr:'Tickets, membership, and training — revenue circulated to keep the network alive.'}
