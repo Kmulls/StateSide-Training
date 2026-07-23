@@ -30,8 +30,10 @@ becoming a full-time marketer or tech person.
   gift into a business that runs — recurring revenue, less admin, your time back.
   Not more hustle. More capacity.
 - Primary CTA (button): Book a call
-- CTA microcopy: A 20-minute call. We'll map what's capping your growth — no pitch.
-- Secondary link: or come to a gathering →
+- CTA microcopy: A no-pressure, 30-minute vision call. We'll map what's capping
+  your growth — no pitch.
+- (Secondary "or come to a gathering →" link removed 2026-07-23 at Kevin's
+  direction — one action only.)
 - Qualifier line: For practitioners with an audience, a practice, and a vision for
   something bigger.
 - Scarcity line: Now assembling the first cohort — 8 to 12 practitioners.
@@ -45,8 +47,7 @@ gift — without becoming a full-time marketer." Default to the H1 above.
 3. Subhead (the business promise, plain words)
 4. One dominant primary CTA: Book a call — loudest element on the fold
 5. CTA microcopy (removes friction)
-6. Secondary link, clearly quieter than the button
-7. Qualifier + scarcity lines (thin meta row)
+6. Qualifier + scarcity lines (thin meta row)
 
 ## Booking wiring
 - Single BOOKING_URL constant at the top of the file so it's swapped once.
