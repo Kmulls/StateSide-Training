@@ -184,7 +184,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
     <h1>You create the magic. <span class="kicker">We build what carries it.</span></h1>
     <p class="lead">Our House gives you the systems, the tech, and the community to turn your gift into a business that runs — recurring revenue, less admin, your time back. Not more hustle. More capacity.</p>
     <div class="hero-cta">
-      <a class="btn-book js-book" href="business.html#apply">Book a call</a>
+      <a class="btn-book" id="bookCall" href="business.html#apply">Book a call</a>
       <a class="alt-link" href="what-we-do.html">or come to a gathering →</a>
     </div>
     <p class="micro">A 20-minute call. We'll map what's capping your growth — no pitch.</p>
@@ -200,7 +200,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <div class="wrap measure reveal">
     <p class="eyebrow">Come on in</p>
     <h2>Three doors, one living room.</h2>
-    <p>Start wherever you're drawn.</p>
+    <p>Start wherever you're drawn. Every door leads to the same place — people like ourselves, growing on purpose.</p>
   </div>
   <div class="wrap">
     <div class="doors">
@@ -242,8 +242,8 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 
 <section class="close">
   <div class="wrap">
-    <h2>Ready when you are.</h2>
-    <a class="btn-book js-book" href="business.html#apply">Book a call</a>
+    <p class="eyebrow" style="text-align:center">The invitation</p>
+    <h2>Our richness is life, forever.</h2>
   </div>
 </section>
 </main>
@@ -273,9 +273,8 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   });
   tog.textContent = current()==='dark' ? 'Light' : 'Dark';
 
-  if(typeof BOOKING_URL === 'string' && BOOKING_URL){
-    [].slice.call(document.querySelectorAll('.js-book')).forEach(function(a){ a.href = BOOKING_URL; });
-  }
+  var book = document.getElementById('bookCall');
+  if(book && typeof BOOKING_URL === 'string' && BOOKING_URL){ book.href = BOOKING_URL; }
 
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   if(reduce || !('IntersectionObserver' in window)){

@@ -31,6 +31,14 @@ link → qualifier + scarcity meta row. All spec copy used verbatim.
 6. Page `<title>`/meta description still say "Welcome Home" — left untouched
    per spec scope; worth revisiting alongside the funnel decision.
 
+## Follow-up (same session)
+A copy-simplification sweep (closing-quote sections removed on all four pages,
+Bob Marley quote block removed, uniform "Ready when you are." + Book a call
+closes) was built, verified, and then **fully reverted** at Kevin's direction:
+the first-draft homepage was fine, and the copy edits will be made by hand.
+The PR therefore contains the hero rebuild only. The sweep survives in git
+history (commit fdf2064, reverted) if any of it is wanted later.
+
 ## Verification
 Rendered headlessly (Chromium) at 1440×900 dark, 1440×900 light, 390×844
 mobile, plus a toggle-click test: no JS errors, CTA href resolves to the
