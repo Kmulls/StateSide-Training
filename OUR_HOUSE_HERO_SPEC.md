@@ -25,7 +25,9 @@ becoming a full-time marketer or tech person.
 
 ## Exact hero copy — use verbatim
 - Eyebrow: For coaches, facilitators, creators & community-builders
-- Headline (H1): You create the magic. We build what carries it.
+- Headline (H1): You bring the gift. We'll build the house around it.
+  (was "You create the magic. We build what carries it."; changed 2026-07-23
+  at Kevin's direction)
 - Subhead: Our House gives you the systems, the tech, and the community to turn your
   gift into a business that runs — recurring revenue, less admin, your time back.
   Not more hustle. More capacity.
