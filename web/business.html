@@ -43,7 +43,7 @@ const BOOKING_URL = 'https://calendly.com/tcmusic/30min';
   --warm-text:#A05E0B; --thread:rgba(34,28,21,.22);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth; overflow-x:hidden}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   margin:0; background:var(--ground); color:var(--ink);
@@ -77,7 +77,7 @@ a{color:inherit}
 .nav a[aria-current]{color:var(--ink)}
 .nav .brand{font-family:var(--serif); font-size:1.05rem; letter-spacing:0; text-transform:none; color:var(--ink)}
 .navlinks{display:flex; gap:1.4rem; flex-wrap:wrap}
-@media (max-width:560px){.navlinks{gap:.9rem}.nav{gap:1rem}}
+@media (max-width:560px){.navlinks{gap:.9rem}.nav{gap:.9rem; padding-right:4.6rem}.nav .brand{font-size:.98rem}.nav a{font-size:.64rem; letter-spacing:.1em}}
 .nav a:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
 
 .toggle{
