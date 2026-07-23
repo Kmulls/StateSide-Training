@@ -250,6 +250,22 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
 .cap-order li span{font-family:var(--mono); font-size:.64rem; letter-spacing:.1em; color:var(--warm-text); font-weight:700}
 .cap-order li em{margin-left:auto; font-style:normal; font-family:var(--mono); font-size:.58rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:400}
 .cap-box{margin-top:1.4rem; background:radial-gradient(130% 140% at 0% 0%, rgba(232,169,63,.16), transparent 60%), var(--ground); border:1px solid var(--ember); border-radius:14px; padding:1.2rem 1.3rem; font-family:var(--serif); font-weight:700; font-size:1.15rem; line-height:1.25; color:var(--ink)}
+/* HCC: yin-yang turns slowly (stays circular); hover pauses + glows */
+.cap-mark{transform-origin:50% 50%; animation:yy-turn 26s linear infinite}
+.cap-mark:hover{animation-play-state:paused; filter:drop-shadow(0 0 7px rgba(232,169,63,.55))}
+@keyframes yy-turn{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.cap-mark{animation:none}}
+/* HCC popup hover lifts */
+.hcc-arts div,.cap-order li,.cap-box{transition:transform .18s ease, border-color .18s ease}
+.hcc-arts div:hover{transform:translateY(-2px); border-color:var(--ember)}
+.cap-order li:hover{transform:translateY(-2px); border-color:var(--foxfire)}
+.cap-box:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.hcc-arts div,.cap-order li,.cap-box{transition:none}.hcc-arts div:hover,.cap-order li:hover,.cap-box:hover{transform:none}}
+/* HCC nav tab (opens the popup, not a page) */
+.nav .hcc-link{font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-decoration:none; font-weight:400}
+.nav .hcc-link:hover{color:var(--ink)}
+.nav .hcc-link:focus-visible{outline:2px solid var(--foxfire); outline-offset:2px}
+@media (max-width:560px){.nav .hcc-link{font-size:.64rem; letter-spacing:.1em}}
 </style>
 </head>
 <body>
@@ -258,6 +274,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; justify-content:spa
   <span class="navlinks">
     <a href="story.html">The Story</a>
     <a href="business.html" aria-current="page">Work With Us</a>
+    <button type="button" class="hcc-link">Human C.C.</button>
   </span>
 </nav>
 <button class="toggle" id="themeToggle" aria-label="Toggle light or dark theme">Theme</button>
