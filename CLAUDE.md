@@ -1,8 +1,10 @@
 # Repo guardrails — READ FIRST
 
 ## What this repo is
-This repo hosts **Our House** — the musical community gathering brand — and its
-website (the `web/` folder), deployed to GitHub Pages at **mytcmusic.com**.
+This repo hosts **Coherence Crew** (formerly "Our House" — that name is retired
+and reserved for future use) — the musical community gathering brand — and its
+website (the `web/` folder), deployed to GitHub Pages at **coherencecrew.com**
+(previously mytcmusic.com; domain changed 2026-07-31).
 
 ## Hard rules
 1. **One repo, one project, one domain.** Do NOT build, host, or deploy any
@@ -12,7 +14,8 @@ website (the `web/` folder), deployed to GitHub Pages at **mytcmusic.com**.
 2. **Before touching GitHub Pages** (workflows, CNAME, deploys): check the
    repo's existing Pages configuration and custom domain first. A deploy
    replaces whatever Pages is currently serving.
-3. The Pages custom domain for this repo must only ever be `mytcmusic.com`.
+3. The Pages custom domain for this repo must only ever be `coherencecrew.com`
+   (changed from `mytcmusic.com` by owner decision, 2026-07-31).
 
 ## History that motivated these rules
 In June 2026 a session built the agenticsales.com site on a branch here
